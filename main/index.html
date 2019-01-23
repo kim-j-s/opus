@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="x-apple-disable-message-reformatting" />
+	<title>OPUS</title>
+	<link rel="shortcut icon" href="../static/images/common/favicon.ico">
+	<link href="../static/css/lib/swiper.css" rel="stylesheet">
+	<link href="../static/css/reset.css" rel="stylesheet" />
+	<link href="../static/css/common.css" rel="stylesheet" />
+	<link href="../static/css/contents.css" rel="stylesheet" />
+	<script type="text/javascript" src="../static/js/common.js"></script>
+	<script type="text/javascript" src="../static/js/lib/moment.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/daterangepicker.js"></script>
+	<script type="text/javascript" src="../static/js/lib/quill.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jQuery.dPassword.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery.easy-autocomplete.js"></script>
+	<script type="text/javascript" src="../static/js/lib/semantic.min.js"></script>
+	<script type="text/javascript" src="../static/js/ui.js"></script>
+	<!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- 헤더영역 -->
+		<header id="headerWrap">
+			<h1><img src="../static/images/common/logo.jpg" alt="OPUS Logistics" /></h1>
+		</header>
+		<!-- //헤더영역 -->
+
+		<style type="text/css">
+			.tabWrap {
+				padding: 27px 150px 0 43px;
+				/* background:#f5f6fa; */
+				background: #333;
+				font-size: 0;
+			}
+
+			.tabList {
+				/* display:inline-block; */
+				display: flex;
+				font-size: 0;
+				overflow: hidden;
+			}
+
+			.tabList>li {
+				position: relative;
+				float: left;
+				width: 1000px;
+				max-width: 248px;
+				background: #e9f0fb;
+			}
+
+			.tabList>li:not(:first-child) {
+				flex: 1;
+				width: auto;
+				max-width: none;
+			}
+
+			.tabList>li.on:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -10px;
+				width: 18px;
+				height: 62px;
+				background: url(../static/images/common/sprite_common.png) no-repeat -42px 0;
+			}
+
+			.tabList>li.on:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: auto;
+				right: -10px;
+				z-index: 1;
+				width: 18px;
+				height: 62px;
+				background: url(../static/images/common/sprite_common.png) no-repeat -60px 0;
+			}
+
+			.tabList>li+li {}
+
+			.tabList>li+li:after {
+				content: '';
+				position: absolute;
+				top: 12px;
+				left: -1px;
+				width: 1px;
+				border-bottom: 35px solid #c3ccda;
+			}
+
+			.tabList>li:last-child {
+				border-radius: 0 10px 0 0;
+			}
+
+			.tabList>li>a {
+				display: block;
+				height: 62px;
+				padding: 14px 0 0 20px;
+			}
+
+			.tabList>li.on>a {
+				background: #fff;
+				border-radius: 10px 10px 0 0;
+			}
+
+			.tabList>li.home {
+				width: 86px;
+				text-indent: -9999px;
+				border-radius: 10px 0 0 0;
+			}
+
+			.tabList>li.home:before {
+				content: '';
+				position: absolute;
+				top: 22px;
+				left: 27px;
+				width: 22px;
+				height: 21px;
+				background: url(../static/images/common/sprite_common.png) no-repeat -40px -72px;
+			}
+
+			.tabList>li.home .tabClose {
+				right: 16px;
+			}
+
+			.tabList>li span {
+				display: block;
+				font-weight: 600;
+				font-size: 14px;
+				color: #405b85;
+			}
+
+			.tabList>li span+span {
+				font-weight: 400;
+				font-size: 17px;
+			}
+
+			.tabList>li.on span {
+				color: #2346d6;
+			}
+
+			.tabList>li .tabClose {
+				position: absolute;
+				top: 12px;
+				right: 20px;
+				width: 14px;
+				height: 14px;
+				overflow: hidden;
+				text-indent: -9999px;
+				background: url(../static/images/common/sprite_common.png) no-repeat 0 -40px;
+			}
+
+			.tabList>li.on .tabClose {
+				background-position: -20px -40px;
+			}
+
+
+			.box {
+				position: absolute;
+				top: 27px;
+				right: 0;
+				width: 150px;
+				height: 62px;
+				border: 1px solid blue;
+				background: #fff;
+				overflow: hidden;
+			}
+
+			.box li {}
+
+			.box li a {
+				display: block;
+				font-size: 14px;
+				color: #333;
+			}
+
+
+			.layer {
+				display: flex;
+				height: calc(100% - 89px);
+			}
+
+			.layer .double {
+				flex: 1;
+				/* display:inline-block; */
+				font-size: 0;
+				height: 100%;
+				background: #ddd;
+			}
+
+			.layer .double>.ele {
+				display: inline-block;
+				font-size: 0;
+				min-width: 300px;
+				max-width: 500px;
+				height: 100%;
+			}
+
+			.layer .double>.ele:first-child {
+				background: blue;
+			}
+
+			.layer .opt {
+				/* display:inline-block; */
+				width: 300px;
+				height: 100%;
+				background: #333;
+			}
+
+			.fix {
+				position: fixed;
+				top: 500px;
+				left: 100px;
+				z-index: 111;
+				min-width: 100px;
+				text-align: center;
+				height: 50px;
+				line-height: 50px;
+				border: 1px solid #333;
+				background: #fff;
+				padding: 0 10px;
+			}
+		</style>
+
+
+		<div class="fix"></div>
+
+		<section id="container">
+			<div class="inner">
+				<nav>
+					<div class="menuAll">
+						<button class="allBtn">
+							<span>Menu</span>
+						</button>
+					</div>
+					<div class="gnb">
+						<ul class="gnbList">
+							<li>
+								<div class="gnbTit">
+									Organization
+									<button class="clip"></button>
+								</div>
+								<ul class="dept">
+									<li><a href="#">Organization List</a></li>
+									<li><a href="#">Organization</a></li>
+								</ul>
+							</li>
+							<li>
+								<div class="gnbTit">
+									Warehousing
+									<button class="clip"></button>
+								</div>
+								<ul class="dept">
+									<li><a href="">Subscription List</a></li>
+									<li><a href="">Subscription List (Waiting)</a></li>
+									<li><a href="">Subscription List (Approved)</a></li>
+									<li><a href="">Subscription List (Cancelled)</a></li>
+									<li><a href="">Subscription List (Withdraw)</a></li>
+								</ul>
+							</li>
+							<li>
+								<div class="gnbTit">
+									Billing
+									<button class="clip"></button>
+								</div>
+								<ul class="dept">
+									<li><a href="">Billing Policy List</a></li>
+									<li><a href="">Invoice List</a></li>
+									<li><a href="">Invoice List (Waiting)</a></li>
+									<li><a href="">Invoice List (Sent)</a></li>
+									<li><a href="">Invoice List (Paid)</a></li>
+									<li><a href="">Invoice List (Cancelled)</a></li>
+									<li><a href="">Scheduler and History</a></li>
+								</ul>
+							</li>
+							<li>
+								<div class="gnbTit">
+									Usage
+									<button class="clip"></button>
+								</div>
+								<ul class="dept">
+									<li><a href="">Usage List</a></li>
+									<li><a href="">Usage List (Seat)</a></li>
+									<li><a href="">Usage List (Transaction)</a></li>
+									<li><a href="">Transaction List</a></li>
+								</ul>
+							</li>
+							<li>
+								<div class="gnbTit">
+									Service
+									<button class="clip"></button>
+								</div>
+								<ul class="dept">
+									<li><a href="#">Service List</a></li>
+									<li><a href="#">Tariff List</a></li>
+									<li><a href="">Service Group List</a></li>
+								</ul>
+							</li>
+							<li>
+								<div class="gnbTit">
+									Notice
+									<button class="clip"></button>
+								</div>
+								<ul class="dept">
+									<li><a href="#">Notice List</a></li>
+								</ul>
+							</li>
+							<li>
+								<div class="gnbTit">
+									Administration
+									<button class="clip"></button>
+								</div>
+								<ul class="dept">
+									<li><a href="#">System Code List</a></li>
+									<li><a href="#">Role List</a></li>
+									<li><a href="#">Mail Transmit History</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="content">
+					<div class="tabWrap">
+						<ul class="tabList">
+							<li class="home">
+								<a href="#">Home</a>
+								<button class="tabClose">Close</button>
+							</li>
+							<li class="on">
+								<a href="#">
+									<span>House B/L</span>
+									<span>OBK-000468</span>
+								</a>
+								<button class="tabClose">Close</button>
+							</li>
+							<li>
+								<a href="#">
+									<span>House B/L</span>
+									<span>OBK-000468</span>
+								</a>
+								<button class="tabClose">Close</button>
+							</li>
+							<li>
+								<a href="#">
+									<span>House B/L</span>
+									<span>OBK-000468</span>
+								</a>
+								<button class="tabClose">Close</button>
+							</li>
+							<li>
+								<a href="#">
+									<span>House B/L</span>
+									<span>OBK-000468</span>
+								</a>
+								<button class="tabClose">Close</button>
+							</li>
+							<li>
+								<a href="#">
+									<span>House B/L</span>
+									<span>OBK-000468</span>
+								</a>
+								<button class="tabClose">Close</button>
+							</li>
+						</ul>
+						<div class="box">
+							<ul>
+							</ul>
+						</div>
+					</div>
+
+
+					<script type="text/javascript">
+						$(function() {
+							tabView();
+							$(window).resize(tabView);
+
+							cntp();
+
+						});
+
+
+						function tabView() {
+							var layerWidth = $('.layer').width();
+							var tabWidth = $('.tabList').width();
+
+							$('.fix').html('윈도우 넓이 : ' + layerWidth + ' / 탭 총 넓이 : ' + (tabWidth + 150 + 44));
+
+							if (layerWidth > (tabWidth + 150 + 44)) {
+								console.log('1');
+								$('.box > ul > li').last().appendTo('.tabList');
+							} else {
+
+								console.log('2');
+								$('.tabList > li').last().appendTo('.box > ul');
+							}
+						}
+
+
+
+						function cntp() {
+							var xxx = $('.cnt').html();
+							var Tablist = setInterval(function() {
+								xxx = xxx - 1;
+								$('.cnt').html(xxx);
+								console.log(xxx);
+								if (xxx == 0) {
+									clearInterval(Tablist);
+								}
+							}, 500);
+						}
+					</script>
+					<div class="cnt">5</div>
+
+
+					<div class="layer">
+
+						<!--
+						<div class="double">
+							<div class="ele">
+								<table>
+									<colgroup>
+										<col width="200px;" />
+										<col width="" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>타이틀명</th>
+											<td>
+												<input type="" class="inpt" />
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="ele">
+								<table>
+									<colgroup>
+										<col width="200px;" />
+										<col width="" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>타이틀명 우측</th>
+											<td>
+												<input type="" class="inpt" />
+											</td>
+										</tr>
+										<tr>
+											<th>타이틀명 우측</th>
+											<td>
+												<input type="" class="inpt" />
+											</td>
+										</tr>
+										<tr>
+											<th>타이틀명 우측</th>
+											<td>
+												<input type="" class="inpt" />
+											</td>
+										</tr>
+										<tr>
+											<th>타이틀명 우측</th>
+											<td>
+												<input type="" class="inpt" />
+											</td>
+										</tr>
+										<tr>
+											<th>타이틀명 우측</th>
+											<td>
+												<input type="" class="inpt" />
+											</td>
+										</tr>
+										<tr>
+											<th>타이틀명 우측</th>
+											<td>
+												<input type="" class="inpt" />
+											</td>
+										</tr>
+										<tr>
+											<th>타이틀명 우측</th>
+											<td>
+												<input type="" class="inpt" />
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="opt"></div>
+						-->
+
+					</div>
+
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+
+</html>
