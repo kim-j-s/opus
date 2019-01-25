@@ -45,6 +45,7 @@
 section.contGroup {}
 section.contGroup > .tit {padding-bottom:10px; font-weight:600; font-size:18px; color:#181818; border-bottom:1px solid #d9d9d9;}
 section.contGroup > .tit + .inpItem {margin-top:20px;}
+section.contGroup > .tit + .txtBox {margin-top:20px;}
 section.contGroup + section.contGroup {margin-top:20px;}
 section.contGroup > .itemList2:nth-of-type(1) {margin-top:20px;}
 
@@ -53,17 +54,29 @@ section.contGroup > .itemList2:nth-of-type(1) {margin-top:20px;}
 .inpItem:after {content:''; display:block; clear:both;}
 .inpItem + .inpItem {margin-top:15px;}
 .inpItem + .txtBox {margin-top:10px;}
-.txtBox + .inpItem {margin-top:15px;}
 .inpItem > dt {width:210px; float:left; padding:6px 10px 0 0; word-break:break-all;}
-.inpItem > dd {padding:0 0 0 210px;font-size:0;}
+.inpItem > dd {padding:0 0 0 210px; font-size:0; text-align:right;}
 .inpItem > dd .totalVal {display:inline-block; width:68px; padding:0 24px 0 0; font-size:14px; line-height:28px; text-align:right;}
 .inpItem > dd .totalVal + .inputBox {margin-left:7px;}
 .inpItem > dd .inputBox.count .inp {text-align:right;}
 
 
+/* txtBox */
+.txtBox {max-height:200px; overflow:auto;}
+.txtBox > .inner {}
+.txtBox + .inpItem {margin-top:15px;}
+.txtBox + .agreeChk {margin-top:15px;}
+
+
+/* agreeChk */
+.agreeChk {}
+.agreeChk > .txt {display:inline-block; padding:4px 0 0 0;}
+.agreeChk > .checkbox {float:right;}
+
+
 /* list */
 .optionList {}
-.optionList > li {}
+.optionList > li {text-align:left;}
 .optionList > li + li {margin-top:10px;}
 
 
