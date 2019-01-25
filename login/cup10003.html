@@ -55,9 +55,11 @@
 								<input type="text" name="i10003-eMail" class="inp Mandate" id="i10003-eMail" placeholder="Your Email" maxlength="50">
 								<button class="inpReset"></button>
 							</div>
-							<p class="alertMessage" id="i10003-dupeMailLb">Duplicated Email address found while adding your address.</p>
 						</dd>
 					</dl>
+					<div class="txtBox">
+						<p class="alertMessage" id="i10003-dupeMailLb">Duplicated Email address found while adding your address.</p>
+					</div>
 					<dl class="inpItem">
 						<dt id="i10003-passwordLb">Password</dt>
 						<dd>
@@ -65,9 +67,11 @@
 								<input type="password" name="i10003-password" class="inp Mandate pwinp" id="i10003-password" placeholder="Type Password" maxlength="50">
 								<button class="inpReset"></button>
 							</div>
-							<p class="alertMessage" id="i10003-shortPasswordLb">Password must contain at least 6 characters, including alphabets and numbers.</p>
 						</dd>
 					</dl>
+					<div class="txtBox">
+						<p class="alertMessage" id="i10003-shortPasswordLb">Password must contain at least 6 characters, including alphabets and numbers.</p>
+					</div>
 					<dl class="inpItem">
 						<dt id="i10003-confirmPasswordLb">Confirm Password</dt>
 						<dd>
@@ -75,9 +79,11 @@
 								<input type="password" name="i10003-confirmPassword" class="inp Mandate pwinp" id="i10003-confirmPassword" placeholder="Re-Type Password" maxlength="50">
 								<button class="inpReset"></button>
 							</div>
-							<p class="alertMessage" id="i10003-misconfirmPasswordLb">The passwords you entered don't match.</p>
 						</dd>
 					</dl>
+					<div class="txtBox">
+						<p class="alertMessage" id="i10003-misconfirmPasswordLb">The passwords you entered don't match.</p>
+					</div>
 				</section>
 				<section class="contGroup">
 					<h1 class="tit" id="i10003-organizationLb">Organization</h1>
@@ -147,8 +153,8 @@
 					<dl class="inpItem">
 						<dt id="i10003-countryLb">Country</dt>
 						<dd>
-							<div class="ui selection dropdown country" id="i10003-state">
-								<input type="hidden" name="selection">
+							<div class="ui search selection dropdown country" id="i10003-state">
+								<input type="hidden" name="country">
 								<i class="dropdown icon"></i>
 								<div class="default text">Type Country</div>
 								<div class="menu">
