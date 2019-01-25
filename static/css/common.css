@@ -66,6 +66,7 @@
 .inputBox.schType.ty1 > .inner .easy-autocomplete:first-child {width:100px;}
 .inputBox.schType.ty2 > .inner .easy-autocomplete {width:150px;}
 .inputBox.schType.ty2 > .inner .easy-autocomplete:first-child {width:100px;}
+.inputBox.full.schType.ty2 > .inner .easy-autocomplete:first-child {width:100px;}
 .inputBox.full.schType.ty2 > .inner .easy-autocomplete {width:calc(100% - 100px);}
 .inputBox.full.schType > .inner {display:block;}
 
