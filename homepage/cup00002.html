@@ -34,7 +34,9 @@
 <body>
 	<div class="flexWrap">
 		<div class="flexLayer">
-			<h1><img src="../static/images/common/logo.png" alt="OPUS LOGISTICS" /></h1>
+			<h1>
+				<img src="../static/images/common/logo.png" alt="OPUS LOGISTICS" />
+			</h1>
 			<div class="flexContent">
 				<div class="inner">
 					<h2 class="tit" id="i00002-newAccountLb">Define Users</h2>
@@ -54,9 +56,9 @@
 					</dl>
 					<div class="lineBasic"></div>
 					<dl class="inpItem">
-						<dt id="i00002-monthlyTotalLb"><span class="bold">Monthly Total</span></dt>
+						<dt><span class="bold" id="i00002-monthlyTotalLb">Monthly Total</span></dt>
 						<dd class="tr">
-							<span class="totalVal" id="i00002-monthlyTotal"><span class="bold">15</span></span>
+							<span class="totalVal"><span class="bold" id="i00002-monthlyTotal">15</span></span>
 							<div class="inputBox readonly amount">
 								<input type="text" name="" class="inp Readonly" id="" readonly="readonly" value="USD">
 								<input type="text" name="i00002-totalPrice" class="inp Readonly" id="i00002-totalPrice" readonly="readonly" value="1,500.00">
@@ -71,7 +73,8 @@
 							<ul class="optionList">
 								<li>
 									<div class="checkbox">
-										<input type="checkbox" name="" id="check"><label for="check" id="i00002-usFax">U.S. Internet Fax</label>
+										<input type="checkbox" name="i00002-usFaxChk" id="i00002-usFaxChk">
+										<label for="i00002-usFaxChk" id="i00002-usFax">U.S. Internet Fax</label>
 									</div>
 								</li>
 							</ul>
@@ -83,17 +86,20 @@
 							<ul class="optionList">
 								<li>
 									<div class="checkbox">
-										<input type="checkbox" name="i00002-usAmsChk" id="i00002-usAmsChk"><label for="i00002-usAmsChk" id="i00002-usAms">U.S. AMS(Advance Manifest System)</label>
+										<input type="checkbox" name="i00002-usAmsChk" id="i00002-usAmsChk">
+										<label for="i00002-usAmsChk" id="i00002-usAms">U.S. AMS(Advance Manifest System)</label>
 									</div>
 								</li>
 								<li>
 									<div class="checkbox">
-										<input type="checkbox" name="i00002-usIsfChk" id="i00002-usIsfChk"><label for="i00002-usIsfChk" id="i00002-usIsf">U.S. ISF(Import Security Filing)</label>
+										<input type="checkbox" name="i00002-usIsfChk" id="i00002-usIsfChk">
+										<label for="i00002-usIsfChk" id="i00002-usIsf">U.S. ISF(Import Security Filing)</label>
 									</div>
 								</li>
 								<li>
 									<div class="checkbox">
-										<input type="checkbox" name="i00002-krAmsChk" id="i00002-krAmsChk"><label for="i00002-krAmsChk" id="i00002-krAms">Korean AMS(Advance Manifest System)</label>
+										<input type="checkbox" name="i00002-krAmsChk" id="i00002-krAmsChk">
+										<label for="i00002-krAmsChk" id="i00002-krAms">Korean AMS(Advance Manifest System)</label>
 									</div>
 								</li>
 							</ul>
@@ -105,12 +111,14 @@
 							<ul class="optionList">
 								<li>
 									<div class="checkbox">
-										<input type="checkbox" name="i00002-vgmChk" id="i00002-vgmChk"><label for="i00002-vgmChk" id="i00002-vgm">VGM(Verified Gross Mass)</label>
+										<input type="checkbox" name="i00002-vgmChk" id="i00002-vgmChk">
+										<label for="i00002-vgmChk" id="i00002-vgm">VGM(Verified Gross Mass)</label>
 									</div>
 								</li>
 								<li>
 									<div class="checkbox">
-										<input type="checkbox" name="i00002-bookSiChk" id="i00002-bookSiChk"><label for="i00002-bookSiChk" id="i00002-bookSi">Booking/Shipping Instruction</label>
+										<input type="checkbox" name="i00002-bookSiChk" id="i00002-bookSiChk">
+										<label for="i00002-bookSiChk" id="i00002-bookSi">Booking/Shipping Instruction</label>
 									</div>
 								</li>
 							</ul>

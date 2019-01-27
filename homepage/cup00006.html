@@ -39,53 +39,148 @@
 			</h1>
 			<div class="flexContent">
 				<div class="inner">
-					<h2 class="tit" id="i00005-defineBillingInformationLb">Define Billing Information</h2>
+					<h2 class="tit" id="i00006-confirmSubscriptionLb">Confirm Subscription</h2>
 					<dl class="inpItem">
-						<dt id="i00005-billToPartyLb">Customer Name</dt>
+						<dt id="i00006-userCountLb">User Count, Monthly Charge</dt>
+						<dd class="tr">
+							<span class="totalVal" id="i00006-userCount"><span class="bold">15</span></span>
+							<div class="inputBox readonly amount">
+								<input type="text" name="" class="inp Readonly" id="" readonly="readonly" value="USD">
+								<input type="text" name="i00006-basicPrice" class="inp Readonly" id="i00006-basicPrice" readonly="readonly" value="0.00">
+							</div>
+							<a href="#" class="btn" id="i00006-backBasic">Back</a>
+						</dd>
+					</dl>
+					<div class="txtBox" id="i00006-platformDescription">
+						Basic – 15 users <br /> Free 15Gigabite Storage
+					</div>
+					<dl class="inpItem">
+						<dt id="i00006-platformBase">Platform Base</dt>
+						<dd class="tr">
+							<span class="totalVal"><span class="bold" id="i00006-platformBaseLb">Share</span></span>
+							<div class="inputBox readonly amount">
+								<input type="text" name="" class="inp Readonly" id="" readonly="readonly" value="USD">
+								<input type="text" name="i00006-platformPrice" class="inp Readonly" id="i00006-platformPrice" readonly="readonly" value="0.00">
+							</div>
+							<a href="#" class="btn" id="i00006-backPlatform">Back</a>
+						</dd>
+					</dl>
+					<div class="lineBasic"></div>
+					<dl class="inpItem">
+						<dt><span class="bold" id="i00006-monthlyTotalLb">Monthly Total</span></dt>
+						<dd class="tr">
+							<div class="inputBox readonly amount">
+								<input type="text" name="" class="inp Readonly" id="" readonly="readonly" value="USD">
+								<input type="text" name="i00006-monthlyTotal" class="inp Readonly" id="i00006-monthlyTotal" readonly="readonly" value="1,500.00">
+							</div>
+						</dd>
+					</dl>
+					<h3 class="tit" id="i00006-optionalServicesLb">Optional Service</h3>
+					<dl class="inpItem">
+						<dt id="i00006-internetFaxLb">Internet Fax <br />($ 1.00/call)</dt>
+						<dd>
+							<ul class="optionList">
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" name="i00006-usFaxChk" id="i00006-usFaxChk">
+										<label for="i00006-usFaxChk" id="i00006-usFax">U.S. Internet Fax</label>
+									</div>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+					<dl class="inpItem">
+						<dt id="i00006-customsFilingEdiLb">Customs Filing EDI <br />($ 1.00/bill)</dt>
+						<dd>
+							<ul class="optionList">
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" name="i00006-usAmsChk" id="i00006-usAmsChk">
+										<label for="i00006-usAmsChk" id="i00006-usAms">U.S. AMS(Advance Manifest System)</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" name="i00006-usIsfChk" id="i00006-usIsfChk">
+										<label for="i00006-usIsfChk" id="i00006-usIsf">U.S. ISF(Import Security Filing)</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" name="i00006-krAmsChk" id="i00006-krAmsChk">
+										<label for="i00006-krAmsChk" id="i00006-krAms">Korean AMS(Advance Manifest System)</label>
+									</div>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+					<dl class="inpItem">
+						<dt id="i00006-shippingEdiLb">Shipping EDI <br />($ 0.50/bill)</dt>
+						<dd>
+							<ul class="optionList">
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" name="i00006-vgmChk" id="i00006-vgmChk">
+										<label for="i00006-vgmChk" id="i00006-vgm">VGM(Verified Gross Mass)</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" name="i00006-bookSiChk" id="i00006-bookSiChk">
+										<label for="i00006-bookSiChk" id="i00006-bookSi">Booking/Shipping Instruction</label>
+									</div>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+				<div class="inner">
+					<dl class="inpItem">
+						<dt id="i00006-billToPartyLb">Customer Name</dt>
 						<dd>
 							<div class="inputBox">
-								<input type="text" name="i00005-billToParty" class="inp Mandate" id="i00005-billToParty" placeholder="Party Name" maxlength="50">
+								<input type="text" name="i00006-billToParty" class="inp Readonly" id="i00006-billToParty" readonly="readonly" value="Customer Name" maxlength="80">
 								<button class="inpReset"></button>
 							</div>
 						</dd>
 					</dl>
 					<dl class="inpItem">
-						<dt id="i00005-addressLine1Lb">Address Line1</dt>
+						<dt id="i00006-addressLine1Lb">Address Line1</dt>
 						<dd>
 							<div class="inputBox full">
-								<input type="text" name="i00005-addressLine1" class="inp Mandate" id="i00005-addressLine1" placeholder="Worldcup Buk-Ro 140 Nuritkum Sqr. 16F" maxlength="80">
+								<input type="text" name="i00006-addressLine1" class="inp Readonly" id="i00006-addressLine1" readonly="readonly" value="Address Line1" maxlength="80">
 								<button class="inpReset"></button>
 							</div>
 						</dd>
 					</dl>
 					<dl class="inpItem">
-						<dt id="i00005-addressLine2Lb">Address Line2</dt>
+						<dt id="i00006-addressLine2Lb">Address Line2</dt>
 						<dd>
 							<div class="inputBox full">
-								<input type="text" name="i00005-addressLine2" class="inp" id="i00005-addressLine2" placeholder="Mapo-Gu, Sang Am-Dong" maxlength="80">
+								<input type="text" name="i00006-addressLine2" class="inp Readonly" id="i00006-addressLine2" readonly="readonly" value="Address Line2" maxlength="80">
 								<button class="inpReset"></button>
 							</div>
 						</dd>
 					</dl>
 					<dl class="inpItem">
-						<dt id="i00005-cityLb">City, State/Province</dt>
+						<dt id="i00006-cityLb">City, State/Province</dt>
 						<dd>
 							<div class="inputBox full schType ty2">
 								<div class="inner">
-									<input type="text" name="i00005-stateProvince" class="inp autoSch ty2 code Readonly" id="i00005-stateProvince" readonly="readonly" maxlength="50">
-									<input type="text" name="i00005-city" class="inp autoSch Mandate ty2 name" id="i00005-city" placeholder="Type City" maxlength="50">
+									<input type="text" name="i00006-stateProvince" class="inp autoSch ty2 code Readonly" id="i00006-stateProvince" readonly="readonly" value="State" maxlength="50">
+									<input type="text" name="i00006-city" class="inp autoSch Mandate ty2 name" id="i00006-city" value="Type City" maxlength="50">
 									<button class="inpReset"></button>
 								</div>
 							</div>
 						</dd>
 					</dl>
 					<dl class="inpItem">
-						<dt id="i00005-countryLb">Country, Zip Code</dt>
+						<dt id="i00006-countryLb">Country, Zip Code</dt>
 						<dd>
-							<div class="ui search selection dropdown country" id="i00005-country">
+							<div class="ui search selection dropdown country disabled" id="i00006-country">
 								<input type="hidden" name="country">
 								<i class="dropdown icon"></i>
-								<div class="default text">Type Country</div>
+								<div class="text"><i class="al flag"></i> Albania</div>
 								<div class="menu">
 									<div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
 									<div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
@@ -333,68 +428,69 @@
 							</div>
 							<div class="inputBox zipCode">
 								<div class="inner">
-									<input type="text" name="i00005-zipCode" class="inp" id="i00005-zipCode" placeholder="Zip Code">
+									<input type="text" name="i00006-zipCode" class="inp Readonly" id="i00006-zipCode" readonly="readonly" value="Zip Code">
 									<button class="inpReset"></button>
 								</div>
 							</div>
 						</dd>
 					</dl>
-
-					<h3 class="tit" id="i00005-personInChargeLb">Person in Charge</h3>
+					<h3 class="tit" id="i00006-personInChargeLb">Person in Charge</h3>
 					<dl class="inpItem">
-						<dt id="i00005-departmentLb">Department</dt>
+						<dt id="i00006-departmentLb">Department</dt>
 						<dd>
 							<div class="inputBox full">
-								<input type="text" name="i00005-department" class="inp full" id="i00005-department" placeholder="Department Name" maxlength="80">
+								<input type="text" name="i00006-department" class="inp Readonly" id="i00006-department" readonly="readonly" value="Department Name" maxlength="80">
 								<button class="inpReset"></button>
 							</div>
 						</dd>
 					</dl>
 					<dl class="inpItem">
-						<dt id="i00005-picNameLb">Person in Charge</dt>
+						<dt id="i00006-picNameLb">Person in Charge</dt>
 						<dd>
 							<div class="inputBox">
-								<input type="text" name="i00005-picName" class="inp Readonly" id="i00005-picName" readonly="readonly" value="Name">
+								<input type="text" name="i00006-picName" class="inp Readonly" id="i00006-picName" readonly="readonly" value="Name">
 							</div>
 						</dd>
 					</dl>
 					<dl class="inpItem">
-						<dt id="i00005-emailLb">Email</dt>
+						<dt id="i00006-emailLb">Email</dt>
 						<dd>
 							<div class="inputBox">
-								<input type="text" name="i00005-email" class="inp Readonly" id="i00005-email" readonly="readonly" value="Email">
+								<input type="text" name="i00006-email" class="inp Readonly" id="i00006-email" readonly="readonly" value="Email">
 							</div>
 						</dd>
 					</dl>
 					<dl class="inpItem">
-						<dt id="i00005-phoneNumberLb">Phone Number</dt>
+						<dt id="i00006-phoneNumberLb">Phone Number</dt>
 						<dd>
 							<div class="inputBox">
-								<input type="text" name="i00005-phoneNumber" class="inp Mandate" id="i00005-phoneNumber" placeholder="Phone Number">
+								<input type="text" name="i00006-phoneNumber" class="inp Readonly" id="i00006-phoneNumber" readonly="readonly" value="Phone Number">
 								<button class="inpReset"></button>
 							</div>
 						</dd>
 					</dl>
 					<dl class="inpItem">
-						<dt id="i00005-faxNumberLb">Fax Number</dt>
+						<dt id="i00006-faxNumberLb">Fax Number</dt>
 						<dd>
 							<div class="inputBox">
-								<input type="text" name="i00005-faxNumber" class="inp" id="i00005-faxNumber" placeholder="Fax Number">
+								<input type="text" name="i00006-faxNumber" class="inp Readonly" id="i00006-faxNumber" readonly="readonly" value="Fax Number">
 								<button class="inpReset"></button>
 							</div>
 						</dd>
 					</dl>
 					<div class="joinBtn">
+						<p class="txt" id="i00006-finalConfirm">By clicking “Confirm Subscription” button, you confirm to subscription of OPUS Logistics Service</p>
 						<div class="btns">
-							<button class="btn" id="i00005-next">Next</button>
+							<a href="" class="btn" id="i00006-backBillto">Back</a>
+							<button class="btn" id="i00006-confirmSubscription">Confirm Subscription</button>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="link">
-				<a href="#" id="i00005-helpLb">Help</a>
-				<a href="#" id="i00005-privacyLb">Privacy</a>
-				<a href="#" id="i00005-termsLb">Terms</a>
+				<a href="#" id="i00006-helpLb">Help</a>
+				<a href="#" id="i00006-privacyLb">Privacy</a>
+				<a href="#" id="i00006-termsLb">Terms</a>
 			</div>
 		</div>
 	</div>
