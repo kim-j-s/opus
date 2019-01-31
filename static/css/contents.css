@@ -16,6 +16,7 @@
 /* login */
 .flexWrap{position:relative; display:-webkit-box; display:-ms-flexbox; display:flex; height:100%; -webkit-box-align:center; -ms-flex-align:center; align-items:center;}
 .flexWrap:before {content:''; -webkit-box-flex:0; -ms-flex:0; flex:0; text-align:center;}
+.flexWrap > form {display:inline-block; margin:0 auto;}
 .flexLayer {display:inline-block; margin:0 auto;}
 .flexLayer > .inner { padding:10px; }
 .flexLayer > h1 {text-align:center;}
