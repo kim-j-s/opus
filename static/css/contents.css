@@ -68,13 +68,13 @@ h3.tit + .inpItem2 {margin-top:20px;}
 .inpItem + .inpItem {margin-top:15px;}
 .inpItem + .txtBox {margin-top:10px;}
 .inpItem + h3.tit {margin-top:20px;}
-.inpItem > dt {width:210px; float:left; padding:6px 10px 0 0; font-size:14px; word-break:break-all;}
-.inpItem > dt + dd {padding:0 0 0 210px;}
+.inpItem > dt {width:180px; float:left; padding:6px 10px 0 0; font-size:14px;}
+.inpItem > dt + dd {padding:0 0 0 180px;}
 .inpItem > dd {font-size:0;}
 .inpItem > dd .totalVal {display:inline-block; width:68px; padding:0 24px 0 0; font-size:14px; line-height:28px; text-align:right;}
 .inpItem > dd .totalVal + .inputBox {margin-left:7px;}
 .inpItem > dd .inputBox.count .inp {text-align:right;}
-.inpItem > dd .checkbox:nth-of-type(1) {margin-top:6px;}
+/* .inpItem > dd .checkbox:nth-of-type(1) {margin-top:6px;} */
 
 .inpItem2 {}
 .inpItem2 > dt {}

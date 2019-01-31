@@ -174,18 +174,6 @@ $(function(){
 	});
 
 
-	/*
-	$('.timeSelect').each(function(){
-		$(this).on('click', function(){
-			if ( $(this).find('.tsDropBox').css('display') == 'none')
-			{
-				$(this).find('.tsDropBox').show();
-			}
-		});
-	});
-	*/
-
-
 });
 
 
@@ -357,6 +345,7 @@ function tabListOut() {
 function InputReset() {
 	// input reset
 	$('.inpReset').click(function(){
+		console.log('active');
 		$(this).closest('.inputBox').find('.inp').val('');
 		$(this).hide();
 	});
@@ -371,6 +360,22 @@ function InputReset() {
 		{
 			$(this).next('button').css('display','none');
 		}
+	});
+
+	$(InpObj).unbind('focusin').focusin(function(){
+		if($(this).val().length >= 1) {
+			$(this).closest('.inputBox').find('button').css('display','block');
+		}
+	});
+
+	$('.inputBox').unbind('focusout').focusout(function(){
+		obj = this;
+		setTimeout(function(){
+			console.log('범용 포커스 아웃');
+			//$(obj).closest('.inputBox').find('.inpReset').hide();
+			$(obj).find('.inpReset').hide();
+		}, 500);
+		
 	});
 }
 
