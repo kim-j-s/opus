@@ -77,7 +77,9 @@ $(function(){
 	ACC();
 	$( ".comboSelect" ).combobox();
 
-
+	// time input
+	tsChk();
+	tsDisplay();
 
 
 	// date range picker
@@ -545,26 +547,75 @@ function ACC() {
     });
 }
 
-
 // time select
-function tsChk(e) {
-	var Hour = $(e).closest('.tsDropBox').find("input[name='hour']").val();
-	var Minute = $(e).closest('.tsDropBox').find("input[name='minute']").val();
-	var AmPm = $(e).closest('.tsDropBox').find("input[name='ampm']").val();
-	selectedTime = Hour + ':' + Minute + ' ' + AmPm;
-	if ( Hour == '' || Minute == '' || AmPm == '')
-	{
-		selectedTime = '';
-	}
-	$(e).closest('.timeSelect').find('.txt').html(selectedTime);
-	tsClose(e);
+function tsChk() {
+	$(".quantity").keypress(function (e) {
+		quantityVal = $(this).val();
+		if (quantityVal.length > 4)
+		{
+			$(this).val('');
+		}
+		if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+			return false;
+		}
+	});
 }
 
 // time select close
-function tsClose(e) {
-	setTimeout(function() {
-		$(e).closest('.tsDropBox').hide();
-	}, 100)
+function tsDisplay() {
+	$('.quantity').unbind('focusout').focusout(function(){
+		obj = this;
+		quantityVal = $(this).val();
+		if (quantityVal.length < 5 && !quantityVal == '')
+		{
+			var timeHour = quantityVal.substring(0,2);
+			var timeMinute = quantityVal.substring(2,4);
+			Time = this;
+			if (timeHour > 11)
+			{
+				ampm = 'PM'
+			} else {
+				ampm = 'AM'
+			}
+			
+			///Hour
+			if (timeHour.length == 1)
+			{
+				timeHour = '0' + timeHour;
+			}
+
+			// Minute
+			if (timeMinute.length == 1)
+			{
+				timeMinute = timeMinute + '0'
+			} else if (timeMinute.length == 0)
+			{
+				timeMinute = '00';
+			}
+			$(Time).val(timeHour + ' : ' + timeMinute + ' ' + ampm);
+
+			if (timeHour > 23)
+			{
+				$(Time).val('');
+				$(this).closest('.inputBox').find('.inpReset').hide();
+				$(".alertMessage.time").html('Please enter a correct value! - Hour: Between 0 ~ 23').show().fadeOut(4000);
+				return false;
+			}		
+			if (timeMinute > 59)
+			{
+				$(Time).val('');
+				$(this).closest('.inputBox').find('.inpReset').hide();
+				$(".alertMessage.time").html('Please enter a correct value! - Minute: Between 0 ~ 59').show().fadeOut(4000);
+				return false;
+			}
+		}
+		setTimeout(function(){
+			if ( !$(obj).closest('.inputBox').find('.inpReset').is(':focus'))
+			{
+				$(obj).closest('.inputBox').find('.inpReset').hide();
+			}
+		}, 10);
+	});
 }
 
 

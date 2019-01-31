@@ -303,104 +303,14 @@
 											<div class="inputBox Edit_date single">
 												<input type="text" name="cup10702_createDate" class="inp Readonly" id="cup10702_createDate" value="12-14-2018" readonly />
 											</div>
-											<div class="inputBox Edit_Time">
-												<input type="text" name="cup10702_createTime" class="inp quantity" id="cup10702_createTime" placeholder="-- : --" maxlength="4">
-												<button class="inpReset"></button>
-												<div class="alertMessage time" style="margin-top:10px; display:none;"></div>
+											<div class="inputBox Edit_Time readonly">
+												<input type="text" name="cup10702_createTime" class="inp Readonly" id="cup10702_createTime" value="10 : 20 AM" readonly="readonly">
 											</div>
-
-
-											<style type="text/css">
-												.fixa {
-													position: fixed;
-													top: 100px;
-													left: 100px;
-													border: 1px solid blue;
-													min-width: 200px;
-													height: 100px;
-													text-align: center;
-													background: #fff;
-													font-size: 14px;
-												}
-											</style>
-
-
-											<script type="text/javascript">
-												$(function() {
-													$(".quantity").keypress(function(e) {
-														quantityVal = $(this).val();
-														if (quantityVal.length > 4) {
-															$(this).val('');
-														}
-														if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-															return false;
-														}
-													});
-
-													$('.quantity').unbind('focusout').focusout(function() {
-														obj = this;
-														quantityVal = $(this).val();
-														if (quantityVal.length < 5 && !quantityVal == '') {
-															var timeHour = quantityVal.substring(0, 2);
-															var timeMinute = quantityVal.substring(2, 4);
-															Time = this;
-															if (timeHour > 11) {
-																ampm = 'PM'
-															} else {
-																ampm = 'AM'
-															}
-
-															///Hour
-															if (timeHour.length == 1) {
-																timeHour = '0' + timeHour;
-															}
-
-															// Minute
-															if (timeMinute.length == 1) {
-																timeMinute = timeMinute + '0'
-															} else if (timeMinute.length == 0) {
-																timeMinute = '00';
-															}
-															$(Time).val(timeHour + ' : ' + timeMinute + ' ' + ampm);
-
-															if (timeHour > 23) {
-																//alert('Please enter a correct value! - Hour: Between 0 ~ 23');
-																$(Time).val('');
-																$(this).closest('.inputBox').find('.inpReset').hide();
-																$(".alertMessage.time").html('Please enter a correct value! - Hour: Between 0 ~ 23').show().fadeOut(4000);
-																return false;
-															}
-															if (timeMinute > 59) {
-																//alert('Please enter a correct value! - Minute: Between 0 ~ 59');
-																$(Time).val('');
-																$(this).closest('.inputBox').find('.inpReset').hide();
-																$(".alertMessage.time").html('Please enter a correct value! - Minute: Between 0 ~ 59').show().fadeOut(4000);
-																return false;
-															}
-
-															setTimeout(function() {
-																if (!$(obj).closest('.inputBox').find('.inpReset').is(':focus')) {
-																	$(obj).closest('.inputBox').find('.inpReset').hide();
-																}
-															}, 10);
-
-														}
-
-													});
-
-
-
-												});
-											</script>
-
-
-											<div class="fixa"></div>
 										</div>
 										<div class="ele">
 											<div class="inputBox Edit_User">
-												<img src="../static/images/common/icon/icon_person.png" alt="" class="thumb" />
-												<input type="text" name="cup10702_createdBy" class="inp" id="cup10702_createdBy">
-												<button class="inpReset"></button>
+												<img src="../static/images/common/icon/icon_person_small.png" alt="" class="thumb" />
+												<input type="text" name="cup10702_createdBy" class="inp Readonly" id="cup10702_createdBy" value="Park, JungIl" readonly="readonly">
 											</div>
 										</div>
 										<!--// 2019-01-31 수정 -->
@@ -415,104 +325,14 @@
 											<div class="inputBox Edit_date single">
 												<input type="text" name="cup10702_modifiedDate" class="inp Readonly" id="cup10702_modifiedDate" value="12-14-2018" readonly />
 											</div>
-											<div class="inputBox Edit_Time">
-												<input type="text" name="cup10702_modifiedTime" class="inp quantity" id="cup10702_modifiedTime" placeholder="-- : --" maxlength="4">
-												<button class="inpReset"></button>
-												<div class="alertMessage time" style="margin-top:10px; display:none;"></div>
+											<div class="inputBox Edit_Time readonly">
+												<input type="text" name="cup10702_modifiedTime" class="inp Readonly" id="cup10702_modifiedTime" value="10 : 20 AM" readonly="readonly">
 											</div>
-
-
-											<style type="text/css">
-												.fixa {
-													position: fixed;
-													top: 100px;
-													left: 100px;
-													border: 1px solid blue;
-													min-width: 200px;
-													height: 100px;
-													text-align: center;
-													background: #fff;
-													font-size: 14px;
-												}
-											</style>
-
-
-											<script type="text/javascript">
-												$(function() {
-													$(".quantity").keypress(function(e) {
-														quantityVal = $(this).val();
-														if (quantityVal.length > 4) {
-															$(this).val('');
-														}
-														if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-															return false;
-														}
-													});
-
-													$('.quantity').unbind('focusout').focusout(function() {
-														obj = this;
-														quantityVal = $(this).val();
-														if (quantityVal.length < 5 && !quantityVal == '') {
-															var timeHour = quantityVal.substring(0, 2);
-															var timeMinute = quantityVal.substring(2, 4);
-															Time = this;
-															if (timeHour > 11) {
-																ampm = 'PM'
-															} else {
-																ampm = 'AM'
-															}
-
-															///Hour
-															if (timeHour.length == 1) {
-																timeHour = '0' + timeHour;
-															}
-
-															// Minute
-															if (timeMinute.length == 1) {
-																timeMinute = timeMinute + '0'
-															} else if (timeMinute.length == 0) {
-																timeMinute = '00';
-															}
-															$(Time).val(timeHour + ' : ' + timeMinute + ' ' + ampm);
-
-															if (timeHour > 23) {
-																//alert('Please enter a correct value! - Hour: Between 0 ~ 23');
-																$(Time).val('');
-																$(this).closest('.inputBox').find('.inpReset').hide();
-																$(".alertMessage.time").html('Please enter a correct value! - Hour: Between 0 ~ 23').show().fadeOut(4000);
-																return false;
-															}
-															if (timeMinute > 59) {
-																//alert('Please enter a correct value! - Minute: Between 0 ~ 59');
-																$(Time).val('');
-																$(this).closest('.inputBox').find('.inpReset').hide();
-																$(".alertMessage.time").html('Please enter a correct value! - Minute: Between 0 ~ 59').show().fadeOut(4000);
-																return false;
-															}
-
-															setTimeout(function() {
-																if (!$(obj).closest('.inputBox').find('.inpReset').is(':focus')) {
-																	$(obj).closest('.inputBox').find('.inpReset').hide();
-																}
-															}, 10);
-
-														}
-
-													});
-
-
-
-												});
-											</script>
-
-
-											<div class="fixa"></div>
 										</div>
 										<div class="ele">
 											<div class="inputBox Edit_User">
-												<img src="../static/images/common/icon/icon_person.png" alt="" class="thumb" />
-												<input type="text" name="cup10702_modifiedBy" class="inp" id="cup10702_modifiedBy">
-												<button class="inpReset"></button>
+												<img src="../static/images/common/icon/icon_person_small.png" alt="" class="thumb" />
+												<input type="text" name="cup10702_modifiedBy" class="inp Readonly" id="cup10702_modifiedBy" value="Park, JungIl" readonly="readonly">
 											</div>
 										</div>
 										<!--// 2019-01-31 수정 -->

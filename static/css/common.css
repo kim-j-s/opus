@@ -65,6 +65,7 @@
 
 
 .inputBox.Edit_Time {width:110px;}
+.inputBox.Edit_Time.readonly {}
 
 .inputBox.inpNone {border-radius:0;}
 .inputBox.inpNone > .inp {padding:0; border:none; font-weight:600; font-size:18px;}
