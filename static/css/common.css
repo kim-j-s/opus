@@ -56,7 +56,7 @@
 .inputBox.Edit_User > .thumb {position:absolute; top:5px; left:5px; width:20px; height:20px;}
 .inputBox.Edit_User > .inp {padding:0 28px 0 30px;}
 
-.inputBox.Edit_date {}
+.inputBox.Edit_date {vertical-align:top;}
 .inputBox.Edit_date:after {content:''; position:absolute; top:5px; right:5px; width:19px; height:17px; background:url(../images/common/sprite_common.png) no-repeat -126px -40px;}
 .inputBox.Edit_date > .inp {}
 

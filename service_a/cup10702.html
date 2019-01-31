@@ -306,6 +306,7 @@
 											<div class="inputBox Edit_Time">
 												<input type="text" name="cup10702_createTime" class="inp quantity" id="cup10702_createTime" placeholder="-- : --" maxlength="4">
 												<button class="inpReset"></button>
+												<div class="alertMessage time" style="margin-top:10px; display:none;">Please enter a correct value! - Hour: Between 0 ~ 23</div>
 											</div>
 
 
@@ -362,15 +363,17 @@
 															$(Time).val(timeHour + ' : ' + timeMinute + ' ' + ampm);
 
 															if (timeHour > 23) {
-																alert('Please enter a correct value! - Hour: Between 0 ~ 23');
+																//alert('Please enter a correct value! - Hour: Between 0 ~ 23');
 																$(Time).val('');
 																$(this).closest('.inputBox').find('.inpReset').hide();
+																$(".alertMessage.time").html('Please enter a correct value! - Hour: Between 0 ~ 23').show().fadeOut(4000);
 																return false;
 															}
 															if (timeMinute > 59) {
-																alert('Please enter a correct value! - Minute: Between 0 ~ 59');
+																//alert('Please enter a correct value! - Minute: Between 0 ~ 59');
 																$(Time).val('');
 																$(this).closest('.inputBox').find('.inpReset').hide();
+																$(".alertMessage.time").html('Please enter a correct value! - Minute: Between 0 ~ 59').show().fadeOut(4000);
 																return false;
 															}
 														}
@@ -407,6 +410,7 @@
 											<div class="inputBox Edit_Time">
 												<input type="text" name="cup10702_modifiedTime" class="inp quantity" id="cup10702_modifiedTime" placeholder="-- : --" maxlength="4">
 												<button class="inpReset"></button>
+												<div class="alertMessage time" style="margin-top:10px; display:none;">Please enter a correct value! - Hour: Between 0 ~ 23</div>
 											</div>
 
 
@@ -463,15 +467,17 @@
 															$(Time).val(timeHour + ' : ' + timeMinute + ' ' + ampm);
 
 															if (timeHour > 23) {
-																alert('Please enter a correct value! - Hour: Between 0 ~ 23');
+																//alert('Please enter a correct value! - Hour: Between 0 ~ 23');
 																$(Time).val('');
 																$(this).closest('.inputBox').find('.inpReset').hide();
+																$(".alertMessage.time").html('Please enter a correct value! - Hour: Between 0 ~ 23').show().fadeOut(4000);
 																return false;
 															}
 															if (timeMinute > 59) {
-																alert('Please enter a correct value! - Minute: Between 0 ~ 59');
+																//alert('Please enter a correct value! - Minute: Between 0 ~ 59');
 																$(Time).val('');
 																$(this).closest('.inputBox').find('.inpReset').hide();
+																$(".alertMessage.time").html('Please enter a correct value! - Minute: Between 0 ~ 59').show().fadeOut(4000);
 																return false;
 															}
 														}
