@@ -368,15 +368,20 @@ function InputReset() {
 		}
 	});
 
-	$('.inputBox').unbind('focusout').focusout(function(){
+	$('.inpReset').unbind('focusout').focusout(function(){
+		$(this).hide();
+	});
+
+	$(InpObj).unbind('focusout').focusout(function(){
 		obj = this;
 		setTimeout(function(){
-			console.log('범용 포커스 아웃');
-			//$(obj).closest('.inputBox').find('.inpReset').hide();
-			$(obj).find('.inpReset').hide();
-		}, 500);
-		
+			if ( !$(obj).closest('.inputBox').find('.inpReset').is(':focus'))
+			{
+				$(obj).closest('.inputBox').find('.inpReset').hide();
+			}
+		}, 10);
 	});
+
 }
 
 // input Number

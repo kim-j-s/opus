@@ -306,7 +306,7 @@
 											<div class="inputBox Edit_Time">
 												<input type="text" name="cup10702_createTime" class="inp quantity" id="cup10702_createTime" placeholder="-- : --" maxlength="4">
 												<button class="inpReset"></button>
-												<div class="alertMessage time" style="margin-top:10px; display:none;">Please enter a correct value! - Hour: Between 0 ~ 23</div>
+												<div class="alertMessage time" style="margin-top:10px; display:none;"></div>
 											</div>
 
 
@@ -338,6 +338,7 @@
 													});
 
 													$('.quantity').unbind('focusout').focusout(function() {
+														obj = this;
 														quantityVal = $(this).val();
 														if (quantityVal.length < 5 && !quantityVal == '') {
 															var timeHour = quantityVal.substring(0, 2);
@@ -376,6 +377,13 @@
 																$(".alertMessage.time").html('Please enter a correct value! - Minute: Between 0 ~ 59').show().fadeOut(4000);
 																return false;
 															}
+
+															setTimeout(function() {
+																if (!$(obj).closest('.inputBox').find('.inpReset').is(':focus')) {
+																	$(obj).closest('.inputBox').find('.inpReset').hide();
+																}
+															}, 10);
+
 														}
 
 													});
@@ -410,7 +418,7 @@
 											<div class="inputBox Edit_Time">
 												<input type="text" name="cup10702_modifiedTime" class="inp quantity" id="cup10702_modifiedTime" placeholder="-- : --" maxlength="4">
 												<button class="inpReset"></button>
-												<div class="alertMessage time" style="margin-top:10px; display:none;">Please enter a correct value! - Hour: Between 0 ~ 23</div>
+												<div class="alertMessage time" style="margin-top:10px; display:none;"></div>
 											</div>
 
 
@@ -442,6 +450,7 @@
 													});
 
 													$('.quantity').unbind('focusout').focusout(function() {
+														obj = this;
 														quantityVal = $(this).val();
 														if (quantityVal.length < 5 && !quantityVal == '') {
 															var timeHour = quantityVal.substring(0, 2);
@@ -480,6 +489,13 @@
 																$(".alertMessage.time").html('Please enter a correct value! - Minute: Between 0 ~ 59').show().fadeOut(4000);
 																return false;
 															}
+
+															setTimeout(function() {
+																if (!$(obj).closest('.inputBox').find('.inpReset').is(':focus')) {
+																	$(obj).closest('.inputBox').find('.inpReset').hide();
+																}
+															}, 10);
+
 														}
 
 													});
