@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="x-apple-disable-message-reformatting" />
+	<title>Customer Portal</title>
+	<link rel="shortcut icon" href="../static/images/common/favicon.ico">
+	<link href="../static/css/lib/swiper.css" rel="stylesheet">
+	<link href="../static/css/reset.css" rel="stylesheet" />
+	<link href="../static/css/common.css" rel="stylesheet" />
+	<link href="../static/css/contents.css" rel="stylesheet" />
+	<script type="text/javascript" src="../static/js/common.js"></script>
+	<script type="text/javascript" src="../static/js/lib/moment.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/daterangepicker.js"></script>
+	<script type="text/javascript" src="../static/js/lib/quill.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jQuery.dPassword.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery.easy-autocomplete.js"></script>
+	<script type="text/javascript" src="../static/js/lib/semantic.min.js"></script>
+	<script type="text/javascript" src="../static/js/ui.js"></script>
+	<!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- 헤더영역 -->
+		<header id="headerWrap">
+			<h1><img src="../static/images/common/logo.jpg" alt="OPUS Logistics" /></h1>
+		</header>
+		<!-- //헤더영역 -->
+		<section id="container">
+			<div class="inner">
+				<nav>
+					<div class="menuAll">
+						<button class="allBtn">
+							<span>Menu</span>
+						</button>
+					</div>
+					<div class="gnb">
+						<ul class="gnbList">
+							<li>
+								<div class="gnbTit">Organization</div>
+								<ul class="dept">
+									<li><a href="#">Organization List</a></li>
+									<li><a href="#">Organization</a></li>
+								</ul>
+								<button class="clip on"></button>
+							</li>
+							<li>
+								<div class="gnbTit">Warehousing</div>
+								<ul class="dept">
+									<li><a href="">Subscription List</a></li>
+									<li><a href="">Subscription List (Waiting)</a></li>
+									<li><a href="">Subscription List (Approved)</a></li>
+									<li><a href="">Subscription List (Cancelled)</a></li>
+									<li><a href="">Subscription List (Withdraw)</a></li>
+								</ul>
+								<button class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit">Billing</div>
+								<ul class="dept">
+									<li><a href="">Billing Policy List</a></li>
+									<li><a href="">Invoice List</a></li>
+									<li><a href="">Invoice List (Waiting)</a></li>
+									<li><a href="">Invoice List (Sent)</a></li>
+									<li><a href="">Invoice List (Paid)</a></li>
+									<li><a href="">Invoice List (Cancelled)</a></li>
+									<li><a href="">Scheduler and History</a></li>
+								</ul>
+								<button class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit">Usage</div>
+								<ul class="dept">
+									<li><a href="">Usage List</a></li>
+									<li><a href="">Usage List (Seat)</a></li>
+									<li><a href="">Usage List (Transaction)</a></li>
+									<li><a href="">Transaction List</a></li>
+								</ul>
+								<button class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit">Service</div>
+								<ul class="dept">
+									<li><a href="#">Service List</a></li>
+									<li><a href="#">Tariff List</a></li>
+									<li><a href="">Service Group List</a></li>
+								</ul>
+								<button class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit">Notice</div>
+								<ul class="dept">
+									<li><a href="#">Notice List</a></li>
+								</ul>
+								<button class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit">Administration</div>
+								<ul class="dept">
+									<li><a href="#">System Code List</a></li>
+									<li><a href="#">Role List</a></li>
+									<li><a href="#">Mail Transmit History</a></li>
+								</ul>
+								<button class="clip"></button>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="content">
+					<div class="tabWrap">
+						<ul class="tabList">
+							<li class="home single">
+								<a href="#">Home</a>
+							</li>
+							<li>
+								<a href="#" class="on">
+									<span>House B/L 1</span>
+									<span>OBK-000468</span>
+								</a>
+								<button class="tabClose">Close</button>
+							</li>
+							<li>
+								<a href="#">
+									<span>House B/L 2</span>
+									<span>OBK-000468</span>
+								</a>
+								<button class="tabClose">Close</button>
+							</li>
+							<li>
+								<a href="#">
+									<span>House B/L 3</span>
+									<span>OBK-000468</span>
+								</a>
+								<button class="tabClose">Close</button>
+							</li>
+							<li>
+								<a href="#">
+									<span>House B/L 4</span>
+									<span>OBK-000468</span>
+								</a>
+								<button class="tabClose">Close</button>
+							</li>
+						</ul>
+						<div class="tabListBox">
+							<ul>
+							</ul>
+						</div>
+					</div>
+					<!-- 컨텐츠 영역 -->
+					<div class="Layout_Sidebar">
+						<h2 class="tit" id="cup10702_serviceLb">Service</h2>
+						<div class="serviceCode">
+							<!-- 2019-01-30 수정 -->
+							<div class="srvNum" id="cup10702_serviceIDLb">
+								<div class="inputBox inpNone">
+									<input type="text" name="" class="inp" id="" readonly="readonly" value="S10000001">
+								</div>
+							</div>
+							<!--// 2019-01-30 수정 -->
+							<div class="actChk">
+								<!-- 2019-01-29 수정 -->
+								<div class="switchChk">
+									<input type="checkbox" name="cup10702_activeChk" id="cup10702_activeChk">
+									<label for="cup10702_activeChk" id="cup10702_active">
+										<span class="txt1">Inactive</span>
+										<span class="txt2">Active</span>
+									</label>
+								</div>
+								<!--// 2019-01-29 수정 -->
+							</div>
+						</div>
+						<div class="inner saveAdd">
+							<div class="lsCont">
+								<h3 class="tit" id="cup10702_basicLb">Basic</h3>
+								<ul class="itemList2">
+									<li>
+										<dl class="inpItem">
+											<dt id="cup10702_serviceTypeLb">Service Type</dt>
+											<dd>
+												<div class="comboBox">
+													<select class="comboSelect" id="cup10702_serviceType" placeholder="Select a Type">
+														<option value="">Select a Type</option>
+														<option value="T-Shirt">T-Shirt</option>
+														<option value="T-Shirt Woman">T-Shirt Woman</option>
+														<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+														<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+													</select>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="inpItem">
+											<dt id="cup10702_serviceNameLb">Service Name</dt>
+											<dd>
+												<div class="inputBox">
+													<input type="text" name="cup10702_serviceName" class="inp Mandate" id="cup10702_serviceName" maxlength="50">
+													<button class="inpReset"></button>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="inpItem">
+											<dt id="cup10702_serviceAliasLb">Service Alias</dt>
+											<dd>
+												<div class="inputBox">
+													<input type="text" name="cup10702_serviceAlias" class="inp" id="cup10702_serviceAlias">
+													<button class="inpReset"></button>
+													<div class="tooltip">
+														<div class="tips">
+															<strong class="tit">Alias</strong>
+															<p class="txt">Alias can be service <br />code or abbreviation.</p>
+														</div>
+													</div>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="inpItem">
+											<dt id="cup10702_descriptionLb">Description</dt>
+											<dd>
+												<div class="textareaDiv">
+													<textarea name="" id="cup10702_description" cols="30" rows="10" class="textarea" maxlength="500"></textarea>
+													<div class="byte"><span class="bold">100</span>/150</div>
+												</div>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+
+								<h3 class="tit" id="cup10702_suggestedTariffLb">Selling</h3>
+								<ul class="itemList2">
+									<li>
+										<dl class="inpItem">
+											<dt id="cup10702_suggestedTariff">Suggested Tariff</dt>
+											<dd>
+												<!-- 2019-01-30 수정 -->
+												<div class="comboBox">
+													<select class="comboSelect" id="cup10702_suggestedTariff" placeholder="Select a Tariff">
+														<option value="">Select a Type</option>
+														<option value="T-Shirt">T-Shirt</option>
+														<option value="T-Shirt Woman">T-Shirt Woman</option>
+														<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+														<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+													</select>
+												</div>
+												<!--// 2019-01-30 수정 -->
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="inpItem">
+											<dt id="cup10702_addTariffLb">Need New Tariff?</dt>
+											<dd>
+												<button class="btn" id="cup10702_newTariff">Add Tariff</button>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="inpItem">
+											<dt id="cup10702_isForOnlineSalesLb">Is for Online Sales</dt>
+											<dd>
+												<div class="checkbox">
+													<input type="checkbox" name="cup10702_isForOnlineSalesChk" id="cup10702_isForOnlineSalesChk" checked="checked"><label for="cup10702_isForOnlineSalesChk" id="cup10702_isForOnlineSales">Apply</label>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="inpItem">
+											<dt id="cup10702_displayOrderLb">Display Order</dt>
+											<dd>
+												<div class="inputBox">
+													<input type="text" name="cup10702_displayOrder" class="inp" id="cup10702_displayOrder" placeholder="Ascending Order" maxlength="10">
+													<button class="inpReset"></button>
+												</div>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+							<div class="lsCont fix">
+								<h3 class="tit">Record</h3>
+								<dl class="inpItem2">
+									<dt id="cup10702_createdOnLb">Created on</dt>
+									<dd>
+										<!-- 2019-01-30 수정 -->
+										<div class="ele">
+											<div class="inputBox Edit_date single">
+												<input type="text" name="cup10702_createDate" class="inp Readonly" id="cup10702_createDate" value="12-14-2018" readonly />
+											</div>
+											<div class="timeSelect">
+												<div class="txt"></div>
+												<div class="tsDropBox">
+													<div class="ui selection dropdown">
+														<input type="hidden" name="hour">
+														<i class="dropdown icon"></i>
+														<div class="default text"></div>
+														<div class="menu">
+															<div class="item" data-value="1">1</div>
+															<div class="item" data-value="2">2</div>
+															<div class="item" data-value="3">3</div>
+															<div class="item" data-value="4">4</div>
+															<div class="item" data-value="5">5</div>
+															<div class="item" data-value="6">6</div>
+															<div class="item" data-value="7">7</div>
+															<div class="item" data-value="8">8</div>
+															<div class="item" data-value="9">9</div>
+															<div class="item" data-value="10">10</div>
+															<div class="item" data-value="11">11</div>
+															<div class="item" data-value="12">12</div>
+														</div>
+													</div>
+													<div class="ui selection dropdown">
+														<input type="hidden" name="minute">
+														<i class="dropdown icon"></i>
+														<div class="default text"></div>
+														<div class="menu">
+															<div class="item" data-value="1">1</div>
+															<div class="item" data-value="2">2</div>
+															<div class="item" data-value="3">3</div>
+															<div class="item" data-value="4">4</div>
+															<div class="item" data-value="5">5</div>
+															<div class="item" data-value="6">6</div>
+															<div class="item" data-value="7">7</div>
+															<div class="item" data-value="8">8</div>
+															<div class="item" data-value="9">9</div>
+															<div class="item" data-value="10">10</div>
+															<div class="item" data-value="11">11</div>
+															<div class="item" data-value="12">12</div>
+															<div class="item" data-value="13">13</div>
+															<div class="item" data-value="14">14</div>
+															<div class="item" data-value="15">15</div>
+															<div class="item" data-value="16">16</div>
+															<div class="item" data-value="17">17</div>
+															<div class="item" data-value="18">18</div>
+															<div class="item" data-value="19">19</div>
+															<div class="item" data-value="20">20</div>
+															<div class="item" data-value="21">21</div>
+															<div class="item" data-value="22">22</div>
+															<div class="item" data-value="23">23</div>
+															<div class="item" data-value="24">24</div>
+															<div class="item" data-value="25">25</div>
+															<div class="item" data-value="26">26</div>
+															<div class="item" data-value="27">27</div>
+															<div class="item" data-value="28">28</div>
+															<div class="item" data-value="29">29</div>
+															<div class="item" data-value="30">30</div>
+															<div class="item" data-value="31">31</div>
+															<div class="item" data-value="32">32</div>
+															<div class="item" data-value="33">33</div>
+															<div class="item" data-value="34">34</div>
+															<div class="item" data-value="35">35</div>
+															<div class="item" data-value="36">36</div>
+															<div class="item" data-value="37">37</div>
+															<div class="item" data-value="38">38</div>
+															<div class="item" data-value="39">39</div>
+															<div class="item" data-value="40">40</div>
+															<div class="item" data-value="41">41</div>
+															<div class="item" data-value="42">42</div>
+															<div class="item" data-value="43">43</div>
+															<div class="item" data-value="44">44</div>
+															<div class="item" data-value="45">45</div>
+															<div class="item" data-value="46">46</div>
+															<div class="item" data-value="47">47</div>
+															<div class="item" data-value="48">48</div>
+															<div class="item" data-value="49">49</div>
+															<div class="item" data-value="50">50</div>
+															<div class="item" data-value="51">51</div>
+															<div class="item" data-value="52">52</div>
+															<div class="item" data-value="53">53</div>
+															<div class="item" data-value="54">54</div>
+															<div class="item" data-value="55">55</div>
+															<div class="item" data-value="56">56</div>
+															<div class="item" data-value="57">57</div>
+															<div class="item" data-value="58">58</div>
+															<div class="item" data-value="59">59</div>
+															<div class="item" data-value="60">60</div>
+														</div>
+													</div>
+													<div class="ui selection dropdown">
+														<input type="hidden" name="ampm">
+														<i class="dropdown icon"></i>
+														<div class="default text"></div>
+														<div class="menu">
+															<div class="item" data-value="AM">AM</div>
+															<div class="item" data-value="PM">PM</div>
+														</div>
+													</div>
+													<button class="btn" onclick="tsChk(this)">Ok</button>
+													<button class="btn" onclick="tsClose(this)">Cancel</button>
+												</div>
+
+											</div>
+										</div>
+										<div class="ele">
+											<div class="inputBox Edit_User">
+												<img src="../static/images/common/icon/icon_person.png" alt="" class="thumb" />
+												<input type="text" name="cup10702_createdBy" class="inp" id="cup10702_createdBy">
+												<button class="inpReset"></button>
+											</div>
+										</div>
+										<!--// 2019-01-30 수정 -->
+									</dd>
+								</dl>
+
+								<dl class="inpItem2">
+									<dt id="cup10702_modifiedOnLb">Modified on</dt>
+									<dd>
+										<!-- 2019-01-30 수정 -->
+										<div class="ele">
+											<div class="inputBox Edit_date single">
+												<input type="text" name="cup10702_modifiedDate" class="inp Readonly" id="cup10702_modifiedDate" value="12-14-2018" readonly />
+											</div>
+											<div class="timeSelect">
+												<div class="txt"></div>
+												<div class="tsDropBox">
+													<div class="ui selection dropdown">
+														<input type="hidden" name="hour">
+														<i class="dropdown icon"></i>
+														<div class="default text"></div>
+														<div class="menu">
+															<div class="item" data-value="1">1</div>
+															<div class="item" data-value="2">2</div>
+															<div class="item" data-value="3">3</div>
+															<div class="item" data-value="4">4</div>
+															<div class="item" data-value="5">5</div>
+															<div class="item" data-value="6">6</div>
+															<div class="item" data-value="7">7</div>
+															<div class="item" data-value="8">8</div>
+															<div class="item" data-value="9">9</div>
+															<div class="item" data-value="10">10</div>
+															<div class="item" data-value="11">11</div>
+															<div class="item" data-value="12">12</div>
+														</div>
+													</div>
+													<div class="ui selection dropdown">
+														<input type="hidden" name="minute">
+														<i class="dropdown icon"></i>
+														<div class="default text"></div>
+														<div class="menu">
+															<div class="item" data-value="1">1</div>
+															<div class="item" data-value="2">2</div>
+															<div class="item" data-value="3">3</div>
+															<div class="item" data-value="4">4</div>
+															<div class="item" data-value="5">5</div>
+															<div class="item" data-value="6">6</div>
+															<div class="item" data-value="7">7</div>
+															<div class="item" data-value="8">8</div>
+															<div class="item" data-value="9">9</div>
+															<div class="item" data-value="10">10</div>
+															<div class="item" data-value="11">11</div>
+															<div class="item" data-value="12">12</div>
+															<div class="item" data-value="13">13</div>
+															<div class="item" data-value="14">14</div>
+															<div class="item" data-value="15">15</div>
+															<div class="item" data-value="16">16</div>
+															<div class="item" data-value="17">17</div>
+															<div class="item" data-value="18">18</div>
+															<div class="item" data-value="19">19</div>
+															<div class="item" data-value="20">20</div>
+															<div class="item" data-value="21">21</div>
+															<div class="item" data-value="22">22</div>
+															<div class="item" data-value="23">23</div>
+															<div class="item" data-value="24">24</div>
+															<div class="item" data-value="25">25</div>
+															<div class="item" data-value="26">26</div>
+															<div class="item" data-value="27">27</div>
+															<div class="item" data-value="28">28</div>
+															<div class="item" data-value="29">29</div>
+															<div class="item" data-value="30">30</div>
+															<div class="item" data-value="31">31</div>
+															<div class="item" data-value="32">32</div>
+															<div class="item" data-value="33">33</div>
+															<div class="item" data-value="34">34</div>
+															<div class="item" data-value="35">35</div>
+															<div class="item" data-value="36">36</div>
+															<div class="item" data-value="37">37</div>
+															<div class="item" data-value="38">38</div>
+															<div class="item" data-value="39">39</div>
+															<div class="item" data-value="40">40</div>
+															<div class="item" data-value="41">41</div>
+															<div class="item" data-value="42">42</div>
+															<div class="item" data-value="43">43</div>
+															<div class="item" data-value="44">44</div>
+															<div class="item" data-value="45">45</div>
+															<div class="item" data-value="46">46</div>
+															<div class="item" data-value="47">47</div>
+															<div class="item" data-value="48">48</div>
+															<div class="item" data-value="49">49</div>
+															<div class="item" data-value="50">50</div>
+															<div class="item" data-value="51">51</div>
+															<div class="item" data-value="52">52</div>
+															<div class="item" data-value="53">53</div>
+															<div class="item" data-value="54">54</div>
+															<div class="item" data-value="55">55</div>
+															<div class="item" data-value="56">56</div>
+															<div class="item" data-value="57">57</div>
+															<div class="item" data-value="58">58</div>
+															<div class="item" data-value="59">59</div>
+															<div class="item" data-value="60">60</div>
+														</div>
+													</div>
+													<div class="ui selection dropdown">
+														<input type="hidden" name="ampm">
+														<i class="dropdown icon"></i>
+														<div class="default text"></div>
+														<div class="menu">
+															<div class="item" data-value="AM">AM</div>
+															<div class="item" data-value="PM">PM</div>
+														</div>
+													</div>
+													<button class="btn" onclick="tsChk(this)">Ok</button>
+													<button class="btn" onclick="tsClose(this)">Cancel</button>
+												</div>
+
+											</div>
+										</div>
+										<div class="ele">
+											<div class="inputBox Edit_User">
+												<img src="../static/images/common/icon/icon_person.png" alt="" class="thumb" />
+												<input type="text" name="cup10702_modifiedBy" class="inp" id="cup10702_modifiedBy">
+												<button class="inpReset"></button>
+											</div>
+										</div>
+										<!--// 2019-01-30 수정 -->
+									</dd>
+								</dl>
+
+							</div>
+						</div>
+						<div class="saveDiv">
+							<button class="btn" id="cup10702_Save">Save</button>
+						</div>
+					</div>
+					<!--// 컨텐츠 영역 -->
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+
+</html>

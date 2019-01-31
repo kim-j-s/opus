@@ -39,56 +39,6 @@
 		</header>
 		<!-- //헤더영역 -->
 
-		<style type="text/css">
-			.layer {}
-
-			.layer .double {
-				font-size: 0;
-				height: 100%;
-				background: #ddd;
-			}
-
-			.layer .double>.ele {
-				display: inline-block;
-				font-size: 0;
-				min-width: 300px;
-				max-width: 500px;
-				height: 100%;
-			}
-
-			.layer .double>.ele:first-child {
-				background: blue;
-			}
-
-			.layer .opt {
-				width: 300px;
-				height: 100%;
-				background: #333;
-			}
-
-			.fix2 {
-				position: fixed;
-				top: 700px;
-				left: 100px;
-				z-index: 111;
-				min-width: 100px;
-				text-align: center;
-				height: 50px;
-				line-height: 50px;
-				border: 1px solid #333;
-				background: #fff;
-				padding: 0 10px;
-			}
-
-			.box {
-				margin-top: 50px;
-				width: 200px;
-			}
-		</style>
-
-
-		<div class="fix2">탭 추가</div>
-
 		<section id="container">
 			<div class="inner">
 				<nav>
@@ -210,96 +160,28 @@
 						</div>
 					</div>
 
-					<div class="Layout_List">
-						<h2 class="tit" id="i10701-serviceListLb">Service List</h2>
-						<div class="schOptionGroup">
-							<ul class="itemList1">
-								<li>
-									<dl class="inpItem">
-										<dt id="">Keyword</dt>
-										<dd>
-											<div class="inputBox schType keyword">
-												<div class="inner">
-													<input type="text" name="" class="inp autoSch keyword name" id="i10003-company" placeholder="Type Company Name">
-													<button class="inpReset"></button>
-												</div>
-											</div>
-										</dd>
-									</dl>
-								</li>
-								<li>
-									<dl class="inpItem">
-										<dt>B/L Date</dt>
-										<dd>
-											<div class="inputBox Edit_date">
-												<input type="text" name="daterange" class="inp daterange" id="" value="01/01/2018 - 01/15/2018" />
-											</div>
-										</dd>
-									</dl>
-								</li>
-								<li>
-									<dl class="inpItem">
-										<dt>Item Description</dt>
-										<dd>
-											<div class="comboBox">
-												<select class="comboSelect" id="" placeholder="Select a Type">
-													<option value="">Select a Type</option>
-													<option value="T-Shirt">T-Shirt</option>
-													<option value="T-Shirt Woman">T-Shirt Woman</option>
-													<option value="Yellow T-Shirt">Yellow T-Shirt</option>
-													<option value="Zebra T-Shoot">Zebra T-Shoot</option>
-												</select>
-											</div>
-										</dd>
-									</dl>
-								</li>
-								<li>
-									<dl class="inpItem">
-										<dt>Item Description</dt>
-										<dd>
-											<div class="comboBox">
-												<select class="comboSelect" id="" placeholder="Select a Type">
-													<option value="">Select a Type</option>
-													<option value="T-Shirt">T-Shirt</option>
-													<option value="T-Shirt Woman">T-Shirt Woman</option>
-													<option value="Yellow T-Shirt">Yellow T-Shirt</option>
-													<option value="Zebra T-Shoot">Zebra T-Shoot</option>
-												</select>
-											</div>
-										</dd>
-									</dl>
-								</li>
-							</ul>
-							<button class="btn" id="i10701-search">Search</button>
-						</div>
-						<h3 class="tit" id="i10701-servicesLb">Services</h3>
-						<div class="ibsheepTop">
-							<div class="filter" id="i10701-filterStatus">filter</div>
-							<button class="btn" id="i10701-addService">Add Service</button>
-						</div>
-						<div class="ibsheetDiv">
-							ibsheet
-						</div>
+					<div class="carea">
+						컨텐츠 영역
 					</div>
+
 				</div>
 			</div>
 		</section>
 	</div>
-	<script type="text/javascript">
-		$(function() {
-			var xxx = '<li><a href="#"><span>House B/L 9</span><span>OBK-000468</span></a><button class="tabClose" onclick="TabRemove(this)">Close</button></li>';
-			$('.fix2').click(function() {
-				$(xxx).appendTo('.tabList');
-				TablistSort();
-			});
 
-		});
-
-		function TabRemove(e) {
-			$(e).closest('li').remove();
-			TablistSort();
+	<style type="text/css">
+		.carea {
+			width: 100%;
+			height: 100%;
+			background: #ddd;
+			text-align: center;
+			font-weight: 600;
+			font-size: 100px;
+			vertical-align: middle;
+			color: #333;
 		}
-	</script>
+	</style>
+
 </body>
 
 </html>
