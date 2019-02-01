@@ -33,207 +33,197 @@
 
 <body>
 	<div class="wrapper">
-		<!-- 헤더영역 -->
-		<header id="headerWrap">
-			<h1><img src="../static/images/common/logo.jpg" alt="OPUS Logistics" /></h1>
-		</header>
-		<!-- //헤더영역 -->
-		<section id="container">
-			<div class="inner">
-				<nav>
-					<div class="menuAll">
-						<button class="allBtn">
-							<span>Menu</span>
-						</button>
-					</div>
-					<div class="gnb">
-						<ul class="gnbList">
-							<li>
-								<div class="gnbTit">Organization</div>
-								<ul class="dept">
-									<li><a href="#">Organization List</a></li>
-									<li><a href="#">Organization</a></li>
-								</ul>
-								<button class="clip on"></button>
-							</li>
-							<li>
-								<div class="gnbTit">Warehousing</div>
-								<ul class="dept">
-									<li><a href="">Subscription List</a></li>
-									<li><a href="">Subscription List (Waiting)</a></li>
-									<li><a href="">Subscription List (Approved)</a></li>
-									<li><a href="">Subscription List (Cancelled)</a></li>
-									<li><a href="">Subscription List (Withdraw)</a></li>
-								</ul>
-								<button class="clip"></button>
-							</li>
-							<li>
-								<div class="gnbTit">Billing</div>
-								<ul class="dept">
-									<li><a href="">Billing Policy List</a></li>
-									<li><a href="">Invoice List</a></li>
-									<li><a href="">Invoice List (Waiting)</a></li>
-									<li><a href="">Invoice List (Sent)</a></li>
-									<li><a href="">Invoice List (Paid)</a></li>
-									<li><a href="">Invoice List (Cancelled)</a></li>
-									<li><a href="">Scheduler and History</a></li>
-								</ul>
-								<button class="clip"></button>
-							</li>
-							<li>
-								<div class="gnbTit">Usage</div>
-								<ul class="dept">
-									<li><a href="">Usage List</a></li>
-									<li><a href="">Usage List (Seat)</a></li>
-									<li><a href="">Usage List (Transaction)</a></li>
-									<li><a href="">Transaction List</a></li>
-								</ul>
-								<button class="clip"></button>
-							</li>
-							<li>
-								<div class="gnbTit">Service</div>
-								<ul class="dept">
-									<li><a href="#">Service List</a></li>
-									<li><a href="#">Tariff List</a></li>
-									<li><a href="">Service Group List</a></li>
-								</ul>
-								<button class="clip"></button>
-							</li>
-							<li>
-								<div class="gnbTit">Notice</div>
-								<ul class="dept">
-									<li><a href="#">Notice List</a></li>
-								</ul>
-								<button class="clip"></button>
-							</li>
-							<li>
-								<div class="gnbTit">Administration</div>
-								<ul class="dept">
-									<li><a href="#">System Code List</a></li>
-									<li><a href="#">Role List</a></li>
-									<li><a href="#">Mail Transmit History</a></li>
-								</ul>
-								<button class="clip"></button>
-							</li>
-						</ul>
-					</div>
-				</nav>
-				<div class="content">
-					<div class="tabWrap">
-						<ul class="tabList">
-							<li class="home single">
-								<a href="#">Home</a>
-							</li>
-							<li>
-								<a href="#" class="on">
-									<span>House B/L 1</span>
-									<span>OBK-000468</span>
-								</a>
-								<button class="tabClose">Close</button>
-							</li>
-							<li>
-								<a href="#">
-									<span>House B/L 2</span>
-									<span>OBK-000468</span>
-								</a>
-								<button class="tabClose">Close</button>
-							</li>
-							<li>
-								<a href="#">
-									<span>House B/L 3</span>
-									<span>OBK-000468</span>
-								</a>
-								<button class="tabClose">Close</button>
-							</li>
-							<li>
-								<a href="#">
-									<span>House B/L 4</span>
-									<span>OBK-000468</span>
-								</a>
-								<button class="tabClose">Close</button>
-							</li>
-						</ul>
-						<div class="tabListBox">
-							<ul>
+		<form action="">
+			<!-- 헤더영역 -->
+			<header id="headerWrap">
+				<h1><img src="../static/images/common/logo.jpg" alt="OPUS Logistics" /></h1>
+			</header>
+			<!-- //헤더영역 -->
+			<section id="container">
+				<div class="inner">
+					<nav>
+						<div class="menuAll">
+							<button type="button" class="allBtn">
+								<!-- 2019-02-01 수정 -->
+								<span>Menu</span>
+							</button>
+						</div>
+						<div class="gnb">
+							<ul class="gnbList">
+								<li>
+									<div class="gnbTit ty1">Organization</div> <!-- 2019-02-01 수정 -->
+									<ul class="dept">
+										<li><a href="#">Organization List</a></li>
+										<li><a href="#">Organization</a></li>
+									</ul>
+									<button type="button" class="clip on"></button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<div class="gnbTit ty2">Subscription</div> <!-- 2019-02-01 수정 -->
+									<ul class="dept">
+										<li><a href="">Subscription List</a></li>
+										<li><a href="">Subscription List (Waiting)</a></li>
+										<li><a href="">Subscription List (Approved)</a></li>
+										<li><a href="">Subscription List (Cancelled)</a></li>
+										<li><a href="">Subscription List (Withdraw)</a></li>
+									</ul>
+									<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<div class="gnbTit ty3">Billing</div> <!-- 2019-02-01 수정 -->
+									<ul class="dept">
+										<li><a href="">Billing Policy List</a></li>
+										<li><a href="">Invoice List</a></li>
+										<li><a href="">Invoice List (Waiting)</a></li>
+										<li><a href="">Invoice List (Sent)</a></li>
+										<li><a href="">Invoice List (Paid)</a></li>
+										<li><a href="">Invoice List (Cancelled)</a></li>
+										<li><a href="">Scheduler and History</a></li>
+									</ul>
+									<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<div class="gnbTit ty4">Usage</div> <!-- 2019-02-01 수정 -->
+									<ul class="dept">
+										<li><a href="">Usage List</a></li>
+										<li><a href="">Usage List (Seat)</a></li>
+										<li><a href="">Usage List (Transaction)</a></li>
+										<li><a href="">Transaction List</a></li>
+									</ul>
+									<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<div class="gnbTit ty5">Pricing</div> <!-- 2019-02-01 수정 -->
+									<ul class="dept">
+										<li><a href="#">Service List</a></li>
+										<li><a href="#">Tariff List</a></li>
+										<li><a href="">Service Group List</a></li>
+									</ul>
+									<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<div class="gnbTit ty6">Notice</div> <!-- 2019-02-01 수정 -->
+									<ul class="dept">
+										<li><a href="#">Notice List</a></li>
+									</ul>
+									<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<div class="gnbTit ty7">Administration</div> <!-- 2019-02-01 수정 -->
+									<ul class="dept">
+										<li><a href="#">System Code List</a></li>
+										<li><a href="#">Role List</a></li>
+										<li><a href="#">Mail Transmit History</a></li>
+									</ul>
+									<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								</li>
 							</ul>
 						</div>
-					</div>
-					<!-- 컨텐츠 영역 -->
-					<div class="Layout_List">
-						<h2 class="tit" id="i10701_serviceListLb">Service List</h2>
-						<div class="schOptionGroup">
-							<ul class="itemList1">
+					</nav>
+					<div class="content">
+						<div class="tabWrap">
+							<ul class="tabList">
+								<li class="home single">
+									<a href="#">Home</a>
+								</li>
 								<li>
-									<dl class="inpItem">
-										<dt id="">Keyword</dt>
-										<dd>
-											<div class="inputBox schType keyword">
-												<div class="inner">
-													<input type="text" name="" class="inp autoSch keyword name" id="" placeholder="Type Company Name">
-													<button class="inpReset"></button>
+									<a href="#" class="on">
+										<span>House B/L 1</span>
+										<span>OBK-000468</span>
+									</a>
+									<button type="button" class="tabClose">Close</button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<a href="#">
+										<span>House B/L 2</span>
+										<span>OBK-000468</span>
+									</a>
+									<button type="button" class="tabClose">Close</button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<a href="#">
+										<span>House B/L 3</span>
+										<span>OBK-000468</span>
+									</a>
+									<button type="button" class="tabClose">Close</button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<a href="#">
+										<span>House B/L 4</span>
+										<span>OBK-000468</span>
+									</a>
+									<button type="button" class="tabClose">Close</button> <!-- 2019-02-01 수정 -->
+								</li>
+							</ul>
+							<div class="tabListBox">
+								<ul>
+								</ul>
+							</div>
+						</div>
+						<!-- 컨텐츠 영역 -->
+						<div class="layout Layout_List">
+							<!-- 2019-02-01 수정 -->
+							<h2 class="tit" id="i10701_serviceListLb">Service List</h2>
+							<div class="schOptionGroup">
+								<!-- 2019-02-01 수정 -->
+								<ul class="itemList1">
+									<li>
+										<dl class="inpItem">
+											<dt id="">Keyword</dt>
+											<dd>
+												<div class="inputBox schType keyword">
+													<div class="inner">
+														<input type="text" name="" class="inp autoSch keyword name" id="" placeholder="Type Company Name">
+														<button type="button" class="inpReset"></button> <!-- 2019-02-01 수정 -->
+													</div>
 												</div>
-											</div>
-										</dd>
-									</dl>
-								</li>
-								<li>
-									<dl class="inpItem">
-										<dt>B/L Date</dt>
-										<dd>
-											<div class="inputBox Edit_date">
-												<input type="text" name="daterange" class="inp daterange" id="" value="01/01/2018 - 01/15/2018" />
-											</div>
-										</dd>
-									</dl>
-								</li>
-								<li>
-									<dl class="inpItem">
-										<dt>Item Description</dt>
-										<dd>
-											<div class="comboBox">
-												<select class="comboSelect" id="" placeholder="Select a Type">
-													<option value="">Select a Type</option>
-													<option value="T-Shirt">T-Shirt</option>
-													<option value="T-Shirt Woman">T-Shirt Woman</option>
-													<option value="Yellow T-Shirt">Yellow T-Shirt</option>
-													<option value="Zebra T-Shoot">Zebra T-Shoot</option>
-												</select>
-											</div>
-										</dd>
-									</dl>
-								</li>
-								<li>
-									<dl class="inpItem">
-										<dt>Item Description</dt>
-										<dd>
-											<div class="comboBox">
-												<select class="comboSelect" id="" placeholder="Select a Type">
-													<option value="">Select a Type</option>
-													<option value="T-Shirt">T-Shirt</option>
-													<option value="T-Shirt Woman">T-Shirt Woman</option>
-													<option value="Yellow T-Shirt">Yellow T-Shirt</option>
-													<option value="Zebra T-Shoot">Zebra T-Shoot</option>
-												</select>
-											</div>
-										</dd>
-									</dl>
-								</li>
-							</ul>
-							<button class="btn" id="i10701_search">Search</button>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="inpItem">
+											<dt>Service Type</dt>
+											<dd>
+												<div class="comboBox">
+													<select class="comboSelect" id="" placeholder="Select a Type">
+														<option value="">Select a Type</option>
+														<option value="T-Shirt">T-Shirt</option>
+														<option value="T-Shirt Woman">T-Shirt Woman</option>
+														<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+														<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+													</select>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="inpItem">
+											<dt>Creation</dt>
+											<dd>
+												<div class="inputBox Edit_date">
+													<input type="text" name="daterange" class="inp daterange" id="" placeholder="From - To" />
+												</div>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+								<button type="button" class="btn schBtn" id="i10701_search">Search</button>
+								<!--// 2019-02-01 수정 -->
+							</div>
+							<h3 class="tit" id="i10701_servicesLb">Services</h3>
+							<div class="ibsheepTop">
+								<div class="filter" id="i10701_filterStatus">filter</div>
+								<button type="button" class="btn" id="i10701_addService">Add Service</button> <!-- 2019-02-01 수정 -->
+							</div>
+							<div class="ibsheetDiv">
+								ibsheet
+							</div>
 						</div>
-						<h3 class="tit" id="i10701_servicesLb">Services</h3>
-						<div class="ibsheepTop">
-							<div class="filter" id="i10701_filterStatus">filter</div>
-							<button class="btn" id="i10701_addService">Add Service</button>
-						</div>
-						<div class="ibsheetDiv">
-							ibsheet
-						</div>
+						<!--// 컨텐츠 영역 -->
 					</div>
-					<!--// 컨텐츠 영역 -->
 				</div>
-			</div>
-		</section>
+			</section>
+		</form>
 	</div>
 </body>
 

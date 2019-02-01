@@ -64,14 +64,14 @@
 	<h2>input타입 - text</h2>
 	<div class="inputBox">
 		<input type="text" name="" class="inp" id="">
-		<button class="inpReset"></button>
+		<button type="button" class="inpReset"></button>
 	</div>
 	<!-- souce code 뷰어 -->
 	<div class="box">
 		<pre class="brush: html;">
 			<div class="inputBox">
 				<input type="text" name="" class="inp" id="">
-				<button class="inpReset"></button>
+				<button type="button" class="inpReset"></button>
 			</div>
 		</pre>
 	</div>
@@ -80,13 +80,13 @@
 	<h2>input타입 - password</h2>
 	<div class="inputBox">
 		<input type="text" name="" class="inp pwinp" id="test" placeholder="" />
-		<button class="inpReset"></button>
+		<button type="button" class="inpReset"></button>
 	</div>
 	<!-- souce code 뷰어 -->
 	<textarea class="pubTextarea" name="" id="" cols="30" rows="10">
 <div class="inputBox">
 	<input type="text" name="" class="inp pwinp" id="test" placeholder="" />
-	<button class="inpReset"></button>
+	<button type="button" class="inpReset"></button>
 </div>
 	</textarea>
 	<!-- //souce code 뷰어 -->
@@ -108,14 +108,14 @@
 	<h2>input타입 - Warning</h2>
 	<div class="inputBox">
 		<input type="text" name="" class="inp Warning" id="">
-		<button class="inpReset"></button>
+		<button type="button" class="inpReset"></button>
 	</div>
 	<!-- souce code 뷰어 -->
 	<div class="box">
 		<pre class="brush: html;">
 			<div class="inputBox">
 				<input type="text" name="" class="inp Warning" id="">
-				<button class="inpReset"></button>
+				<button type="button" class="inpReset"></button>
 			</div>
 		</pre>
 	</div>
@@ -124,14 +124,14 @@
 	<h2>input타입 - Mandate</h2>
 	<div class="inputBox">
 		<input type="text" name="" class="inp Mandate" id="">
-		<button class="inpReset"></button>
+		<button type="button" class="inpReset"></button>
 	</div>
 	<!-- souce code 뷰어 -->
 	<div class="box">
 		<pre class="brush: html;">
 			<div class="inputBox">
 				<input type="text" name="" class="inp Mandate" id="">
-				<button class="inpReset"></button>
+				<button type="button" class="inpReset"></button>
 			</div>
 		</pre>
 	</div>
@@ -139,17 +139,21 @@
 
 	<h2>input타입 - Edit_User</h2>
 	<div class="inputBox Edit_User">
-		<img src="../static/images/common/icon/icon_person_small.png" alt="" class="thumb" />
+		<div class="thumb">
+			<img src="../static/images/common/icon/icon_person_small.png" alt="" />
+		</div>
 		<input type="text" name="" class="inp" id="">
-		<button class="inpReset"></button>
+		<button type="button" class="inpReset"></button>
 	</div>
 	<!-- souce code 뷰어 -->
 	<div class="box">
 		<pre class="brush: html;">
 			<div class="inputBox Edit_User">
-				<img src="../static/images/common/icon/icon_person_small.png" alt="" class="thumb" />
+				<div class="thumb">
+					<img src="../static/images/common/icon/icon_person_small.png" alt="" />
+				</div>
 				<input type="text" name="" class="inp" id="">
-				<button class="inpReset"></button>
+				<button type="button" class="inpReset"></button>
 			</div>
 		</pre>
 	</div>
@@ -158,7 +162,7 @@
 	<h2>input타입 - Edit_Time</h2>
 	<div class="inputBox Edit_Time">
 		<input type="text" name="cup10702_modifiedTime" class="inp quantity" id="cup10702_modifiedTime" placeholder="-- : --" maxlength="4">
-		<button class="inpReset"></button>
+		<button type="button" class="inpReset"></button>
 		<div class="alertMessage time" style="margin-top:10px; display:none;"></div>
 	</div>
 	<!-- souce code 뷰어 -->
@@ -166,7 +170,7 @@
 		<pre class="brush: html;">
 			<div class="inputBox Edit_Time">
 	<input type="text" name="" class="inp quantity" id="" placeholder="-- : --" maxlength="4">
-	<button class="inpReset"></button>
+	<button type="button" class="inpReset"></button>
 	<div class="alertMessage time" style="margin-top:10px; display:none;"></div>
 </div>
 		</pre>
@@ -194,17 +198,17 @@
 
 	<h2>input타입 - 증감</h2>
 	<div class="inputBox count">
-		<button class="plus"><span>Plus</span></button>
+		<button type="button" class="plus"><span>Plus</span></button>
 		<input type="number" name="" class="inp Edit_Count" id="" min="0">
-		<button class="minus"><span>Minus</span></button>
+		<button type="button" class="minus"><span>Minus</span></button>
 	</div>
 	<!-- souce code 뷰어 -->
 	<div class="box">
 		<pre class="brush: html;">
 			<div class="inputBox count">
-				<button class="plus"><span>Plus</span></button>
+				<button type="button" class="plus"><span>Plus</span></button>
 				<input type="number" name="" class="inp Edit_Count" id="" min="0">
-				<button class="minus"><span>Minus</span></button>
+				<button type="button" class="minus"><span>Minus</span></button>
 			</div>
 		</pre>
 	</div>
@@ -270,7 +274,7 @@
 				<div class="inner">
 					<input type="text" class="inp autoSch ty1 code Readonly" readonly="readonly">
 					<input type="text" name="" class="inp autoSch ty1 name" id="i10003-company" placeholder="Type Company Name">
-					<button class="inpReset"></button>
+					<button type="button" class="inpReset"></button>
 				</div>
 			</div>
 		</dd>
@@ -284,7 +288,7 @@
 			<div class="inner">
 				<input type="text" class="inp autoSch ty1 code Readonly" readonly="readonly">
 				<input type="text" name="" class="inp autoSch ty1 name" id="i10003-company" placeholder="Type Company Name">
-				<button class="inpReset"></button>
+				<button type="button" class="inpReset"></button>
 			</div>
 		</div>
 	</dd>
