@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="x-apple-disable-message-reformatting" />
+	<title>Customer Portal</title>
+	<link rel="shortcut icon" href="../static/images/common/favicon.ico">
+	<link href="../static/css/lib/swiper.css" rel="stylesheet">
+	<link href="../static/css/reset.css" rel="stylesheet" />
+	<link href="../static/css/common.css" rel="stylesheet" />
+	<link href="../static/css/contents.css" rel="stylesheet" />
+	<script type="text/javascript" src="../static/js/common.js"></script>
+	<script type="text/javascript" src="../static/js/lib/moment.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/daterangepicker.js"></script>
+	<script type="text/javascript" src="../static/js/lib/quill.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jQuery.dPassword.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery.easy-autocomplete.js"></script>
+	<script type="text/javascript" src="../static/js/lib/semantic.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery.are-you-sure.js"></script>
+	<script type="text/javascript" src="../static/js/ui.js"></script>
+	<!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="wrapper">
+		<form action="">
+			<!-- 헤더영역 -->
+			<header id="headerWrap">
+				<h1><img src="../static/images/common/logo.jpg" alt="OPUS Logistics" /></h1>
+				<div class="menuAll">
+					<button type="button" class="allBtn">
+						<span>Menu</span>
+					</button>
+				</div>
+			</header>
+			<!-- //헤더영역 -->
+			<section id="container">
+				<div class="inner">
+					<nav>
+						<div class="gnb">
+							<ul class="gnbList">
+								<li>
+									<div class="gnbTit ty1">Organization</div> <!-- 2019-02-01 수정 -->
+									<ul class="dept">
+										<li><a href="#">Organization List</a></li>
+										<li><a href="#">Organization</a></li>
+									</ul>
+									<button type="button" class="clip on"></button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<div class="gnbTit ty2">Subscription</div> <!-- 2019-02-01 수정 -->
+									<ul class="dept">
+										<li><a href="">Subscription List</a></li>
+										<li><a href="">Subscription List (Waiting)</a></li>
+										<li><a href="">Subscription List (Approved)</a></li>
+										<li><a href="">Subscription List (Cancelled)</a></li>
+										<li><a href="">Subscription List (Withdraw)</a></li>
+									</ul>
+									<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<div class="gnbTit ty3">Billing</div> <!-- 2019-02-01 수정 -->
+									<ul class="dept">
+										<li><a href="">Billing Policy List</a></li>
+										<li><a href="">Invoice List</a></li>
+										<li><a href="">Invoice List (Waiting)</a></li>
+										<li><a href="">Invoice List (Sent)</a></li>
+										<li><a href="">Invoice List (Paid)</a></li>
+										<li><a href="">Invoice List (Cancelled)</a></li>
+										<li><a href="">Scheduler and History</a></li>
+									</ul>
+									<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<div class="gnbTit ty4">Usage</div> <!-- 2019-02-01 수정 -->
+									<ul class="dept">
+										<li><a href="">Usage List</a></li>
+										<li><a href="">Usage List (Seat)</a></li>
+										<li><a href="">Usage List (Transaction)</a></li>
+										<li><a href="">Transaction List</a></li>
+									</ul>
+									<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<div class="gnbTit ty5">Pricing</div> <!-- 2019-02-01 수정 -->
+									<ul class="dept">
+										<li><a href="#">Service List</a></li>
+										<li><a href="#">Tariff List</a></li>
+										<li><a href="">Service Group List</a></li>
+									</ul>
+									<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<div class="gnbTit ty6">Notice</div> <!-- 2019-02-01 수정 -->
+									<ul class="dept">
+										<li><a href="#">Notice List</a></li>
+									</ul>
+									<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<div class="gnbTit ty7">Administration</div> <!-- 2019-02-01 수정 -->
+									<ul class="dept">
+										<li><a href="#">System Code List</a></li>
+										<li><a href="#">Role List</a></li>
+										<li><a href="#">Mail Transmit History</a></li>
+									</ul>
+									<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<div class="content editBtns">
+						<div class="tabWrap">
+							<ul class="tabList">
+								<li class="home single">
+									<a href="#">Home</a>
+								</li>
+								<li>
+									<a href="#" class="on">
+										<span>House B/L 1</span>
+										<span>OBK-000468</span>
+									</a>
+									<button type="button" class="tabClose">Close</button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<a href="#">
+										<span>House B/L 2</span>
+										<span>OBK-000468</span>
+									</a>
+									<button type="button" class="tabClose">Close</button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<a href="#">
+										<span>House B/L 3</span>
+										<span>OBK-000468</span>
+									</a>
+									<button type="button" class="tabClose">Close</button> <!-- 2019-02-01 수정 -->
+								</li>
+								<li>
+									<a href="#">
+										<span>House B/L 4</span>
+										<span>OBK-000468</span>
+									</a>
+									<button type="button" class="tabClose">Close</button> <!-- 2019-02-01 수정 -->
+								</li>
+							</ul>
+							<div class="tabListBox">
+								<ul>
+								</ul>
+							</div>
+						</div>
+						<!-- 컨텐츠 영역 -->
+						<div class="layout Layout_List">
+							<h2 class="tit" id="cup10704_tariffLb">Tariff</h2>
+
+							<div class="serviceCode">
+								<div class="srvNum" id="">
+									<div class="inputBox inpNone">
+										<input type="text" name="cup10704_tariffIdLb" class="inp" id="cup10704_tariffIdLb" readonly="readonly" value="S10000001">
+									</div>
+									<span class="codeLabel" id="cup10704_RevisonLb">REV</span>
+									<div class="inputBox inpNone">
+										<input type="text" name="cup10704_tariffRevLb" class="inp" id="cup10704_tariffRevLb" readonly="readonly" value="11">
+									</div>
+								</div>
+								<div class="actChk">
+									<div class="switchChk">
+										<input type="checkbox" name="" id="cup10704_activeChk">
+										<label for="cup10704_activeChk" id="cup10704_active">
+											<span class="txt1">Inactive</span>
+											<span class="txt2">Active</span>
+										</label>
+									</div>
+								</div>
+							</div>
+
+							<h3 class="tit" id="cup10704_basicLb">Basic</h3>
+							<ul class="itemList2">
+								<li>
+									<dl class="inpItem">
+										<dt id="cup10704_serviceNameLb">Service Name</dt>
+										<dd>
+											<div class="inputBox schType ty1">
+												<div class="inner">
+													<input type="text" class="inp autoSch ty1 code Readonly" readonly="readonly">
+													<input type="text" name="cup10704_serviceName" class="inp autoSch ty1 name Mandate" id="cup10704_serviceName" placeholder="Select a Service">
+													<button type="button" class="inpReset"></button>
+												</div>
+											</div>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="inpItem">
+										<dt id="cup10704_customerTypeLb">Customer Type</dt>
+										<dd>
+											<div class="comboBox Mandate">
+												<select class="comboSelect" id="cup10704_customerType" placeholder="Select a Type">
+													<option value="">Select a Type</option>
+													<option value="T-Shirt">T-Shirt</option>
+													<option value="T-Shirt Woman">T-Shirt Woman</option>
+													<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+													<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+												</select>
+											</div>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="inpItem">
+										<dt id="cup10704_tariffNameLb">Tariff Name</dt>
+										<dd>
+											<div class="inputBox">
+												<input type="text" name="cup10704_tariffName" class="inp Mandate" id="cup10704_tariffName" maxlength="50">
+												<button type="button" class="inpReset"></button>
+											</div>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="inpItem">
+										<dt id="cup10704_tariffCycleLb">Tariff Cycle</dt>
+										<dd>
+											<div class="comboBox Mandate">
+												<select class="comboSelect" id="cup10704_tariffCycle" placeholder="Select a Cycle">
+													<option value="">Select a Type</option>
+													<option value="T-Shirt">T-Shirt</option>
+													<option value="T-Shirt Woman">T-Shirt Woman</option>
+													<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+													<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+												</select>
+											</div>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="inpItem">
+										<dt id="cup10704_paymentTermsLb">Payment Terms</dt>
+										<dd>
+											<div class="comboBox Mandate">
+												<select class="comboSelect" id="cup10704_paymentTerms" placeholder="Select a Term">
+													<option value="">Select a Type</option>
+													<option value="T-Shirt">T-Shirt</option>
+													<option value="T-Shirt Woman">T-Shirt Woman</option>
+													<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+													<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+												</select>
+											</div>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="inpItem">
+										<dt id="cup10704_descriptionLb">Description</dt>
+										<dd>
+											<div class="textareaDiv">
+												<textarea name="cup10704_description" id="cup10704_description" cols="30" rows="10" class="textarea" maxlength="500"></textarea>
+												<div class="byte"><span class="bold">100</span>/150</div>
+											</div>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="inpItem">
+										<dt id="cup10704_registeredOnLb">Registered on</dt>
+										<dd>
+											<div class="inputBox Edit_date single">
+												<input type="text" name="cup10704_registeredDate" class="inp Readonly" id="cup10704_registeredDate" value="12-14-2018" readonly />
+											</div>
+											<div class="inputBox Edit_Time readonly">
+												<input type="text" name="cup10704_registeredTime" class="inp Readonly" id="cup10704_registeredTime" value="10 : 20 AM" readonly="readonly">
+											</div>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="inpItem">
+										<dt id="cup10704_registeredByLb">Registered on</dt>
+										<dd>
+											<div class="inputBox Edit_User">
+												<div class="thumb">
+													<img src="../static/images/common/icon/icon_person_small.png" alt="" />
+												</div>
+												<input type="text" name="cup10704_registeredBy" class="inp Readonly" id="cup10704_registeredBy" value="Park, JungIl" readonly="readonly">
+											</div>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+
+							<h3 class="tit" id="cup10704_unitRateLb">Unit Rate</h3>
+							<ul class="itemList2">
+								<li>
+									<dl class="inpItem">
+										<dt id="cup10704_unitLb">Unit</dt>
+										<dd>
+											<div class="comboBox Mandate">
+												<select class="comboSelect" id="cup10704_unit" placeholder="Select a Unit">
+													<option value="">Select a Type</option>
+													<option value="T-Shirt">T-Shirt</option>
+													<option value="T-Shirt Woman">T-Shirt Woman</option>
+													<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+													<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+												</select>
+											</div>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="inpItem">
+										<dt id="cup10704_unitCurrencyLb">Unit Currency</dt>
+										<dd>
+											<div class="comboBox Mandate">
+												<select class="comboSelect" id="cup10704_unitCurrency" placeholder="Select a Type">
+													<option value="">Select a Type</option>
+													<option value="T-Shirt">T-Shirt</option>
+													<option value="T-Shirt Woman">T-Shirt Woman</option>
+													<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+													<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+												</select>
+											</div>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="inpItem">
+										<dt id="cup10704_unitRateLb">Unit Rate</dt>
+										<dd>
+											<div class="inputBox">
+												<input type="text" name="cup10704_unitRate" class="inp Mandate" id="cup10704_unitRate">
+												<button type="button" class="inpReset"></button>
+											</div>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="inpItem">
+										<dt id="cup10704_unitPointLb">Unit Point</dt>
+										<dd>
+											<div class="inputBox onlyNumber">
+												<input type="text" name="cup10704_unitPoint" class="inp onlyNumber" id="cup10704_unitPoint">
+												<button type="button" class="inpReset"></button>
+											</div>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+
+							<h3 class="tit" id="cup10704_taxLb">TAX</h3>
+							<ul class="itemList2">
+								<li>
+									<dl class="inpItem">
+										<dt id="cup10704_isTaxAppliedLb">Is TAX Applied</dt>
+										<dd>
+											<div class="checkbox">
+												<input type="checkbox" name="" id="cup10704_isTaxAppliedChk" checked="checked"><label for="cup10704_isTaxAppliedChk" id="cup10704_isTaxApplied">Apply</label>
+											</div>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="inpItem">
+										<dt id="cup10704_taxItemLb">TAX Item</dt>
+										<dd>
+											<select name="" multiple class="ui fluid dropdown" id="cup10704_taxItem">
+												<option value="">Select TAX Item(s)</option>
+												<option value="10%VAT">10% VAT</option>
+												<option value="5%EDUCATION TAX">5% EDUCATION TAX</option>
+												<option value="5%REGIONAL TAX">5% REGIONAL TAX</option>
+											</select>
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl class="inpItem">
+										<dt id="cup10704_taxRatioLb">TAX Ratio</dt>
+										<dd>
+											<div class="inputBox Percent onlyNumber">
+												<input type="text" name="cup10704_taxRatio" class="inp Mandate onlyNumber" id="cup10704_taxRatio" maxlength="50">
+												<button type="button" class="inpReset"></button>
+											</div>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+
+							<h3 class="tit" id="cup10704_discountRuleLb">Discount Rule</h3>
+							<div class="ibsheepTop">
+								<div class="tools">
+									<button type="button" class="btn addBtn" id="cup10704_addRule">ADD</button>
+									<button type="button" class="btn removeBtn" id="cup10704_deleteRule">REMOVE</button>
+								</div>
+							</div>
+							<div class="ibsheetDiv">
+								ibsheet
+							</div>
+							<div class="editBtns">
+								<button type="button" class="btn basic" id="cup10704_Save">Save</button>
+							</div>
+						</div>
+						<!--// 컨텐츠 영역 -->
+					</div>
+				</div>
+			</section>
+		</form>
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			$('form').areYouSure();
+		});
+	</script>
+</body>
+
+</html>
