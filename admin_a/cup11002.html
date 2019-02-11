@@ -162,75 +162,50 @@
 					<!-- 컨텐츠 영역 -->
 					<form action="">
 						<div class="layout Layout_Sidebar">
-							<h2 class="tit" id="i10101-profileLb">Profile</h2>
+							<h2 class="tit" id="cup11002_systemCodeLb">System Code</h2>
 							<div class="serviceCode">
 								<div class="srvNum" id="">
 									<div class="inputBox inpNone">
-										<input type="text" name="i10101-userIdLb" class="inp" id="i10101-userIdLb" readonly="readonly" value="U10000001">
+										<input type="text" name="cup11002_masterCode" class="inp" id="cup11002_masterCode" readonly="readonly" value="TAXCD">
+									</div>
+								</div>
+								<div class="actChk">
+									<div class="switchChk">
+										<input type="checkbox" name="" id="cup11002_activeChk" checked="checked">
+										<label for="cup11002_activeChk" id="cup11002_active">
+											<span class="txt1">Inactive</span>
+											<span class="txt2">Active</span>
+										</label>
 									</div>
 								</div>
 							</div>
 							<div class="inner">
 								<div class="lsCont">
-									<h3 class="tit" id="i10101-userLb">User</h3>
+									<h3 class="tit" id="cup11002_masterLb">Master</h3>
 									<ul class="itemList2">
 										<li>
 											<dl class="inpItem">
-												<dt id="i10101-userPictureLb">Picture</dt>
+												<dt id="cup11002_masterCdLb">Master Code</dt>
 												<dd>
-													<div class="imgAdd">
-														<div class="imgBox person">
-															<img src="../static/images/common/icon/icon_person.png" alt="" class="Image_Logo_Large" id="i10101-userPicture" />
-															<button type="button" class="imgRemove" id="i10101-deletePicture">Delete</button>
-														</div>
-														<div class="changeBtn">
-															<div class="fileBox">
-																<label for="imgUpload" id="i10101-changePicture">Change Logo</label>
-																<input type="file" name="imgUpload" id="imgUpload" class="fileUpload" />
-															</div>
-														</div>
+													<div class="inputBox Edit_AlphaNum">
+														<input type="text" name="cup11002_masterCd" class="inp Mandate" id="cup11002_masterCd" maxlength="5">
+														<button type="button" class="inpReset"></button>
 													</div>
 												</dd>
 											</dl>
 										</li>
 										<li>
 											<dl class="inpItem">
-												<dt id="i10101-displayNameLb">Display Name</dt>
+												<dt id="cup11002_masterNameLb">Display Name</dt>
 												<dd>
 													<div class="inputBox">
-														<input type="text" name="i10101-displayName" class="inp Mandate" id="i10101-displayName" maxlength="50">
+														<input type="text" name="cup11002_masterName" class="inp Mandate" id="cup11002_masterName" maxlength="50">
 														<button type="button" class="inpReset"></button>
 													</div>
 													<div class="tooltip">
 														<div class="tips">
 															<strong class="tit">Display Name</strong>
-															<p class="txt">Display Name is <br />shown on the system</p>
-														</div>
-													</div>
-												</dd>
-											</dl>
-											<dl class="inpItem">
-												<dt id="i10101-englishNameLb">English Name</dt>
-												<dd>
-													<div class="inputBox Edit_AlphaNum">
-														<input type="text" name="i10101-englishName" class="inp" id="i10101-englishName" maxlength="50">
-														<button type="button" class="inpReset"></button>
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="i10101-languageNameLb">Language Name</dt>
-												<dd>
-													<div class="inputBox">
-														<input type="text" name="i10101-languageName" class="inp" id="i10101-languageName" maxlength="50">
-														<button type="button" class="inpReset"></button>
-													</div>
-													<div class="tooltip">
-														<div class="tips">
-															<strong class="tit">Language Name</strong>
-															<p class="txt">Language Name Is <br />your name in native<br /> language, as it appear<br /> language.</p>
+															<p class="txt">Display Name is <br />shown on the system </p>
 														</div>
 													</div>
 												</dd>
@@ -238,188 +213,104 @@
 										</li>
 										<li>
 											<dl class="inpItem">
-												<dt id="i10101-eMailLb">Email</dt>
+												<dt id="cup11002_masterDescriptionLb">Description</dt>
 												<dd>
 													<div class="inputBox">
-														<input type="text" name="i10101-eMail" class="inp Readonly" id="i10101-eMail" readonly="readonly">
+														<input type="text" name="cup11002_masterDescription" class="inp" id="cup11002_masterDescription" maxlength="80">
+														<button type="button" class="inpReset"></button>
 													</div>
-													<div class="tooltip">
-														<div class="tips" id="i10101-eMailInfo">
-															<strong class="tit">Email</strong>
-															<p class="txt">You can’t change your <br />Email during <br />subscription. </p>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup11002_masterPlaceHolderLb">Place Holder</dt>
+												<dd>
+													<div class="inputBox">
+														<input type="text" name="cup11002_masterPlaceHolder" class="inp" id="cup11002_masterPlaceHolder" maxlength="50">
+														<button type="button" class="inpReset"></button>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup11002_defaultDetailCodeLb">Default Item</dt>
+												<dd>
+													<div class="inputBox schType ty1">
+														<div class="inner">
+															<input type="text" class="inp autoSch ty1 code Readonly" readonly="readonly">
+															<input type="text" name="cup11002_defaultDetailCode" class="inp autoSch ty1 name Mandate" id="cup11002_defaultDetailCode" placeholder="Type Company Name">
+															<button type="button" class="inpReset"></button>
 														</div>
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="i10101-passwordLb">Password</dt>
-												<dd>
-													<button type="button" class="btn" id="i10101-password">Change Password</button>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="i10101-departmentLb">Department</dt>
-												<dd>
-													<div class="comboBox Edit_HisSuggestion">
-														<select class="comboSelect" id="i10101-deparment" placeholder="Select a Type">
-															<option value="">Select a Type</option>
-															<option value="T-Shirt">T-Shirt</option>
-															<option value="T-Shirt Woman">T-Shirt Woman</option>
-															<option value="Yellow T-Shirt">Yellow T-Shirt</option>
-															<option value="Zebra T-Shoot">Zebra T-Shoot</option>
-														</select>
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="i10101-telephoneNoLb">Telephone Number</dt>
-												<dd>
-													<div class="inputBox Edit_PhoneFax">
-														<input type="text" name="i10101-telephoneNo" class="inp" id="i10101-telephoneNo" maxlength="50">
-														<button type="button" class="inpReset"></button>
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="i10101-faxNoLb">Fax Number</dt>
-												<dd>
-													<div class="inputBox Edit_PhoneFax">
-														<input type="text" name="i10101-faxNo" class="inp" id="i10101-faxNo" maxlength="50">
-														<button type="button" class="inpReset"></button>
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="i10101-mobilePhoneNoLb">Mobile Phone Number</dt>
-												<dd>
-													<div class="inputBox Edit_PhoneFax">
-														<input type="text" name="i10101-mobilePhoneNoNetwork" class="inp" id="i10101-mobilePhoneNoNetwork" maxlength="50">
-														<button type="button" class="inpReset"></button>
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="i10101-socialNetworkLb">Social Network</dt>
-												<dd>
-													<div class="inputBox">
-														<input type="text" name="i10101-socialNetwork" class="inp" id="i10101-socialNetwork" maxlength="50">
-														<button type="button" class="inpReset"></button>
 													</div>
 												</dd>
 											</dl>
 										</li>
 									</ul>
 
-									<h3 class="tit" id="i10101-systemOptionsLb">System Options</h3>
-									<ul class="itemList2">
-										<li>
-											<dl class="inpItem">
-												<dt id="i10101-languageLb">Language</dt>
-												<dd>
-													<div class="comboBox">
-														<select class="comboSelect" id="i10101-language" placeholder="Select a Type">
-															<option value="">Select a Type</option>
-															<option value="En">En</option>
-														</select>
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="i10101-dateDisplayFormatLb">Date Display Format</dt>
-												<dd>
-													<div class="comboBox">
-														<select class="comboSelect" id="i10101-dateDisplayFormat" placeholder="Select a Type">
-															<option value="">Select a Type</option>
-															<option value="Date1">MM-dd-yyyy</option>
-															<option value="Date2">dd-MM-yyyy</option>
-															<option value="Date3">yyyy-MM-dd</option>
-														</select>
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="i10101-timeDisplayFormatLb">Time Display Format</dt>
-												<dd>
-													<div class="comboBox">
-														<select class="comboSelect" id="i10101-timeDisplayFormat" placeholder="Select a Type">
-															<option value="">Select a Type</option>
-															<option value="Time1">24:00</option>
-															<option value="Time2">12:00 PM</option>
-														</select>
-													</div>
-												</dd>
-											</dl>
-										</li>
-									</ul>
-								</div>
-								<div class="lsCont fix">
-									<h3 class="tit" id="i10101-recordLb">Record</h3>
-									<dl class="inpItem2">
-										<dt id="i10101-createOnLb">Created on</dt>
-										<dd>
-											<div class="ele">
-												<div class="inputBox Edit_date single">
-													<input type="text" name="i10101-createDate" class="inp Readonly" id="i10101-createDate" value="12-14-2018" readonly />
-												</div>
-												<div class="inputBox Edit_Time readonly">
-													<input type="text" name="i10101-createTime" class="inp Readonly" id="i10101-createTime" value="10 : 20 AM" readonly="readonly">
-												</div>
-											</div>
-										</dd>
-									</dl>
-									<dl class="inpItem2">
-										<dt id="i10101-modifiedOnLb">Modified on</dt>
-										<dd>
-											<div class="ele">
-												<div class="inputBox Edit_date single">
-													<input type="text" name="i10101-modifiedDate" class="inp Readonly" id="i10101-modifiedDate" value="12-14-2018" readonly />
-												</div>
-												<div class="inputBox Edit_Time readonly">
-													<input type="text" name="i10101-modifiedTime" class="inp Readonly" id="i10101-modifiedTime" value="10 : 20 AM" readonly="readonly">
-												</div>
-											</div>
-										</dd>
-									</dl>
-
-									<h3 class="tit" id="i10101-inviteUserLb">Invite User</h3>
-									<div class="iTxtCont">
-										<p class="txt" id="i10101-inviteDescriptionLb">
-											Invite User allow you to invite other users to manage your subscription. Invited user will be belong to your organization
-										</p>
-										<div class="btnBox">
-											<button type="button" class="btn" id="i10101-inviteUser">Invite User</button>
+									<h3 class="tit" id="cup11002_itemsLb">Items</h3>
+									<div class="ibsheepTop">
+										<div class="tools">
+											<button type="button" class="btn addBtn" id="cup11002_rowDelete">ADD</button>
+											<button type="button" class="btn removeBtn" id="cup11002_rowAdd">REMOVE</button>
 										</div>
 									</div>
-
-									<h3 class="tit" id="i10101-leaveOrganizationLb">Leave Organization?</h3>
-									<div class="iTxtCont">
-										<p class="txt" id="i10101-leaveOrganizationDescriptionLb">
-											Leave your organization? <br />To inactive the user account, you must define alternate account to organization’s subscription manager.
-										</p>
-											<div class="btnBox">
-												<button type="button" class="btn" id="i10101-leaveOrganization">Leave Organization</button>
-											</div>
+									<div class="ibsheetDiv">
+										ibsheet
 									</div>
+								</div>
+
+								<div class="lsCont fix">
+									<h3 class="tit" id="cup11002_recordLb">Record</h3>
+									<dl class="inpItem2">
+										<dt id="cup11002_createdOnLb">Created on</dt>
+										<dd>
+											<div class="ele">
+												<div class="inputBox Edit_date single">
+													<input type="text" name="cup11002_createDate" class="inp Readonly" id="cup11002_createDate" value="12-14-2018" readonly="readonly" />
+												</div>
+												<div class="inputBox Edit_Time readonly">
+													<input type="text" name="cup11002_createTime" class="inp Readonly" id="cup11002_createTime" value="10 : 20 AM" readonly="readonly">
+												</div>
+											</div>
+											<div class="ele">
+												<div class="inputBox Edit_User">
+													<div class="thumb">
+														<img src="../static/images/common/icon/icon_person_small.png" alt="" />
+													</div>
+													<input type="text" name="cup11002_createdBy" class="inp Readonly" id="cup11002_createdBy" value="Park, JungIl" readonly="readonly">
+												</div>
+											</div>
+										</dd>
+									</dl>
+
+									<dl class="inpItem2">
+										<dt id="cup11002_modifiedOnLb">Modified on</dt>
+										<dd>
+											<div class="ele">
+												<div class="inputBox Edit_date single">
+													<input type="text" name="cup11002_modifiedDate" class="inp Readonly" id="cup11002_modifiedDate" value="12-14-2018" readonly="readonly" />
+												</div>
+												<div class="inputBox Edit_Time readonly">
+													<input type="text" name="cup11002_modifiedTime" class="inp Readonly" id="cup11002_modifiedTime" value="10 : 20 AM" readonly="readonly">
+												</div>
+											</div>
+											<div class="ele">
+												<div class="inputBox Edit_User">
+													<div class="thumb">
+														<img src="../static/images/common/icon/icon_person_small.png" alt="" />
+													</div>
+													<input type="text" name="cup11002_modifiedBy" class="inp Readonly" id="cup11002_modifiedBy" value="Park, JungIl" readonly="readonly">
+												</div>
+											</div>
+										</dd>
+									</dl>
+
 								</div>
 							</div>
 							<div class="editBtns">
-								<button type="button" class="btn basic" id="i10101-Save">Save</button>
+								<button type="button" class="btn basic" id="cup11002_Save">Save</button>
 							</div>
 						</div>
 					</form>
