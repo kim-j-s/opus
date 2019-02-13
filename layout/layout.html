@@ -48,20 +48,6 @@
 		<style type="text/css">
 			.layer {}
 
-			.fix2 {
-				position: fixed;
-				top: 700px;
-				left: 100px;
-				z-index: 111;
-				min-width: 100px;
-				text-align: center;
-				height: 50px;
-				line-height: 50px;
-				border: 1px solid #333;
-				background: #fff;
-				padding: 0 10px;
-			}
-
 			.box {
 				margin-top: 50px;
 				width: 200px;
@@ -69,79 +55,77 @@
 		</style>
 
 
-		<div class="fix2">탭 추가</div>
-
 		<section id="container">
 			<div class="inner">
 				<nav>
 					<div class="gnb">
 						<ul class="gnbList">
 							<li>
-								<div class="gnbTit ty1">Organization</div> <!-- 2019-02-01 수정 -->
+								<div class="gnbTit ty1">Organization</div>
 								<ul class="dept">
-									<li><a href="#">Organization List</a></li>
-									<li><a href="#">Organization</a></li>
+									<li><a href="#" data-name="OrganizationList">Organization List</a></li>
+									<li><a href="#" data-name="Organization">Organization</a></li>
 								</ul>
-								<button type="button" class="clip on"></button> <!-- 2019-02-01 수정 -->
+								<button type="button" class="clip on"></button>
 							</li>
 							<li>
-								<div class="gnbTit ty2">Subscription</div> <!-- 2019-02-01 수정 -->
+								<div class="gnbTit ty2">Subscription</div>
 								<ul class="dept">
-									<li><a href="">Subscription List</a></li>
-									<li><a href="">Subscription List (Waiting)</a></li>
-									<li><a href="">Subscription List (Approved)</a></li>
-									<li><a href="">Subscription List (Cancelled)</a></li>
-									<li><a href="">Subscription List (Withdraw)</a></li>
+									<li><a href="#" data-name="SubscriptionList">Subscription List</a></li>
+									<li><a href="#" data-name="SubscriptionListWaiting">Subscription List (Waiting)</a></li>
+									<li><a href="#" data-name="SubscriptionListApproved">Subscription List (Approved)</a></li>
+									<li><a href="#" data-name="SubscriptionListCancelled">Subscription List (Cancelled)</a></li>
+									<li><a href="#" data-name="SubscriptionListWithdraw">Subscription List (Withdraw)</a></li>
 								</ul>
-								<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								<button type="button" class="clip"></button>
 							</li>
 							<li>
-								<div class="gnbTit ty3">Billing</div> <!-- 2019-02-01 수정 -->
+								<div class="gnbTit ty3">Billing</div>
 								<ul class="dept">
-									<li><a href="">Billing Policy List</a></li>
-									<li><a href="">Invoice List</a></li>
-									<li><a href="">Invoice List (Waiting)</a></li>
-									<li><a href="">Invoice List (Sent)</a></li>
-									<li><a href="">Invoice List (Paid)</a></li>
-									<li><a href="">Invoice List (Cancelled)</a></li>
-									<li><a href="">Scheduler and History</a></li>
+									<li><a href="#" data-name="BillingPolicyList">Billing Policy List</a></li>
+									<li><a href="#" data-name="InvoiceList">Invoice List</a></li>
+									<li><a href="#" data-name="InvoiceListWaiting">Invoice List (Waiting)</a></li>
+									<li><a href="#" data-name="InvoiceListSent">Invoice List (Sent)</a></li>
+									<li><a href="#" data-name="InvoiceListPaid">Invoice List (Paid)</a></li>
+									<li><a href="#" data-name="InvoiceListCancelled">Invoice List (Cancelled)</a></li>
+									<li><a href="#" data-name="SchedulerandHistory">Scheduler and History</a></li>
 								</ul>
-								<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								<button type="button" class="clip"></button>
 							</li>
 							<li>
-								<div class="gnbTit ty4">Usage</div> <!-- 2019-02-01 수정 -->
+								<div class="gnbTit ty4">Usage</div>
 								<ul class="dept">
-									<li><a href="">Usage List</a></li>
-									<li><a href="">Usage List (Seat)</a></li>
-									<li><a href="">Usage List (Transaction)</a></li>
-									<li><a href="">Transaction List</a></li>
+									<li><a href="#" data-name="UsageList">Usage List</a></li>
+									<li><a href="#" data-name="UsageListSeat">Usage List (Seat)</a></li>
+									<li><a href="#" data-name="UsageListTransaction">Usage List (Transaction)</a></li>
+									<li><a href="#" data-name="TransactionList">Transaction List</a></li>
 								</ul>
-								<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								<button type="button" class="clip"></button>
 							</li>
 							<li>
-								<div class="gnbTit ty5">Pricing</div> <!-- 2019-02-01 수정 -->
+								<div class="gnbTit ty5">Pricing</div>
 								<ul class="dept">
-									<li><a href="#">Service List</a></li>
-									<li><a href="#">Tariff List</a></li>
-									<li><a href="">Service Group List</a></li>
+									<li><a href="#" data-name="ServiceList">Service List</a></li>
+									<li><a href="#" data-name="TariffList">Tariff List</a></li>
+									<li><a href="#" data-name="ServiceGroupList">Service Group List</a></li>
 								</ul>
-								<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								<button type="button" class="clip"></button>
 							</li>
 							<li>
-								<div class="gnbTit ty6">Notice</div> <!-- 2019-02-01 수정 -->
+								<div class="gnbTit ty6">Notice</div>
 								<ul class="dept">
-									<li><a href="#">Notice List</a></li>
+									<li><a href="#" data-name="NoticeList">Notice List</a></li>
 								</ul>
-								<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								<button type="button" class="clip"></button>
 							</li>
 							<li>
-								<div class="gnbTit ty7">Administration</div> <!-- 2019-02-01 수정 -->
+								<div class="gnbTit ty7">Administration</div>
 								<ul class="dept">
-									<li><a href="#">System Code List</a></li>
-									<li><a href="#">Role List</a></li>
-									<li><a href="#">Mail Transmit History</a></li>
+									<li><a href="#" data-name="SystemCodeList">System Code List</a></li>
+									<li><a href="#" data-name="RoleList">Role List</a></li>
+									<li><a href="#" data-name="MailTransmitHistory">Mail Transmit History</a></li>
 								</ul>
-								<button type="button" class="clip"></button> <!-- 2019-02-01 수정 -->
+								<button type="button" class="clip"></button>
 							</li>
 						</ul>
 					</div>
@@ -152,34 +136,20 @@
 							<li class="home single">
 								<a href="#">Home</a>
 							</li>
-							<li>
-								<a href="#" class="on">
-									<span>House B/L 1</span>
-									<span>OBK-000468</span>
-								</a>
-								<button type="button" class="tabClose">Close</button> <!-- 2019-02-01 수정 -->
-							</li>
-							<li>
-								<a href="#">
-									<span>House B/L 2</span>
-									<span>OBK-000468</span>
-								</a>
-								<button type="button" class="tabClose">Close</button> <!-- 2019-02-01 수정 -->
-							</li>
-							<li>
-								<a href="#">
-									<span>House B/L 3</span>
-									<span>OBK-000468</span>
-								</a>
-								<button type="button" class="tabClose">Close</button> <!-- 2019-02-01 수정 -->
-							</li>
-							<li>
-								<a href="#">
-									<span>House B/L 4</span>
-									<span>OBK-000468</span>
-								</a>
-								<button type="button" class="tabClose">Close</button> <!-- 2019-02-01 수정 -->
-							</li>
+							<!-- <li>
+			<a href="#" class="on">
+				<span>House B/L 1</span>
+				<span>OBK-000468</span>
+			</a>
+			<button type="button" class="tabClose" onclick="TabRemove(this)">Close</button>
+		</li> -->
+							<!-- <li>
+			<a href="#">
+				<span>House B/L 2</span>
+				<span>OBK-000468</span>
+			</a>
+			<button type="button" class="tabClose" onclick="TabRemove(this)">Close</button>
+		</li> -->
 						</ul>
 						<div class="tabListBox">
 							<ul>
@@ -187,151 +157,91 @@
 						</div>
 					</div>
 
-					<div class="layout Layout_List">
-						<h2 class="tit" id="i10701-serviceListLb">Service List</h2>
-						<div class="schOptionGroup">
-							<ul class="itemList1">
-								<li>
-									<dl class="inpItem">
-										<dt id="">Keyword</dt>
-										<dd>
-											<div class="inputBox schType keyword">
-												<div class="inner">
-													<input type="text" name="" class="inp autoSch keyword name" id="i10003-company" placeholder="Type Company Name">
-													<button type="button" class="inpReset"></button>
-												</div>
-											</div>
-										</dd>
-									</dl>
-								</li>
-								<li>
-									<dl class="inpItem">
-										<dt>B/L Date</dt>
-										<dd>
-											<div class="inputBox Edit_date">
-												<input type="text" name="daterange" class="inp daterange" id="" placeholder="From - To" />
-											</div>
-										</dd>
-									</dl>
-								</li>
-								<li>
-									<dl class="inpItem">
-										<dt>Item Description</dt>
-										<dd>
-											<div class="comboBox">
-												<select class="comboSelect" id="" placeholder="Select a Type">
-													<option value="">Select a Type</option>
-													<option value="T-Shirt">T-Shirt</option>
-													<option value="T-Shirt Woman">T-Shirt Woman</option>
-													<option value="Yellow T-Shirt">Yellow T-Shirt</option>
-													<option value="Zebra T-Shoot">Zebra T-Shoot</option>
-												</select>
-											</div>
-										</dd>
-									</dl>
-								</li>
-								<li>
-									<dl class="inpItem">
-										<dt>Item Description</dt>
-										<dd>
-											<div class="comboBox">
-												<select class="comboSelect" id="" placeholder="Select a Type">
-													<option value="">Select a Type</option>
-													<option value="T-Shirt">T-Shirt</option>
-													<option value="T-Shirt Woman">T-Shirt Woman</option>
-													<option value="Yellow T-Shirt">Yellow T-Shirt</option>
-													<option value="Zebra T-Shoot">Zebra T-Shoot</option>
-												</select>
-											</div>
-										</dd>
-									</dl>
-								</li>
-							</ul>
-							<button type="button" class="btn schBtn" id="i10701_search">Search</button>
-						</div>
-						<h3 class="tit" id="i10701-servicesLb">Services</h3>
-						<div class="ibsheepTop">
-							<!-- <div class="filter" id="">filter</div> -->
-							<div class="ui floating dropdown labeled icon button filter" id="">
-								<i class="filter icon"></i>
-								<span class="text">Filter Posts</span>
-								<div class="menu">
-									<div class="ui icon search input">
-										<i class="search icon"></i>
-										<input type="text" placeholder="Search tags...">
-									</div>
-									<div class="header">
-										<i class="tags icon"></i>
-										Tag Label
-									</div>
-									<div class="scrolling menu">
-										<div class="item">
-											<div class="ui red empty circular label"></div>
-											Important
-										</div>
-										<div class="item">
-											<div class="ui blue empty circular label"></div>
-											Announcement
-										</div>
-										<div class="item">
-											<div class="ui black empty circular label"></div>
-											Cannot Fix
-										</div>
-										<div class="item">
-											<div class="ui purple empty circular label"></div>
-											News
-										</div>
-										<div class="item">
-											<div class="ui orange empty circular label"></div>
-											Enhancement
-										</div>
-										<div class="item">
-											<div class="ui empty circular label"></div>
-											Change Declined
-										</div>
-										<div class="item">
-											<div class="ui yellow empty circular label"></div>
-											Off Topic
-										</div>
-										<div class="item">
-											<div class="ui pink empty circular label"></div>
-											Interesting
-										</div>
-										<div class="item">
-											<div class="ui green empty circular label"></div>
-											Discussion
-										</div>
-									</div>
-								</div>
+					<form action="">
+						<div class="layout Layout_List">
+							<h2 class="tit" id="">Welcome to OPUS Logistics!</h2>
+							<h3 class="tit" id="">Notice</h3>
+							<div class="ibsheetDiv">
+								ibsheet
 							</div>
-							<button type="button" class="btn" id="i10701-addService">Add Service</button>
 						</div>
-						<div class="ibsheetDiv">
-							ibsheet
-						</div>
-
-						<div style="height:200px; background:green"></div>
-
-					</div>
+					</form>
 				</div>
 			</div>
 		</section>
 	</div>
 	<script type="text/javascript">
 		$(function() {
-			var xxx = '<li><a href="#"><span>House B/L 9</span><span>OBK-000468</span></a><button type="button" class="tabClose" onclick="TabRemove(this)">Close</button></li>';
-			$('.fix2').click(function() {
-				$(xxx).appendTo('.tabList');
-				TablistSort();
-			});
 
+			var gnbAppen = $('.gnbList').find('a');
+			$(gnbAppen).each(function() {
+				$(this).on('click', function() {
+					var thisDate = $(this).data('name');
+					var thisTitle = $(this).text();
+					console.log(thisDate);
+
+					if ($('.tabList').find('li').hasClass(thisDate) || $('.tabListBox').find('li').hasClass(thisDate)) {
+						idx = $('.tabList').find('.' + thisDate).index();
+						console.log(idx + ' : 동일 클래스가 있는 경우');
+						$('.tabList > li > a').removeClass('on');
+						$('.tabListBox > ul > li > a').removeClass('on');
+						$('.tabList > li').find('.' + thisDate).children('a').addClass('on');
+						$('.tabListBox > ul > li').find('.' + thisDate).children('a').addClass('on');
+						$('.content').find('form').hide();
+						$('.content').find('form').eq(idx - 1).show();
+					} else {
+						var make = '<li class="' + thisDate + '"><a href="#"><span>' + thisTitle + '</span><span>OBK-000468</span></a><button type="button" class="tabClose" onclick="TabRemove(this)">Close</button></li>;'
+						$(make).appendTo('.tabList');
+						TablistSort();
+						idx = $('.tabList').find('.' + thisDate).index();
+						console.log(idx + ' : 동일 클래스가 없는 경우');
+						$('.tabList > li > a').removeClass('on');
+						$('.tabList > li').eq(idx).children('a').addClass('on');
+
+						/*
+						$('.tabList > li > a').removeClass('on');
+						$('.tabListBox > ul > li > a').removeClass('on');
+						$('.tabList > li').find('.' + thisDate).children('a').addClass('on');
+						$('.tabListBox > ul > li').find('.' + thisDate).children('a').addClass('on');
+						*/
+						var dmpDom = '<form action=""><div class="layout" style="background:blue; height:300px;"><span style="color:#fff;">' + thisDate + '</span></div></form>'
+						$('.content').find('form').hide();
+						$(dmpDom).appendTo('.content');
+					}
+				});
+			});
 		});
 
 		function TabRemove(e) {
+
+			idx = $(e).closest('li').index();
+			lng = $('form').length;
+
 			$(e).closest('li').remove();
 			TablistSort();
+
+			setTimeout(function() {
+				tabLng = $('.tabList > li').length;
+				tabBoxLng = $('.tabListBox > ul > li').length;
+				console.log(idx + ' , ' + lng + ' , 탭 길이 : ' + tabLng + ' , 탭 박스 길이 : ' + tabBoxLng);
+			}, 210);
+
+
+
+			$('.content').find('form').eq(idx).remove();
+			if (idx == 1 && $('form').length == 1) {
+				$('.content').find('form').eq(0).show();
+			}
+
 		}
 	</script>
+
+	<style type="text/css">
+		.gnbList>li .dept {
+			display: block !important;
+		}
+	</style>
+
 </body>
 
 </html>
