@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="x-apple-disable-message-reformatting" />
+	<title>Customer Portal</title>
+	<link rel="shortcut icon" href="../static/images/common/favicon.ico">
+	<link href="../static/css/lib/swiper.css" rel="stylesheet">
+	<link href="../static/css/reset.css" rel="stylesheet" />
+	<link href="../static/css/common.css" rel="stylesheet" />
+	<link href="../static/css/contents.css" rel="stylesheet" />
+	<script type="text/javascript" src="../static/js/common.js"></script>
+	<script type="text/javascript" src="../static/js/lib/moment.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/daterangepicker.js"></script>
+	<script type="text/javascript" src="../static/js/lib/quill.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jQuery.dPassword.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery.easy-autocomplete.js"></script>
+	<script type="text/javascript" src="../static/js/lib/semantic.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery.are-you-sure.js"></script>
+	<script type="text/javascript" src="../static/js/ui.js"></script>
+	<!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- 헤더영역 -->
+		<header id="headerWrap">
+			<h1><img src="../static/images/common/logo.jpg" alt="OPUS Logistics" /></h1>
+			<div class="menuAll">
+				<button type="button" class="allBtn">
+					<span>Menu</span>
+				</button>
+			</div>
+		</header>
+		<!-- //헤더영역 -->
+		<section id="container">
+			<div class="inner">
+				<nav>
+					<div class="gnb">
+						<ul class="gnbList">
+							<li>
+								<div class="gnbTit ty1">Organization</div>
+								<ul class="dept">
+									<li><a href="#" data-name="OrganizationList">Organization List</a></li>
+									<li><a href="#" data-name="Organization">Organization</a></li>
+								</ul>
+								<button type="button" class="clip on"></button>
+							</li>
+							<li>
+								<div class="gnbTit ty2">Subscription</div>
+								<ul class="dept">
+									<li><a href="#" data-name="SubscriptionList">Subscription List</a></li>
+									<li><a href="#" data-name="SubscriptionListWaiting">Subscription List (Waiting)</a></li>
+									<li><a href="#" data-name="SubscriptionListApproved">Subscription List (Approved)</a></li>
+									<li><a href="#" data-name="SubscriptionListCancelled">Subscription List (Cancelled)</a></li>
+									<li><a href="#" data-name="SubscriptionListWithdraw">Subscription List (Withdraw)</a></li>
+								</ul>
+								<button type="button" class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit ty3">Billing</div>
+								<ul class="dept">
+									<li><a href="#" data-name="BillingPolicyList">Billing Policy List</a></li>
+									<li><a href="#" data-name="InvoiceList">Invoice List</a></li>
+									<li><a href="#" data-name="InvoiceListWaiting">Invoice List (Waiting)</a></li>
+									<li><a href="#" data-name="InvoiceListSent">Invoice List (Sent)</a></li>
+									<li><a href="#" data-name="InvoiceListPaid">Invoice List (Paid)</a></li>
+									<li><a href="#" data-name="InvoiceListCancelled">Invoice List (Cancelled)</a></li>
+									<li><a href="#" data-name="SchedulerandHistory">Scheduler and History</a></li>
+								</ul>
+								<button type="button" class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit ty4">Usage</div>
+								<ul class="dept">
+									<li><a href="#" data-name="UsageList">Usage List</a></li>
+									<li><a href="#" data-name="UsageListSeat">Usage List (Seat)</a></li>
+									<li><a href="#" data-name="UsageListTransaction">Usage List (Transaction)</a></li>
+									<li><a href="#" data-name="TransactionList">Transaction List</a></li>
+								</ul>
+								<button type="button" class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit ty5">Pricing</div>
+								<ul class="dept">
+									<li><a href="#" data-name="ServiceList">Service List</a></li>
+									<li><a href="#" data-name="TariffList">Tariff List</a></li>
+									<li><a href="#" data-name="ServiceGroupList">Service Group List</a></li>
+								</ul>
+								<button type="button" class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit ty6">Notice</div>
+								<ul class="dept">
+									<li><a href="#" data-name="NoticeList">Notice List</a></li>
+								</ul>
+								<button type="button" class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit ty7">Administration</div>
+								<ul class="dept">
+									<li><a href="#" data-name="SystemCodeList">System Code List</a></li>
+									<li><a href="#" data-name="RoleList">Role List</a></li>
+									<li><a href="#" data-name="MailTransmitHistory">Mail Transmit History</a></li>
+								</ul>
+								<button type="button" class="clip"></button>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="content editBtns">
+					<div class="tabWrap">
+						<ul class="tabList">
+							<li class="home single">
+								<a href="#">Home</a>
+							</li>
+						</ul>
+						<div class="tabListBox">
+							<span>More</span>
+							<ul>
+							</ul>
+						</div>
+					</div>
+					<!-- 컨텐츠 영역 -->
+					<form action="">
+						<div class="layout Layout_Sidebar">
+							<h2 class="tit" id="cup10602_billingPolicy">Billing Policy</h2>
+							<div class="serviceCode">
+								<div class="srvNum" id="">
+									<div class="inputBox inpNone">
+										<input type="text" name="cup10602_billingPolicyIDLb" class="inp" id="cup10602_billingPolicyIDLb" readonly="readonly" value="P10000001">
+									</div>
+								</div>
+								<div class="actChk">
+									<div class="switchChk">
+										<input type="checkbox" name="cup10602_activeChk" id="cup10602_activeChk" checked="checked">
+										<label for="cup10602_activeChk" id="cup10602_active">
+											<span class="txt1">Inactive</span>
+											<span class="txt2">Active</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="inner">
+								<div class="lsCont">
+									<h3 class="tit" id="cup10602_basicLb">Basic</h3>
+									<ul class="itemList2">
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10602_billingPolicyNameLb">Billing Policy Name</dt>
+												<dd>
+													<div class="inputBox full">
+														<input type="text" name="cup10602_billingPolicyName" class="inp Mandate" id="cup10602_billingPolicyName" placeholder="" maxlength="80">
+														<button type="button" class="inpReset"></button>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10602_customerTypeLb">Customer Type</dt>
+												<dd>
+													<div class="comboBox Mandate">
+														<select class="comboSelect" id="cup10602_customerType" placeholder="Select a Type">
+															<option value="">Select a Type</option>
+															<option value="T-Shirt">T-Shirt</option>
+															<option value="T-Shirt Woman">T-Shirt Woman</option>
+															<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+															<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+														</select>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10602_billingPartyLb">Billing Party</dt>
+												<dd>
+													<div class="inputBox Edit_Organization full">
+														<div class="thumb">
+															<img src="../static/images/common/icon/icon_logo_small.png" alt="" name="cup10602_billingPartylogoUrl" id="cup10602_billingPartylogoUrl" />
+														</div>
+														<input type="text" name="cup10602_billingParty" class="inp autoSch Edit_Organization name" id="cup10602_billingParty" placeholder="">
+														<button type="button" class="inpReset"></button>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10602_billingCurrencyLb">Billing Currency</dt>
+												<dd>
+													<div class="comboBox Mandate">
+														<select class="comboSelect" id="cup10602_billingCurrency" placeholder="Select a Currency">
+															<option value="">Select a Type</option>
+															<option value="T-Shirt">T-Shirt</option>
+															<option value="T-Shirt Woman">T-Shirt Woman</option>
+															<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+															<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+														</select>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10602_productLineLb">Product Line</dt>
+												<dd>
+													<div class="comboBox Mandate">
+														<select class="comboSelect" id="cup10602_productLine" placeholder="Select a Product Line">
+															<option value="">Select a Type</option>
+															<option value="T-Shirt">T-Shirt</option>
+															<option value="T-Shirt Woman">T-Shirt Woman</option>
+															<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+															<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+														</select>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10602_billingContactLb">Billing Contact</dt>
+												<dd>
+													<div class="inputBox Edit_User">
+														<div class="thumb">
+															<img src="../static/images/common/icon/icon_person_small.png" alt="" name="cup10602_billingContactPhotoUrl" id="cup10602_billingContactPhotoUrl" />
+														</div>
+														<input type="text" name="cup10602_billingContact" class="inp autoSch Edit_User name" id="cup10602_billingContact" placeholder="">
+														<button type="button" class="inpReset"></button>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10602_paymentMethodLb">Payment Method</dt>
+												<dd>
+													<div class="comboBox Mandate">
+														<select class="comboSelect" id="cup10602_paymentMethod" placeholder="Select a Method">
+															<option value="">Select a Type</option>
+															<option value="T-Shirt">T-Shirt</option>
+															<option value="T-Shirt Woman">T-Shirt Woman</option>
+															<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+															<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+														</select>
+													</div>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+
+									<h3 class="tit" id="cup10602_billingRulesLb">Billing Rule</h3>
+									<ul class="itemList2">
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10602_billingStartLb">Billing Started on</dt>
+												<dd>
+													<div class="comboBox small">
+														<select class="comboSelect" id="cup10602_billingStartType" placeholder="Type">
+															<option value="">Select a Type</option>
+															<option value="T-Shirt">T-Shirt</option>
+															<option value="T-Shirt Woman">T-Shirt Woman</option>
+															<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+															<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+														</select>
+													</div>
+													<div class="inputBox count">
+														<button type="button" class="plus"><span>Plus</span></button>
+														<input type="number" name="cup10602_billingStartDay" class="inp Edit_Count" id="cup10602_billingStartDay" min="0" placeholder='Day(s)'>
+														<button type="button" class="minus"><span>Minus</span></button>
+													</div>
+													<div class="tooltip">
+														<div class="tips">
+															<strong class="tit">Billing Started on</strong>
+															<p class="txt">Codition of Date the <br />billing begins</p>
+														</div>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10602_creditTermLb">Credit Term</dt>
+												<dd>
+													<div class="comboBox small">
+														<select class="comboSelect" id="cup10602_creditTermType" placeholder="Type">
+															<option value="">Select a Type</option>
+															<option value="T-Shirt">T-Shirt</option>
+															<option value="T-Shirt Woman">T-Shirt Woman</option>
+															<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+															<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+														</select>
+													</div>
+													<div class="inputBox count">
+														<button type="button" class="plus"><span>Plus</span></button>
+														<input type="number" name="cup10602_creditTermDay" class="inp Edit_Count" id="cup10602_creditTermDay" min="0" placeholder='Day(s)'>
+														<button type="button" class="minus"><span>Minus</span></button>
+													</div>
+													<div class="tooltip">
+														<div class="tips">
+															<strong class="tit">Credit Term</strong>
+															<p class="txt">Invoice Due Date <br />Specification Condition</p>
+														</div>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10602_invoiceStartLb">Invoice Started on</dt>
+												<dd>
+													<div class="comboBox small">
+														<select class="comboSelect" id="cup10602_invoiceStartType" placeholder="Type">
+															<option value="">Select a Type</option>
+															<option value="T-Shirt">T-Shirt</option>
+															<option value="T-Shirt Woman">T-Shirt Woman</option>
+															<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+															<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+														</select>
+													</div>
+													<div class="inputBox count">
+														<button type="button" class="plus"><span>Plus</span></button>
+														<input type="number" name="cup10602_invoiceStartDay" class="inp Edit_Count" id="cup10602_invoiceStartDay" min="0" placeholder='Day(s)'>
+														<button type="button" class="minus"><span>Minus</span></button>
+													</div>
+													<div class="tooltip">
+														<div class="tips">
+															<strong class="tit">Invoice Started on</strong>
+															<p class="txt">Condition of Invoice <br />created on the same <br />date each month</p>
+														</div>
+													</div>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+
+									<h3 class="tit" id="cup10602_invoiceOptionLb">Invoice Option</h3>
+									<ul class="itemList2">
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10602_invoiceLogoLb">Invoice Logo</dt>
+												<dd>
+													<div class="imgAdd">
+														<div class="imgBox">
+															<img src="../static/images/sample/sample_logo.png" alt="" class="Image_Logo_Large" name="cup10602_invoiceLogo" id="cup10602_invoiceLogo" />
+															<button type="button" class="imgRemove">Delete</button>
+														</div>
+														<div class="changeBtn">
+															<div class="fileBox">
+																<label for="imgUpload" id="cup10602_changeLogo">Change Logo</label>
+																<input type="file" name="imgUpload" id="imgUpload" class="fileUpload" />
+															</div>
+														</div>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10602_invoiceRemarksLb">Invoice Remarks</dt>
+												<dd>
+													<div class="textareaDiv">
+														<textarea name="cup10602_invoicentRemarks" id="cup10602_invoicentRemarks" cols="30" rows="10" class="textarea" maxlength="500"></textarea>
+														<div class="byte"><span class="bold">100</span>/150</div>
+													</div>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</div>
+
+								<div class="lsCont fix">
+									<h3 class="tit" id="cup10602_recordLb">Record</h3>
+									<dl class="inpItem2">
+										<dt id="cup10602_createdOnLb">Created on</dt>
+										<dd>
+											<div class="ele">
+												<div class="inputBox Edit_date single">
+													<input type="text" name="cup10602_createDate" class="inp Readonly" id="cup10602_createDate" value="12-14-2018" readonly />
+												</div>
+												<div class="inputBox Edit_Time readonly">
+													<input type="text" name="cup10602_createTime" class="inp Readonly" id="cup10602_createTime" value="10 : 20 AM" readonly="readonly">
+												</div>
+											</div>
+											<div class="ele">
+												<div class="inputBox Edit_User">
+													<div class="thumb">
+														<img src="../static/images/common/icon/icon_person_small.png" alt="" name="cup10602_createdByPhotoUrl" id="cup10602_createdByPhotoUrl" />
+													</div>
+													<input type="text" name="cup10602_createdBy" class="inp Readonly" id="cup10602_createdBy" value="Park, JungIl" readonly="readonly">
+												</div>
+											</div>
+										</dd>
+									</dl>
+									<dl class="inpItem2">
+										<dt id="cup10602_modifiedOnLb">Modified on</dt>
+										<dd>
+											<div class="ele">
+												<div class="inputBox Edit_date single">
+													<input type="text" name="cup10602_modifiedDate" class="inp Readonly" id="cup10602_modifiedDate" value="12-14-2018" readonly />
+												</div>
+												<div class="inputBox Edit_Time readonly">
+													<input type="text" name="cup10602_modifiedTime" class="inp Readonly" id="cup10602_modifiedTime" value="10 : 20 AM" readonly="readonly">
+												</div>
+											</div>
+											<div class="ele">
+												<div class="inputBox Edit_User">
+													<div class="thumb">
+														<img src="../static/images/common/icon/icon_person_small.png" alt="" name="cup10602_modifiedByPhotoUrl" id="cup10602_modifiedByPhotoUrl" />
+													</div>
+													<input type="text" name="cup10602_modifiedBy" class="inp Readonly" id="cup10602_modifiedBy" value="Park, JungIl" readonly="readonly">
+												</div>
+											</div>
+										</dd>
+									</dl>
+
+									<h3 class="tit" id="cup10602_onlineDefaultLb">Online Default</h3>
+									<dl class="inpItem2">
+										<dt id="cup10602_onlineDefaultPolicyLb">Online Default Policy</dt>
+										<dd>
+											<div class="ele">
+												<div class="inputBox schType ty1">
+													<div class="inner">
+														<input type="text" class="inp autoSch ty1 code Readonly" readonly="readonly">
+														<input type="text" name="cup10602_onlineDefaultPolicy" class="inp autoSch ty1 name" id="cup10602_onlineDefaultPolicy" placeholder="">
+														<button type="button" class="inpReset"></button>
+													</div>
+												</div>
+											</div>
+											<div class="ele tr">
+												<button type="button" class="btn" id="cup10602_setItDefault">Set it Online Default</button>
+											</div>
+										</dd>
+									</dl>
+
+								</div>
+							</div>
+							<div class="editBtns">
+								<button type="button" class="btn basic" id="cup10602_Save">Save</button>
+							</div>
+						</div>
+					</form>
+					<!--// 컨텐츠 영역 -->
+				</div>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			$('form').areYouSure();
+		});
+	</script>
+</body>
+
+</html>

@@ -135,71 +135,67 @@
 					<!-- 컨텐츠 영역 -->
 					<form action="">
 						<div class="layout Layout_Sidebar">
-							<h2 class="tit" id="cup10505_subscriptionLb">Subscription</h2>
+							<h2 class="tit" id="cup10202_organizationLb">Organization</h2>
 							<div class="serviceCode">
 								<div class="srvNum" id="">
 									<div class="inputBox inpNone">
-										<input type="text" name="cup10505_subscriptionIdLb" class="inp" id="cup10505_subscriptionIdLb" readonly="readonly" value="B10000001">
+										<input type="text" name="cup10202_organizationIdLb" class="inp" id="cup10202_organizationIdLb" readonly="readonly" value="O10000001">
+									</div>
+								</div>
+								<div class="actChk">
+									<div class="switchChk">
+										<input type="checkbox" name="cup10202_activeChk" id="cup10202_activeChk" checked="checked">
+										<label for="cup10202_activeChk" id="cup10202_active">
+											<span class="txt1">Inactive</span>
+											<span class="txt2">Active</span>
+										</label>
 									</div>
 								</div>
 							</div>
 							<div class="inner">
 								<div class="lsCont">
-									<h3 class="tit" id="cup10505_basicLb">Basic</h3>
+									<h3 class="tit" id="cup10202_basicLb">Basic</h3>
 									<ul class="itemList2">
 										<li>
 											<dl class="inpItem">
-												<dt id="cup10505_subscriptionNameLb">Subscription Name</dt>
+												<dt id="cup10202_logoLb">Logo</dt>
 												<dd>
-													<div class="inputBox full">
-														<input type="text" name="cup10505_subscriptionName" class="inp Mandate" id="cup10505_subscriptionName" placeholder="Subscription Name" maxlength="80">
-														<button type="button" class="inpReset"></button>
+													<div class="imgAdd">
+														<div class="imgBox person">
+															<img src="../static/images/common/icon/icon_person.png" alt="" class="Image_Logo_Large" name="cup10202_logo" id="cup10202_logo" />
+															<button type="button" class="imgRemove" id="">Delete</button>
+														</div>
+														<div class="changeBtn">
+															<div class="fileBox">
+																<label for="imgUpload" id="cup10202_changeLogo">Change Logo</label>
+																<input type="file" name="imgUpload" id="imgUpload" class="fileUpload" />
+															</div>
+														</div>
 													</div>
 												</dd>
 											</dl>
 										</li>
 										<li>
 											<dl class="inpItem">
-												<dt id="cup10505_subscriptionStatusLb">Subscription Status</dt>
+												<dt id="cup10202_displayNameLb">Display Name</dt>
 												<dd>
 													<div class="inputBox">
-														<input type="text" name="cup10505_subscriptionStatus" class="inp Readonly" id="cup10505_subscriptionStatus" readonly="readonly" value="Requested">
+														<input type="text" name="cup10202_displayName" class="inp Mandate" id="cup10202_displayName" maxlength="50">
+														<button type="button" class="inpReset"></button>
 													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_billToLb">Bill to</dt>
-												<dd>
-													<!-- 2019-02-12 수정 -->
-													<div class="inputBox Edit_Organization full">
-														<div class="thumb">
-															<img src="../static/images/common/icon/icon_logo_small.png" alt="" name="cup10505_billToLogoUrl" id="cup10505_billToLogoUrl" />
+													<div class="tooltip">
+														<div class="tips">
+															<strong class="tit">Display Name</strong>
+															<p class="txt">Display Name is <br />shown on the system</p>
 														</div>
-														<input type="text" name="cup10505_billTo" class="inp autoSch Edit_Organization name" id="cup10505_billTo" placeholder="">
-														<button type="button" class="inpReset"></button>
-													</div>
-													<!--// 2019-02-12 수정 -->
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_registeredStatusLb">Registered on</dt>
-												<dd>
-													<div class="inputBox Edit_date single">
-														<input type="text" name="cup10505_registeredOn" class="inp datesingle Mandate" id="cup10505_registeredOn">
 													</div>
 												</dd>
 											</dl>
-										</li>
-										<li>
 											<dl class="inpItem">
-												<dt id="cup10505_addressLine1Lb">Address Line1</dt>
+												<dt id="cup10202_englishNameLb">English Name</dt>
 												<dd>
-													<div class="inputBox full">
-														<input type="text" name="cup10505_addressLine1" class="inp Mandate" id="cup10505_addressLine1" placeholder="Type Street Address, P.O. box" maxlength="80">
+													<div class="inputBox Edit_AlphaNum">
+														<input type="text" name="cup10202_englishName" class="inp" id="cup10202_englishName" placeholder="First Name, Last Name" maxlength="50">
 														<button type="button" class="inpReset"></button>
 													</div>
 												</dd>
@@ -207,23 +203,108 @@
 										</li>
 										<li>
 											<dl class="inpItem">
-												<dt id="cup10505_addressLine2Lb">Address Line2</dt>
+												<dt id="cup10202_languageNameLb">Language Name</dt>
 												<dd>
-													<div class="inputBox full">
-														<input type="text" name="cup10505_addressLine2" class="inp" id="cup10505_addressLine2" placeholder="Type Apartment, Suite, Unit, Building, Floor" maxlength="80">
+													<div class="inputBox">
+														<input type="text" name="cup10202_languageName" class="inp" id="cup10202_languageName" maxlength="50">
 														<button type="button" class="inpReset"></button>
+													</div>
+													<div class="tooltip">
+														<div class="tips">
+															<strong class="tit">Language Name</strong>
+															<p class="txt">Language Name Is <br />your name in native<br /> language, as it appear<br /> language.</p>
+														</div>
 													</div>
 												</dd>
 											</dl>
 										</li>
 										<li>
 											<dl class="inpItem">
-												<dt id="cup10505_cityStateLb">City, State/Province</dt>
+												<dt id="cup10202_aliasLb">Alias</dt>
 												<dd>
-													<div class="inputBox full schType ty2">
+													<div class="inputBox Edit_AlphaNum">
+														<input type="text" name="cup10202_alias" class="inp" id="cup10202_alias" maxlength="50">
+														<button type="button" class="inpReset"></button>
+													</div>
+													<div class="tooltip">
+														<div class="tips" id="">
+															<strong class="tit">Alias</strong>
+															<p class="txt">Alias can be <br />organization code or <br />abbreviation.</p>
+														</div>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_companyLb">Company</dt>
+												<dd>
+													<div class="inputBox schType ty1">
 														<div class="inner">
-															<input type="text" name="cup10505_city" class="inp autoSch ty2 code Readonly" id="" placeholder="State/Province" readonly="readonly" maxlength="50">
-															<input type="text" name="cup10505_stateProvince" class="inp autoSch Mandate ty2 name" id="" placeholder="City" maxlength="50">
+															<input type="text" class="inp autoSch ty1 code Readonly" readonly="readonly">
+															<input type="text" name="cup10202_company" class="inp autoSch ty1 name Mandate" id="cup10202_company" placeholder="">
+															<button type="button" class="inpReset"></button>
+														</div>
+													</div>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+
+									<h3 class="tit" id="cup10202_addressLb">Address</h3>
+									<ul class="itemList2">
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_telephoneNumberLb">Telephone Number</dt>
+												<dd>
+													<div class="inputBox Edit_PhoneFax">
+														<input type="text" name="cup10202_telephoneNumber" class="inp" id="cup10202_telephoneNumber" maxlength="50">
+														<button type="button" class="inpReset"></button>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_faxNumberLb">Fax Number</dt>
+												<dd>
+													<div class="inputBox Edit_PhoneFax">
+														<input type="text" name="cup10202_faxNumber" class="inp" id="cup10202_faxNumber" maxlength="50">
+														<button type="button" class="inpReset"></button>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_addressLine1Lb">Address Line1</dt>
+												<dd>
+													<div class="inputBox full">
+														<input type="text" name="cup10202_addressLine1" class="inp" id="cup10202_addressLine1" placeholder="" maxlength="50">
+														<button type="button" class="inpReset"></button>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_addressLine2Lb">Address Line2</dt>
+												<dd>
+													<div class="inputBox full">
+														<input type="text" name="cup10202_addressLine2" class="inp" id="cup10202_addressLine2" placeholder="" maxlength="50">
+														<button type="button" class="inpReset"></button>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_cityLb">City</dt>
+												<dd>
+													<div class="inputBox schType ty2 short">
+														<div class="inner">
+															<input type="text" class="inp autoSch ty2 code Readonly" readonly="readonly">
+															<input type="text" name="cup10202_city" class="inp autoSch ty2 name Mandate" id="cup10202_city" placeholder="Type City" maxlength="50">
 															<button type="button" class="inpReset"></button>
 														</div>
 													</div>
@@ -232,12 +313,26 @@
 										</li>
 										<li>
 											<dl class="inpItem">
-												<dt id="cup10505_countryZipLb">Country, Zip Code</dt>
+												<dt id="cup10202_stateProvinceLb">State/Province</dt>
 												<dd>
-													<div class="ui search selection dropdown country Mandate" id="cup10505_country">
+													<div class="inputBox schType ty2 short">
+														<div class="inner">
+															<input type="text" class="inp autoSch ty3 code Readonly" readonly="readonly">
+															<input type="text" name="cup10202_stateProvince" class="inp autoSch ty3 name" id="cup10202_stateProvince" placeholder="Type State">
+															<button type="button" class="inpReset"></button>
+														</div>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_countryLb">Country</dt>
+												<dd>
+													<div class="ui search selection dropdown country Mandate" id="cup10202_country">
 														<input type="hidden" name="country">
 														<i class="dropdown icon"></i>
-														<div class="default text">Type Country</div>
+														<div class="default text">Select a Country</div>
 														<div class="menu">
 															<div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
 															<div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
@@ -485,7 +580,164 @@
 													</div>
 													<div class="inputBox zipCode">
 														<div class="inner">
-															<input type="text" name="cup10505_zipCode" class="inp Mandate" id="cup10505_zipCode" placeholder="Zip Code">
+															<input type="text" name="cup10202_zipCode" class="inp" id="cup10202_zipCode" placeholder="Zip Code">
+															<button type="button" class="inpReset"></button>
+														</div>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_geoLocationLb">Geo Location</dt>
+												<dd>
+													<div class="inputBox Edit_Geo">
+														<input type="text" name="cup10202_geoLocation" class="inp" id="cup10202_geoLocation" placeholder="" maxlength="50" readonly="readonly">
+													</div>
+													<button type="button" class="btn" onclick="GeoLocation(this)" id="cup10202_getLocation">Get Location</button>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+
+									<h3 class="tit" id="cup10202_businessReferenceLb">Business Reference</h3>
+									<ul class="itemList2">
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_registrationIdLb">Registration ID</dt>
+												<dd>
+													<div class="inputBox">
+														<input type="text" name="cup10202_registrationId" class="inp" id="cup10202_registrationId" maxlength="50">
+														<button type="button" class="inpReset"></button>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_taxIdLb">TAX ID</dt>
+												<dd>
+													<div class="inputBox">
+														<input type="text" name="cup10202_taxId" class="inp" id="cup10202_taxId" maxlength="50">
+														<button type="button" class="inpReset"></button>
+													</div>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+
+									<h3 class="tit" id="cup10202_subscriptionLb">Subscription</h3>
+									<ul class="itemList2">
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_subscriptionManagerLb">Subscription Manager</dt>
+												<dd>
+													<div class="inputBox Edit_User">
+														<div class="thumb">
+															<img src="../static/images/common/icon/icon_person_small.png" alt="" name="" id="" />
+														</div>
+														<input type="text" name="cup10202_subscriptionManager" class="inp autoSch Edit_User name" id="cup10202_subscriptionManager" placeholder="">
+														<button type="button" class="inpReset"></button>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_tenantIdLb">Tenant ID (GUID)</dt>
+												<dd>
+													<div class="inputBox">
+														<input type="text" name="cup10202_tenantId" class="inp Readonly" id="cup10202_tenantId" readonly="readonly">
+													</div>
+													<div class="tooltip">
+														<div class="tips">
+															<strong class="tit">Tenant ID</strong>
+															<p class="txt">Global Unique <br />Identifier in the <br />system. This <br />information is used to <br />assign ownership.</p>
+														</div>
+													</div>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+
+									<h3 class="tit" id="cup10202_systemOptionsLb">System Options</h3>
+									<ul class="itemList2">
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_timeZoneLb">Time Zone</dt>
+												<dd>
+													<div class="comboBox">
+														<select class="comboSelect" id="cup10202_timeZone" placeholder="Select a Time Zone">
+															<option value="">Select a Type</option>
+															<option value="T-Shirt">T-Shirt</option>
+															<option value="T-Shirt Woman">T-Shirt Woman</option>
+															<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+															<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+														</select>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_isDaylightSavingTimeLb">Is Daylight Saving Time</dt>
+												<dd>
+													<div class="checkbox">
+														<input type="checkbox" name="cup10202_isDaylightSavingTimeChk" id="cup10202_isDaylightSavingTimeChk" checked="checked"><label for="cup10202_isDaylightSavingTimeChk" id="cup10202_isDaylightSavingTime">Apply</label>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_currencyLb">Currency</dt>
+												<dd>
+													<div class="inputBox schType ty1 short">
+														<div class="inner">
+															<input type="text" class="inp autoSch ty1 code Readonly" readonly="readonly">
+															<input type="text" name="cup10202_currency" class="inp autoSch ty1 name" id="cup10202_currency" placeholder="Select a Currency">
+															<button type="button" class="inpReset"></button>
+														</div>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_unitOfWeightLb">Unit of Weight</dt>
+												<dd>
+													<div class="inputBox schType ty1 short">
+														<div class="inner">
+															<input type="text" class="inp autoSch ty1 code Readonly" readonly="readonly">
+															<input type="text" name="cup10202_unitOfWeight" class="inp autoSch ty1 name" id="cup10202_unitOfWeight" placeholder="Select a Unit">
+															<button type="button" class="inpReset"></button>
+														</div>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_unitOfVolumeLb">Unit of Volume</dt>
+												<dd>
+													<div class="inputBox schType ty1 short">
+														<div class="inner">
+															<input type="text" class="inp autoSch ty1 code Readonly" readonly="readonly">
+															<input type="text" name="cup10202_unitOfVolume" class="inp autoSch ty1 name" id="cup10202_unitOfVolume" placeholder="Select a Unit">
+															<button type="button" class="inpReset"></button>
+														</div>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10202_unitOfLengthLb">Unit of Length</dt>
+												<dd>
+													<div class="inputBox schType ty1 short">
+														<div class="inner">
+															<input type="text" class="inp autoSch ty1 code Readonly" readonly="readonly">
+															<input type="text" name="cup10202_unitOfLength" class="inp autoSch ty1 name" id="cup10202_unitOfLength" placeholder="Select a Unit">
 															<button type="button" class="inpReset"></button>
 														</div>
 													</div>
@@ -494,402 +746,132 @@
 										</li>
 									</ul>
 
-									<h3 class="tit" id="cup10505_personInChargeLb">Person in Charge</h3>
-									<ul class="itemList2">
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_picNameLb">Name</dt>
-												<dd>
-													<!-- 2019-02-12 수정 -->
-													<div class="inputBox Edit_User">
-														<div class="thumb">
-															<img src="../static/images/common/icon/icon_person_small.png" alt="" name="cup10505_picNamePhotoUrl" id="cup10505_picNamePhotoUrl" />
-														</div>
-														<input type="text" name="cup10505_picName" class="inp autoSch Edit_User name" id="cup10505_picName" placeholder="">
-														<button type="button" class="inpReset"></button>
-													</div>
-													<!--// 2019-02-12 수정 -->
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_emailLb">Email</dt>
-												<dd>
-													<div class="inputBox">
-														<input type="text" name="cup10505_email" class="inp Readonly" id="cup10505_email" readonly="readonly" value="Email">
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_phoneNumberLb">Phone Number</dt>
-												<dd>
-													<!-- 2019-02-12 수정 -->
-													<div class="inputBox Edit_PhoneFax">
-														<input type="text" name="cup10505_phoneNumber" class="inp Mandate" id="cup10505_phoneNumber" maxlength="50">
-														<button type="button" class="inpReset"></button>
-													</div>
-													<!--// 2019-02-12 수정 -->
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_faxNumberLb">Fax Number</dt>
-												<dd>
-													<!-- 2019-02-12 수정 -->
-													<div class="inputBox Edit_PhoneFax">
-														<input type="text" name="cup10505_faxNumber" class="inp" id="cup10505_faxNumber" maxlength="50">
-														<button type="button" class="inpReset"></button>
-													</div>
-													<!--// 2019-02-12 수정 -->
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_departmentLb">Department</dt>
-												<dd>
-													<div class="inputBox full">
-														<input type="text" name="cup10505_department" class="inp" id="cup10505_department" maxlength="80">
-														<button type="button" class="inpReset"></button>
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_additionalEmailLb">Additional Email</dt>
-												<dd>
-													<div class="inputBox full">
-														<input type="text" name="cup10505_additionalEmail" class="inp" id="cup10505_additionalEmail" placeholder="Separating Addresses with a Comma(,)" maxlength="80">
-														<button type="button" class="inpReset"></button>
-													</div>
-												</dd>
-											</dl>
-										</li>
-									</ul>
-
-									<h3 class="tit" id="cup10505_billingLb">Billing</h3>
-									<ul class="itemList2">
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_billingPartyLb">Billing Party</dt>
-												<dd>
-													<!-- 2019-02-12 수정 -->
-													<div class="inputBox Edit_Organization full">
-														<div class="thumb">
-															<img src="../static/images/common/icon/icon_logo_small.png" alt="" name="cup10505_billingPartyLogoUrl" id="cup10505_billingPartyLogoUrl" />
-														</div>
-														<input type="text" name="cup10505_billingParty" class="inp autoSch Edit_Organization name" id="cup10505_billingParty" placeholder="">
-														<button type="button" class="inpReset"></button>
-													</div>
-													<!--// 2019-02-12 수정 -->
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_billingContactLb">Billing Contact</dt>
-												<dd>
-													<!-- 2019-02-12 수정 -->
-													<div class="inputBox Edit_User">
-														<div class="thumb">
-															<img src="../static/images/common/icon/icon_person_small.png" alt="" name="cup10505_billingContactPhotoUrl" id="cup10505_billingContactPhotoUrl" />
-														</div>
-														<input type="text" name="cup10505_billingContact" class="inp autoSch Edit_User name" id="cup10505_billingContact" placeholder="">
-														<button type="button" class="inpReset"></button>
-													</div>
-													<!--// 2019-02-12 수정 -->
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_customerTypeLb">Customer Type</dt>
-												<dd>
-													<div class="comboBox Mandate">
-														<select class="comboSelect" id="cup10505_customerType" placeholder="Select a Type">
-															<option value="">Select a Type</option>
-															<option value="T-Shirt">T-Shirt</option>
-															<option value="T-Shirt Woman">T-Shirt Woman</option>
-															<option value="Yellow T-Shirt">Yellow T-Shirt</option>
-															<option value="Zebra T-Shoot">Zebra T-Shoot</option>
-														</select>
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_billingCurrencyLb">Billing Currency</dt>
-												<dd>
-													<div class="comboBox Mandate">
-														<select class="comboSelect" id="cup10505_billingCurrency" placeholder="Select a Currency">
-															<option value="">Select a Type</option>
-															<option value="T-Shirt">T-Shirt</option>
-															<option value="T-Shirt Woman">T-Shirt Woman</option>
-															<option value="Yellow T-Shirt">Yellow T-Shirt</option>
-															<option value="Zebra T-Shoot">Zebra T-Shoot</option>
-														</select>
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_billingStartedOnLb">Billing Started on</dt>
-												<dd>
-													<div class="inputBox Edit_date single">
-														<input type="text" name="cup10505_billingStartedOn" class="inp datesingle" id="cup10505_billingStartedOn">
-													</div>
-													<div class="tooltip">
-														<div class="tips">
-															<strong class="tit">Billing Started on</strong>
-															<p class="txt">Date the billing begins</p>
-														</div>
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_billingEndedOnLb">Billing Ended on</dt>
-												<dd>
-													<div class="inputBox Edit_date single">
-														<input type="text" name="cup10505_billingEndedOn" class="inp datesingle" id="cup10505_billingEndedOn">
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_invoiceIssuedOnLb">Invoice Issued on</dt>
-												<dd>
-													<div class="inputBox Edit_date single">
-														<input type="text" name="cup10505_invoiceIssuedOn" class="inp datesingle" id="cup10505_invoiceIssuedOn">
-													</div>
-													<div class="tooltip">
-														<div class="tips">
-															<strong class="tit">Invoice Started on</strong>
-															<p class="txt">Fist Invoice Issued <br />Date. Invoice created <br />on the same date each <br />month</p>
-														</div>
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_creditTermLb">Credit Term</dt>
-												<dd>
-													<div class="comboBox small">
-														<select class="comboSelect" id="cup10505_creditTermType" placeholder="Type">
-															<option value="">Select a Type</option>
-															<option value="T-Shirt">T-Shirt</option>
-															<option value="T-Shirt Woman">T-Shirt Woman</option>
-															<option value="Yellow T-Shirt">Yellow T-Shirt</option>
-															<option value="Zebra T-Shoot">Zebra T-Shoot</option>
-														</select>
-													</div>
-													<div class="inputBox count">
-														<button type="button" class="plus"><span>Plus</span></button>
-														<input type="number" name="cup10505_creditTermDay" class="inp Edit_Count" id="cup10505_creditTermDay" min="0">
-														<button type="button" class="minus"><span>Minus</span></button>
-													</div>
-													<div class="tooltip">
-														<div class="tips">
-															<strong class="tit">Credit Term</strong>
-															<p class="txt">Invoice Due Date <br />Specification Condition</p>
-														</div>
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_paymentMethodLb">Payment Method</dt>
-												<dd>
-													<div class="comboBox Mandate">
-														<select class="comboSelect" id="cup10505_paymentMethod" placeholder="Select a Method">
-															<option value="">Select a Type</option>
-															<option value="T-Shirt">T-Shirt</option>
-															<option value="T-Shirt Woman">T-Shirt Woman</option>
-															<option value="Yellow T-Shirt">Yellow T-Shirt</option>
-															<option value="Zebra T-Shoot">Zebra T-Shoot</option>
-														</select>
-													</div>
-												</dd>
-											</dl>
-										</li>
-									</ul>
-
-									<h3 class="tit" id="cup10505_invoiceOptionLb">Invoice Option</h3>
-									<ul class="itemList2">
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_invoiceLogoLb">Invoice Logo</dt>
-												<dd>
-													<div class="imgAdd">
-														<div class="imgBox">
-															<img src="../static/images/sample/sample_logo.png" alt="" class="Image_Logo_Large" id="cup10505_invoiceLogo" />
-															<button type="button" class="imgRemove">Delete</button>
-														</div>
-														<div class="changeBtn">
-															<div class="fileBox">
-																<label for="imgUpload" id="cup10505_changeLogo">Change Picture</label>
-																<input type="file" name="imgUpload" id="imgUpload" class="fileUpload" />
-															</div>
-														</div>
-													</div>
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_invoiceRemarksLb">Invoice Remarks</dt>
-												<dd>
-													<div class="textareaDiv">
-														<!-- 2019-02-18 수정 -->
-														<textarea name="cup10505_invoiceRemarks" id="cup10505_invoiceRemarks" cols="30" rows="10" class="textarea" maxlength="500"></textarea>
-														<!--// 2019-02-18 수정 -->
-														<div class="byte"><span class="bold">100</span>/150</div>
-													</div>
-												</dd>
-											</dl>
-										</li>
-									</ul>
-
-									<h3 class="tit" id="cup10505_salesLb">Sales</h3>
-									<ul class="itemList2">
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_salesPartyLb">Sales Party</dt>
-												<dd>
-													<!-- 2019-02-12 수정 -->
-													<div class="inputBox Edit_Organization">
-														<div class="thumb">
-															<img src="../static/images/common/icon/icon_logo_small.png" alt="" name="cup10505_billingContactPhotoUrl" id="cup10505_billingContactPhotoUrl" />
-														</div>
-														<input type="text" name="cup10505_salesParty" class="inp autoSch Edit_Organization name" id="cup10505_salesParty" placeholder="">
-														<button type="button" class="inpReset"></button>
-													</div>
-													<!--// 2019-02-12 수정 -->
-												</dd>
-											</dl>
-										</li>
-										<li>
-											<dl class="inpItem">
-												<dt id="cup10505_salesRepLb">Sales Rep.</dt>
-												<dd>
-													<!-- 2019-02-12 수정 -->
-													<div class="inputBox Edit_User">
-														<div class="thumb">
-															<img src="../static/images/common/icon/icon_person_small.png" alt="" name="cup10505_salesRepPhotoUrl" id="cup10505_salesRepPhotoUrl" />
-														</div>
-														<input type="text" name="cup10505_salesRep" class="inp autoSch Edit_User name" id="cup10505_salesRep" placeholder="">
-														<button type="button" class="inpReset"></button>
-													</div>
-													<!--// 2019-02-12 수정 -->
-												</dd>
-											</dl>
-										</li>
-									</ul>
-
-									<h3 class="tit" id="cup10505_servicesLb">Services</h3>
+									<h3 class="tit" id="cup10202_usersLb">Users</h3>
 									<div class="ibsheepTop">
-										<div class="tools">
-											<button type="button" class="btn addBtn" id="cup10505_rowAdd">ADD</button>
-											<button type="button" class="btn removeBtn" id="cup10505_rowDelete">REMOVE</button>
+										<div class="ui floating dropdown labeled icon button filter" id="">
+											<i class="filter icon"></i>
+											<span class="text">Filter Posts</span>
+											<div class="menu">
+												<div class="ui icon search input">
+													<i class="search icon"></i>
+													<input type="text" placeholder="Search tags...">
+												</div>
+												<div class="header">
+													<i class="tags icon"></i>
+													Tag Label
+												</div>
+												<div class="scrolling menu">
+													<div class="item">
+														<div class="ui red empty circular label"></div>
+														Important
+													</div>
+													<div class="item">
+														<div class="ui blue empty circular label"></div>
+														Announcement
+													</div>
+													<div class="item">
+														<div class="ui black empty circular label"></div>
+														Cannot Fix
+													</div>
+													<div class="item">
+														<div class="ui purple empty circular label"></div>
+														News
+													</div>
+													<div class="item">
+														<div class="ui orange empty circular label"></div>
+														Enhancement
+													</div>
+													<div class="item">
+														<div class="ui empty circular label"></div>
+														Change Declined
+													</div>
+													<div class="item">
+														<div class="ui yellow empty circular label"></div>
+														Off Topic
+													</div>
+													<div class="item">
+														<div class="ui pink empty circular label"></div>
+														Interesting
+													</div>
+													<div class="item">
+														<div class="ui green empty circular label"></div>
+														Discussion
+													</div>
+												</div>
+											</div>
 										</div>
+										<div class="tools">
+											<button type="button" class="btn addBtn" id="">ADD</button>
+											<button type="button" class="btn removeBtn" id="">REMOVE</button>
+										</div>
+									</div>
+									<div class="ibsheetDiv">
+										ibsheet
 									</div>
 									<div class="ibsheetDiv">
 										ibsheet
 									</div>
 								</div>
 
-								<!-- ***************************** -->
 								<div class="lsCont fix">
-									<h3 class="tit" id="cup10505_recordLb">Record</h3>
+									<h3 class="tit" id="cup10202_recordLb">Record</h3>
 									<dl class="inpItem2">
-										<dt id="cup10505_createOnLb">Created on</dt>
+										<dt id="cup10202_createdOnLb">Created on</dt>
 										<dd>
 											<div class="ele">
 												<div class="inputBox Edit_date single">
-													<input type="text" name="cup10505_createDate" class="inp Readonly" id="cup10505_createDate" value="12-14-2018" readonly />
+													<input type="text" name="cup10202_createDate" class="inp Readonly" id="cup10202_createDate" value="12-14-2018" readonly />
 												</div>
 												<div class="inputBox Edit_Time readonly">
-													<input type="text" name="cup10505_createTime" class="inp Readonly" id="cup10505_createTime" value="10 : 20 AM" readonly="readonly">
+													<input type="text" name="cup10202_createTime" class="inp Readonly" id="cup10202_createTime" value="10 : 20 AM" readonly="readonly">
 												</div>
 											</div>
 											<div class="ele">
 												<div class="inputBox Edit_User">
 													<div class="thumb">
-														<img src="../static/images/common/icon/icon_person_small.png" alt="" />
+														<img src="../static/images/common/icon/icon_person_small.png" alt="" name="cup10202_createdByPhotoUrl" id="cup10202_createdByPhotoUrl">
 													</div>
-													<input type="text" name="cup10505_createdBy" class="inp Readonly" id="cup10505_createdBy" value="Park, JungIl" readonly="readonly">
+													<input type="text" name="cup10202_createdBy" class="inp Readonly" id="cup10202_createdBy" value="Park, JungIl" readonly="readonly">
 												</div>
 											</div>
 										</dd>
 									</dl>
 									<dl class="inpItem2">
-										<dt id="cup10505_modifiedOnLb">Modified on</dt>
+										<dt id="cup10202_modifiedOnLb">Modified on</dt>
 										<dd>
 											<div class="ele">
 												<div class="inputBox Edit_date single">
-													<input type="text" name="cup10505_modifiedDate" class="inp Readonly" id="cup10505_modifiedDate" value="12-14-2018" readonly />
+													<input type="text" name="cup10202_modifiedDate" class="inp Readonly" id="cup10202_modifiedDate" value="12-14-2018" readonly />
 												</div>
 												<div class="inputBox Edit_Time readonly">
-													<input type="text" name="cup10505_modifiedTime" class="inp Readonly" id="cup10505_modifiedTime" value="10 : 20 AM" readonly="readonly">
+													<input type="text" name="cup10202_modifiedTime" class="inp Readonly" id="cup10202_modifiedTime" value="10 : 20 AM" readonly="readonly">
 												</div>
 											</div>
 											<div class="ele">
 												<div class="inputBox Edit_User">
-
 													<div class="thumb">
-														<img src="../static/images/common/icon/icon_person_small.png" alt="" />
+														<img src="../static/images/common/icon/icon_person_small.png" alt="" name="cup10202_modifiedByPhotoUrl" id="cup10202_modifiedByPhotoUrl">
 													</div>
-													<input type="text" name="cup10505_modifiedBy" class="inp Readonly" id="cup10505_modifiedBy" value="Park, JungIl" readonly="readonly">
+													<input type="text" name="cup10202_modifiedBy" class="inp Readonly" id="cup10202_modifiedBy" value="Park, JungIl" readonly="readonly">
 												</div>
 											</div>
 										</dd>
 									</dl>
 
-									<h3 class="tit" id="cup10505_billingPolicyLb">Billing Policy</h3>
-									<dl class="inpItem2">
-										<dt id="cup10505_changePolicyLb">Change Billing Information Using :</dt>
-										<dd>
-											<div class="ele">
-												<div class="comboBox full">
-													<select class="comboSelect" id="cup10505_selectBillingPolicy" placeholder="Select a Billing Policy">
-														<option value="">Select a Type</option>
-														<option value="T-Shirt">T-Shirt</option>
-														<option value="T-Shirt Woman">T-Shirt Woman</option>
-														<option value="Yellow T-Shirt">Yellow T-Shirt</option>
-														<option value="Zebra T-Shoot">Zebra T-Shoot</option>
-													</select>
-												</div>
-											</div>
-											<div class="ele tr">
-												<button type="button" class="btn" id="cup10505_applyBillingPolicy">Apply Billing Policy</button>
-											</div>
-										</dd>
-									</dl>
-
-									<h3 class="tit" id="cup10505_statusHistoryLb">Status History</h3>
-									<div class="ibsheetDiv">
-										ibsheet
-									</div>
-									<div class="mt10">
-										<div class="checkbox">
-											<input type="checkbox" name="" id="cup10505_onlineSubscriptionChk" checked="checked"><label for="cup10505_onlineSubscriptionChk" id="cup10505_onlineSubscription">Online Subscription</label>
+									<h3 class="tit" id="cup10202_inviteUserLb">Invite User</h3>
+									<div class="iTxtCont">
+										<p class="txt" id="cup10202_inviteUserDescriptionLb">
+											Invite User allow you to invite other users to manage your subscription. Invited user will be belong to your organization
+										</p>
+										<div class="btnBox">
+											<button type="button" class="btn" id="cup10202_inviteUser">Invite User</button>
 										</div>
 									</div>
+
 								</div>
 							</div>
 							<div class="editBtns">
-								<button type="button" class="btn basic" id="cup10505_Save">Save</button>
+								<button type="button" class="btn basic" id="cup10202_save">Save</button>
 							</div>
 						</div>
 					</form>
