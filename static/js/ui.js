@@ -84,8 +84,10 @@ $(function(){
 	GnbList();
 
 	// tab list sorting
+	/* 기존 li width 를 기준으로 가변처리 했을때 사용했던 기능 미 사용시 삭제 예정
 	TablistSort();
 	$(window).resize(TablistSort);
+	*/
 
 	// input Number
 	PlusMinus();
@@ -252,7 +254,6 @@ $(function(){
 // 페이지 로드 시 탭 포커스
 $(window).load(function(){
 	$('.tabFocus').focus();	
-	//eacKeywordChk();
 });
 // 페이지 로드 시 탭 포커스
 
@@ -287,6 +288,7 @@ function Gnb() {
 		{
 			console.log('접기');
 			$(this).addClass('on');
+			/*
 			var Tablist = setInterval(function(){ 
 				var LiWidth = 190;
 				var tabListWidth = $('.tabList').width();
@@ -302,7 +304,9 @@ function Gnb() {
 				}
 				//$('.fix').html('기준 넓이 : ' + (tabListWidth + (LiWidth + 2)) + ' , 상대 넓이 : ' + tabObjWidth);
 			}, 50);
-			
+			*/
+
+			/*			
 			$('nav').stop(true).animate({
 				width:0
 			}, 500, function(){
@@ -311,12 +315,19 @@ function Gnb() {
 					clearInterval(Tablist);
 				}, 100);
 			});
+			*/
+
+			$('nav').stop(true).animate({
+				width:0
+			}, 500);
+
 			$('.content').stop(true).animate({
 				'padding-left':'20px'
 			},500);
 		} else if (cnt != 0)
 		{
 			console.log('펼치기');
+			/*
 			var Tablist = setInterval(function(){ 
 				var LiWidth = 190;
 				var tabListWidth = $('.tabList').width();
@@ -334,7 +345,9 @@ function Gnb() {
 					$('.tabList > li').last().prependTo('.tabListBox > ul');
 				}
 			}, 50);
+			*/
 			$(this).removeClass('on');
+			/*
 			$('nav').stop(true).animate({
 				width:'285px'
 			}, 500, function(){
@@ -343,11 +356,16 @@ function Gnb() {
 					clearInterval(Tablist);
 				}, 150);
 			});
+			*/
+
+			$('nav').stop(true).animate({
+				width:'285px'
+			}, 500);
+
 			$('.content').stop(true).animate({
 				'padding-left':'305px'
 			},500);
-			cnt = 0;
-			
+			cnt = 0;			
 		}
 	});
 }
