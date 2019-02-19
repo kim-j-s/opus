@@ -42,6 +42,27 @@
 					<span>Menu</span>
 				</button>
 			</div>
+			<div class="utilGroup">
+				<div class="privacy">
+					<div class="thumb">
+						<a href="#">
+							<img src="../static/images/common/icon/icon_person.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="util">
+					<button type="button" class="btn utilMenu">Util</button>
+					<div class="utilBox">
+						<ul class="utilList">
+							<li><a href="#" class="ty1">Help</a></li>
+							<li><a href="#" class="ty2">Guide</a></li>
+							<li><a href="#" class="ty3">Learn &amp; Support</a></li>
+							<li><a href="#" class="ty4">Shortcut Key (Tab+s)</a></li>
+						</ul>
+						<button type="button" class="btn close">Close</button>
+					</div>
+				</div>
+			</div>
 		</header>
 		<!-- //헤더영역 -->
 
@@ -136,9 +157,6 @@
 							<a href="#">Homes</a>
 						</div>
 						<ul class="tabList">
-							<!-- <li class="home single">
-			<a href="#">Home</a>
-		</li> -->
 						</ul>
 						<div class="tabListBox">
 							<span>More</span>
@@ -230,7 +248,7 @@
 						$(make).appendTo('.tabList');
 
 						$('.tabWrap').find('.tabHome').removeClass('single');
-						TabListSort2();
+						//TabListSort();
 
 						idx = $('.tabList').find('.' + thisDate).index();
 						console.log(idx + ' : 동일 클래스가 없는 경우');
@@ -243,6 +261,7 @@
 						var dmpDom = '<form action=""><div class="layout" style="background:#fff; height:300px;"><span style="color:#000;">' + thisDate + '</span></div></form>'
 						$('.content').find('form').hide();
 						$(dmpDom).appendTo('.content');
+						TabListSort();
 					}
 				});
 			});
@@ -253,7 +272,7 @@
 
 		// more tab sort
 		function moreTabSort(a, b, c) {
-			console.log('탭 모어 : ' + a);
+			console.log('탭 more : ' + a);
 
 			// 순서가 변경되는 탭의 색상 표시
 			/*
@@ -301,7 +320,7 @@
 					$('.tabListBox > ul > li').first().appendTo('.tabList');
 					$('.tabList > li').last().children('a').addClass('on');
 					$('.content').find('form').eq(tabLng).show();
-					TabListSort2();
+					TabListSort();
 				}
 
 				tabLng = $('.tabList > li').length;
@@ -315,7 +334,6 @@
 					console.log('more 박스 없음');
 					$(e).closest('li').remove();
 					$('.content').find('form').eq(idx + 1).remove();
-					//console.log('탭의 길이 : ' + $('.tabList > li').length);
 					$('.tabList > li').last().children('a').addClass('on');
 					tabLng = $('.tabList > li').length;
 					$('.content').find('form').hide();
@@ -326,7 +344,7 @@
 						console.log('일반 탭 영역 : ' + idx);
 						$(e).closest('li').remove();
 						$('.content').find('form').eq(idx + 1).remove();
-						TabListSort2();
+						TabListSort();
 					} else {
 						console.log('more 탭 영역');
 						if ($(e).closest('li').find('a').hasClass('on')) {
@@ -335,7 +353,7 @@
 							tabLng = $('.tabList > li').length;
 							moveIdx = tabLng + (idx + 1);
 							$('.content').find('form').eq(moveIdx).remove();
-							TabListSort2();
+							TabListSort();
 							$('.tabList > li').last().children('a').addClass('on');
 							$('.content').find('form').eq(tabLng).show();
 
@@ -345,20 +363,22 @@
 							tabLng = $('.tabList > li').length;
 							moveIdx = tabLng + (idx + 1);
 							$('.content').find('form').eq(moveIdx).remove();
-							TabListSort2();
+							TabListSort();
 						}
 					}
 				}
 			}
 		}
 
-		function TabListSort2() {
+		function TabListSort() {
 			tabLng = $('.tabList > li').length;
 			console.log('소팅 : 탭 리스트 갯수 : ' + tabLng);
 			if (tabLng > 7) {
+				$('.content').find('form').css('background', '#fff');
 				console.log('more 박스로 누적');
 				$('.tabListBox').show();
-				$('.tabList > li').last().appendTo('.tabListBox > ul');
+				$('.tabList > li').last().prev().prependTo('.tabListBox > ul');
+				$('.content').find('form').last().insertBefore($('.content').find('form').eq(tabLng - 1));
 			}
 
 			if (tabLng < 7) {
