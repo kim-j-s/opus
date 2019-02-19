@@ -315,7 +315,11 @@
 					console.log('more 박스 없음');
 					$(e).closest('li').remove();
 					$('.content').find('form').eq(idx + 1).remove();
-					console.log('탭의 길이 : ' + $('.tabList > li').length);
+					//console.log('탭의 길이 : ' + $('.tabList > li').length);
+					$('.tabList > li').last().children('a').addClass('on');
+					tabLng = $('.tabList > li').length;
+					$('.content').find('form').hide();
+					$('.content').find('form').eq(tabLng).show();
 
 				} else if ($('.tabListBox').css('display') == 'block') {
 					if ($(e).closest('ul').hasClass('tabList')) {
