@@ -7,7 +7,6 @@
 	<meta name="x-apple-disable-message-reformatting" />
 	<title>Customer Portal</title>
 	<link rel="shortcut icon" href="../static/images/common/favicon.ico">
-	<link href="../static/css/lib/swiper.css" rel="stylesheet">
 	<link href="../static/css/reset.css" rel="stylesheet" />
 	<link href="../static/css/common.css" rel="stylesheet" />
 	<link href="../static/css/contents.css" rel="stylesheet" />
@@ -58,6 +57,7 @@
 							<li><a href="#" class="ty2">Guide</a></li>
 							<li><a href="#" class="ty3">Learn &amp; Support</a></li>
 							<li><a href="#" class="ty4">Shortcut Key (Tab+s)</a></li>
+							<li><a href="#" class="logout">Logout</a></li>
 						</ul>
 						<button type="button" class="btn close">Close</button>
 					</div>
@@ -76,7 +76,7 @@
 									<li><a href="#" data-name="OrganizationList">Organization List</a></li>
 									<li><a href="#" data-name="Organization">Organization</a></li>
 								</ul>
-								<button type="button" class="clip on"></button>
+								<button type="button" class="clip"></button>
 							</li>
 							<li>
 								<div class="gnbTit ty2">Subscription</div>
@@ -161,24 +161,22 @@
 								<ul class="itemList1">
 									<li>
 										<dl class="inpItem">
-											<dt id="i10201-kewordLb">Keyword</dt>
+											<!-- 2019-02-20 수정 -->
+											<dt id="i10201-keywordLb">Keyword</dt>
 											<dd>
-												<!-- 2019-02-12 수정 -->
-												<div class="inputBox keyword">
-													<!--// 2019-02-12 수정 -->
-													<div class="inner">
-														<input type="text" name="i10201-keword" class="inp autoSch keyword name" id="i10201-keword" placeholder="Organization, Alias, Company" maxlength="50">
-														<button type="button" class="inpReset"></button>
-													</div>
+												<div class="inputBox">
+													<input type="text" name="i10201-keyword" class="inp inputFocus" id="i10201-keyword" placeholder="Organization, Alias, Company" maxlength="50">
+													<button type="button" class="inpReset"></button>
 												</div>
 											</dd>
+											<!--// 2019-02-20 수정 -->
 										</dl>
 									</li>
 									<li>
 										<dl class="inpItem">
 											<dt id="i10201-countryLb">Country</dt>
 											<dd>
-												<div class="ui search selection dropdown country Mandate" id="i10201-country">
+												<div class="ui search selection dropdown country" id="i10201-country">
 													<input type="hidden" name="country">
 													<i class="dropdown icon"></i>
 													<div class="default text">Select Country</div>
@@ -448,7 +446,7 @@
 								<!-- 2019-02-12 수정 -->
 								<div class="ui floating dropdown labeled icon button filter" id="i10201-filterStatus">
 									<i class="filter icon"></i>
-									<span class="text">Filter Posts</span>
+									<span class="text">Filter Status</span>
 									<div class="menu">
 										<div class="ui icon search input">
 											<i class="search icon"></i>
@@ -499,7 +497,11 @@
 									</div>
 								</div>
 								<!--// 2019-02-12 수정 -->
-								<button type="button" class="btn" id="">Add Organization</button>
+								<!-- 2019-02-21 수정 -->
+								<div class="btns">
+									<button type="button" class="btn" id="">Add Organization</button>
+								</div>
+								<!--// 2019-02-21 수정 -->
 							</div>
 							<div class="ibsheetDiv">
 								ibsheet

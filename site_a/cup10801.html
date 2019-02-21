@@ -65,7 +65,6 @@
 			</div>
 		</header>
 		<!-- //헤더영역 -->
-
 		<section id="container">
 			<div class="inner">
 				<nav>
@@ -154,9 +153,120 @@
 							</ul>
 						</div>
 					</div>
-					<div class="layer">
-
-					</div>
+					<!-- 컨텐츠 영역 -->
+					<form action="">
+						<div class="layout Layout_List">
+							<h2 class="tit" id="i10801-noticeListLb">Notice List</h2>
+							<div class="schOptionGroup">
+								<ul class="itemList1">
+									<li>
+										<dl class="inpItem">
+											<dt id="i10801-keywordLb">Keyword</dt>
+											<dd>
+												<div class="inputBox">
+													<!-- 2019-02-20 수정 -->
+													<input type="text" name="i10801_keyword" class="inp inputFocus" id="i10801_keyword" placeholder="Title" maxlength="50">
+													<!--// 2019-02-20 수정 -->
+													<button type="button" class="inpReset"></button>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="inpItem">
+											<dt id="i10801-categoryLb">Category</dt>
+											<dd>
+												<div class="comboBox">
+													<select class="comboSelect" id="i10801-category" placeholder="Select a Category">
+														<option value="">Select a Type</option>
+														<option value="T-Shirt">T-Shirt</option>
+														<option value="T-Shirt Woman">T-Shirt Woman</option>
+														<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+														<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+													</select>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="inpItem">
+											<dt id="i10801-creationLb">Posting Date</dt>
+											<dd>
+												<div class="inputBox Edit_date">
+													<input type="text" name="daterange" class="inp daterange" id="i10801_creation" placeholder="From - To" />
+												</div>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+								<button type="button" class="btn schBtn" id="i10801-search">Search</button>
+							</div>
+							<h3 class="tit" id="i10801-noticesLb">Notices</h3>
+							<div class="ibsheepTop">
+								<div class="ui floating dropdown labeled icon button filter" id="i10801-filterStatus">
+									<i class="filter icon"></i>
+									<span class="text">Filter Status</span>
+									<div class="menu">
+										<div class="ui icon search input">
+											<i class="search icon"></i>
+											<input type="text" placeholder="Search tags...">
+										</div>
+										<div class="header">
+											<i class="tags icon"></i>
+											Tag Label
+										</div>
+										<div class="scrolling menu">
+											<div class="item">
+												<div class="ui red empty circular label"></div>
+												Important
+											</div>
+											<div class="item">
+												<div class="ui blue empty circular label"></div>
+												Announcement
+											</div>
+											<div class="item">
+												<div class="ui black empty circular label"></div>
+												Cannot Fix
+											</div>
+											<div class="item">
+												<div class="ui purple empty circular label"></div>
+												News
+											</div>
+											<div class="item">
+												<div class="ui orange empty circular label"></div>
+												Enhancement
+											</div>
+											<div class="item">
+												<div class="ui empty circular label"></div>
+												Change Declined
+											</div>
+											<div class="item">
+												<div class="ui yellow empty circular label"></div>
+												Off Topic
+											</div>
+											<div class="item">
+												<div class="ui pink empty circular label"></div>
+												Interesting
+											</div>
+											<div class="item">
+												<div class="ui green empty circular label"></div>
+												Discussion
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- 2019-02-21 수정 -->
+								<div class="btns">
+									<button type="button" class="btn" id="i10801-addNotice">Add Notice</button>
+								</div>
+								<!--/ 2019-02-21 수정 -->
+							</div>
+							<div class="ibsheetDiv">
+								ibsheet
+							</div>
+						</div>
+					</form>
+					<!--// 컨텐츠 영역 -->
 				</div>
 			</div>
 		</section>

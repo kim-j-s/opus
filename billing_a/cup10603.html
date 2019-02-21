@@ -7,7 +7,6 @@
 	<meta name="x-apple-disable-message-reformatting" />
 	<title>Customer Portal</title>
 	<link rel="shortcut icon" href="../static/images/common/favicon.ico">
-	<link href="../static/css/lib/swiper.css" rel="stylesheet">
 	<link href="../static/css/reset.css" rel="stylesheet" />
 	<link href="../static/css/common.css" rel="stylesheet" />
 	<link href="../static/css/contents.css" rel="stylesheet" />
@@ -58,6 +57,7 @@
 							<li><a href="#" class="ty2">Guide</a></li>
 							<li><a href="#" class="ty3">Learn &amp; Support</a></li>
 							<li><a href="#" class="ty4">Shortcut Key (Tab+s)</a></li>
+							<li><a href="#" class="logout">Logout</a></li>
 						</ul>
 						<button type="button" class="btn close">Close</button>
 					</div>
@@ -76,7 +76,7 @@
 									<li><a href="#" data-name="OrganizationList">Organization List</a></li>
 									<li><a href="#" data-name="Organization">Organization</a></li>
 								</ul>
-								<button type="button" class="clip on"></button>
+								<button type="button" class="clip"></button>
 							</li>
 							<li>
 								<div class="gnbTit ty2">Subscription</div>
@@ -161,22 +161,24 @@
 								<ul class="itemList1">
 									<li>
 										<dl class="inpItem">
-											<dt id="i10603-kewordLb">Keyword</dt>
+											<!-- 2019-02-20 수정 -->
+											<dt id="i10603-keywordLb">Keyword</dt>
 											<dd>
-												<div class="inputBox keyword">
-													<div class="inner">
-														<input type="text" name="i10603_keword" class="inp autoSch keyword name" id="i10603_keword" placeholder="ID, Name, Bill to">
-														<button type="button" class="inpReset"></button>
-													</div>
+												<div class="inputBox">
+													<!-- 2019-02-20 수정 -->
+													<input type="text" name="i10603_keyword" class="inp inputFocus" id="i10603_keyword" placeholder="ID, Name, Bill to" maxlength="50">
+													<!--// 2019-02-20 수정 -->
+													<button type="button" class="inpReset"></button>
 												</div>
 											</dd>
+											<!--// 2019-02-20 수정 -->
 										</dl>
 									</li>
 									<li>
 										<dl class="inpItem">
 											<dt id="i10603-paidStatusLb">Paid</dt>
 											<dd>
-												<div class="comboBox Mandate">
+												<div class="comboBox">
 													<select class="comboSelect" id="i10603-paidStatus" placeholder="Select a Status">
 														<option value="">Select a Type</option>
 														<option value="T-Shirt">T-Shirt</option>
@@ -206,7 +208,7 @@
 							<div class="ibsheepTop">
 								<div class="ui floating dropdown labeled icon button filter" id="i10603-filterStatus">
 									<i class="filter icon"></i>
-									<span class="text">Filter Posts</span>
+									<span class="text">Filter Status</span>
 									<div class="menu">
 										<div class="ui icon search input">
 											<i class="search icon"></i>
@@ -256,7 +258,14 @@
 										</div>
 									</div>
 								</div>
-								<button type="button" class="btn" id="i10603-addInvoice">Add Invoice</button>
+								<!-- 2019-02-21 수정 -->
+								<div class="btns">
+									<button type="button" class="btn" id="i10603-approval">Approval</button>
+									<button type="button" class="btn" id="i10603-reject">Reject</button>
+									<button type="button" class="btn" id="i10603-cancel">Cancel</button>
+									<button type="button" class="btn" id="i10603-addInvoice">Add Invoice</button>
+								</div>
+								<!--// 2019-02-21 수정 -->
 							</div>
 							<div class="ibsheetDiv">
 								ibsheet

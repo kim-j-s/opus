@@ -7,7 +7,6 @@
 	<meta name="x-apple-disable-message-reformatting" />
 	<title>Customer Portal</title>
 	<link rel="shortcut icon" href="../static/images/common/favicon.ico">
-	<link href="../static/css/lib/swiper.css" rel="stylesheet">
 	<link href="../static/css/reset.css" rel="stylesheet" />
 	<link href="../static/css/common.css" rel="stylesheet" />
 	<link href="../static/css/contents.css" rel="stylesheet" />
@@ -43,7 +42,9 @@
 						<dt id="i00005_billToPartyLb">Customer Name</dt>
 						<dd>
 							<div class="inputBox">
-								<input type="text" name="i00005_billToParty" class="inp Mandate" id="i00005_billToParty" placeholder="Party Name" maxlength="50">
+								<!-- 2019-02-20 수정 -->
+								<input type="text" name="i00005_billToParty" class="inp Mandate inputFocus" id="i00005_billToParty" placeholder="Party Name" maxlength="50">
+								<!--// 2019-02-20 수정 -->
 								<button type="button" class="inpReset"></button> <!-- 2019-02-01 수정 -->
 							</div>
 						</dd>
@@ -66,18 +67,34 @@
 							</div>
 						</dd>
 					</dl>
+
+					<!-- 2019-02-21 수정 -->
 					<dl class="inpItem">
-						<dt id="i00005_cityLb">City, State/Province</dt>
+						<dt id="i00005_cityLb">City</dt>
 						<dd>
-							<div class="inputBox full schType ty2">
+							<div class="inputBox schType ty2 short">
 								<div class="inner">
-									<input type="text" name="i00005_stateProvince" class="inp autoSch ty2 code Readonly" id="i00005_stateProvince" readonly="readonly" maxlength="50">
-									<input type="text" name="i00005_city" class="inp autoSch Mandate ty2 name" id="i00005_city" placeholder="Type City" maxlength="50">
-									<button type="button" class="inpReset"></button> <!-- 2019-02-01 수정 -->
+									<input type="text" name="" class="inp autoSch ty2 code Readonly" id="" placeholder="" readonly="readonly" maxlength="50" tabindex="-1">
+									<input type="text" name="i00005_city" class="inp autoSch Mandate ty2 name" id="i00005_city" placeholder="Select a City" maxlength="50">
+									<button type="button" class="inpReset"></button>
 								</div>
 							</div>
 						</dd>
 					</dl>
+					<dl class="inpItem">
+						<dt id="i00005_stateProvince">State/Province</dt>
+						<dd>
+							<div class="inputBox schType ty2 short">
+								<div class="inner">
+									<input type="text" name="" class="inp autoSch ty2 code Readonly" id="" placeholder="" readonly="readonly" maxlength="50" tabindex="-1">
+									<input type="text" name="i00005_stateProvince" class="inp autoSch ty2 name" id="i00005_stateProvince" placeholder="Select a State/Province" maxlength="50">
+									<button type="button" class="inpReset"></button>
+								</div>
+							</div>
+						</dd>
+					</dl>
+					<!--// 2019-02-21 수정 -->
+
 					<dl class="inpItem">
 						<dt id="i00005_countryLb">Country, Zip Code</dt>
 						<dd>
@@ -355,7 +372,7 @@
 						<dt id="i00005_picNameLb">Person in Charge</dt>
 						<dd>
 							<div class="inputBox">
-								<input type="text" name="i00005_picName" class="inp Readonly" id="i00005_picName" readonly="readonly" value="Name">
+								<input type="text" name="i00005_picName" class="inp Readonly" id="i00005_picName" readonly="readonly" value="Name" tabindex="-1">
 							</div>
 						</dd>
 					</dl>
@@ -363,7 +380,7 @@
 						<dt id="i00005_emailLb">Email</dt>
 						<dd>
 							<div class="inputBox">
-								<input type="text" name="i00005_email" class="inp Readonly" id="i00005_email" readonly="readonly" value="Email">
+								<input type="text" name="i00005_email" class="inp Readonly" id="i00005_email" readonly="readonly" value="Email" tabindex="-1">
 							</div>
 						</dd>
 					</dl>

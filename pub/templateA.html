@@ -48,56 +48,65 @@
 	</script>
 	<!-- //2018.05.16 -->
 	<style>
-		body {
-			padding: 0 20px;
-			padding-bottom: 200px;
-			overflow: auto;
-		}
-
-		h1 {
-			font-size: 30px;
-			padding: 0 20px;
-		}
-
-		h2 {
-			padding: 20px 0;
-			margin-top: 20px;
-			border-top: 1px dashed #666666;
-			font-size: 20px;
-		}
-
-		.box {
-			margin-top: 20px;
-			border: 1px solid #E3E3E3
-		}
-
-		.maping {
-			position: fixed;
-			z-index: 1000;
-			top: 5px;
-			left: 0;
-			width: 100%;
-			padding: 5px;
-			padding-bottom: 0;
-			border: 1px solid blue;
-			background: #fff;
-		}
-
-		.maping a {
-			display: inline-block;
-			padding: 3px;
-			margin-bottom: 5px;
-			border: 1px solid #333;
-		}
-	</style>
+		body { padding:0 20px; padding-bottom:200px; overflow:auto;}
+	h1 { font-size:30px; padding:0 20px;}
+	h2 { padding:20px 0; margin-top:20px; border-top:1px dashed #666666; font-size:20px;}
+	.box { margin-top:20px; border:1px solid #E3E3E3}
+	.maping {position:fixed; z-index:1000; top:5px; left:0; width:100%; padding:5px; padding-bottom:0; border:1px solid blue; background:#fff;}
+	.maping a {display:inline-block; padding:3px; margin-bottom:5px; border:1px solid #333;}
+</style>
 </head>
 
 <body>
 	<h1>공통 템플릿</h1>
-	<h2>input기본</h2>
+	<h2>button 기본</h2>
+	<button type="button" class="btn" id="">Button</button>
+	<button type="button" class="btn" disabled="disabled" id="">Button</button>
 	<!-- souce code 뷰어 -->
 	<div class="box">
 		<pre class="brush: html;">
+			<button type="button" class="btn" id="">Button</button>
+
+			<button type="button" class="btn" disabled="disabled" id="">Button</button>
+		</pre>
+	</div>
+	<!-- //souce code 뷰어 -->
+
+	<h2>button color</h2>
+	<button type="button" class="btn basic" id="">Button</button>
+	<button type="button" class="btn basic" disabled="disabled" id=""></button>
+	<!-- souce code 뷰어 -->
+	<div class="box">
+		<pre class="brush: html;">
+			<button type="button" class="btn basic" id="">Button</button>
+
+			<button type="button" class="btn basic" disabled="disabled" id=""></button>
+		</pre>
+	</div>
+	<!-- //souce code 뷰어 -->
+
+	<h2>Plus / Miuns</h2>
+	<button type="button" class="btn plus" id="">Add</button>
+	<button type="button" class="btn minus" id="">Delete</button>
+	<!-- souce code 뷰어 -->
+	<div class="box">
+		<pre class="brush: html;">
+			<button type="button" class="btn plus" id="">Add</button>
+
+			<button type="button" class="btn minus" id="">Delete</button>
+		</pre>
+	</div>
+	<!-- //souce code 뷰어 -->
+
+	<h2>IBSheet Plus / Miuns</h2>
+	<button type="button" class="btn addBtn" id="">ADD</button>
+	<button type="button" class="btn removeBtn" id="">REMOVE</button>
+	<!-- souce code 뷰어 -->
+	<div class="box">
+		<pre class="brush: html;">
+			<button type="button" class="btn addBtn" id="">ADD</button>
+
+			<button type="button" class="btn removeBtn" id="">REMOVE</button>
 		</pre>
 	</div>
 	<!-- //souce code 뷰어 -->

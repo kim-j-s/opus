@@ -7,7 +7,6 @@
 	<meta name="x-apple-disable-message-reformatting" />
 	<title>Customer Portal</title>
 	<link rel="shortcut icon" href="../static/images/common/favicon.ico">
-	<link href="../static/css/lib/swiper.css" rel="stylesheet">
 	<link href="../static/css/reset.css" rel="stylesheet" />
 	<link href="../static/css/common.css" rel="stylesheet" />
 	<link href="../static/css/contents.css" rel="stylesheet" />
@@ -58,6 +57,7 @@
 							<li><a href="#" class="ty2">Guide</a></li>
 							<li><a href="#" class="ty3">Learn &amp; Support</a></li>
 							<li><a href="#" class="ty4">Shortcut Key (Tab+s)</a></li>
+							<li><a href="#" class="logout">Logout</a></li>
 						</ul>
 						<button type="button" class="btn close">Close</button>
 					</div>
@@ -76,7 +76,7 @@
 									<li><a href="#" data-name="OrganizationList">Organization List</a></li>
 									<li><a href="#" data-name="Organization">Organization</a></li>
 								</ul>
-								<button type="button" class="clip on"></button>
+								<button type="button" class="clip"></button>
 							</li>
 							<li>
 								<div class="gnbTit ty2">Subscription</div>
@@ -160,7 +160,7 @@
 							<div class="serviceCode">
 								<div class="srvNum" id="">
 									<div class="inputBox inpNone">
-										<input type="text" name="cup10505_subscriptionIdLb" class="inp" id="cup10505_subscriptionIdLb" readonly="readonly" value="B10000001">
+										<input type="text" name="cup10505_subscriptionIdLb" class="inp" id="cup10505_subscriptionIdLb" readonly="readonly" value="B10000001" tabindex="-1">
 									</div>
 								</div>
 							</div>
@@ -173,7 +173,9 @@
 												<dt id="cup10505_subscriptionNameLb">Subscription Name</dt>
 												<dd>
 													<div class="inputBox full">
-														<input type="text" name="cup10505_subscriptionName" class="inp Mandate" id="cup10505_subscriptionName" placeholder="Subscription Name" maxlength="80">
+														<!-- 2019-02-20 수정 -->
+														<input type="text" name="cup10505_subscriptionName" class="inp Mandate inputFocus" id="cup10505_subscriptionName" placeholder="Subscription Name" maxlength="80">
+														<!--// 2019-02-20 수정 -->
 														<button type="button" class="inpReset"></button>
 													</div>
 												</dd>
@@ -184,7 +186,7 @@
 												<dt id="cup10505_subscriptionStatusLb">Subscription Status</dt>
 												<dd>
 													<div class="inputBox">
-														<input type="text" name="cup10505_subscriptionStatus" class="inp Readonly" id="cup10505_subscriptionStatus" readonly="readonly" value="Requested">
+														<input type="text" name="cup10505_subscriptionStatus" class="inp Readonly" id="cup10505_subscriptionStatus" readonly="readonly" value="Requested" tabindex="-1">
 													</div>
 												</dd>
 											</dl>
@@ -198,7 +200,9 @@
 														<div class="thumb">
 															<img src="../static/images/common/icon/icon_logo_small.png" alt="" name="cup10505_billToLogoUrl" id="cup10505_billToLogoUrl" />
 														</div>
-														<input type="text" name="cup10505_billTo" class="inp autoSch Edit_Organization name" id="cup10505_billTo" placeholder="">
+														<!-- 2019-02-21 수정 -->
+														<input type="text" name="cup10505_billTo" class="inp autoSch Edit_Organization name Mandate" id="cup10505_billTo" placeholder="">
+														<!--// 2019-02-21 수정 -->
 														<button type="button" class="inpReset"></button>
 													</div>
 													<!--// 2019-02-12 수정 -->
@@ -237,14 +241,16 @@
 												</dd>
 											</dl>
 										</li>
+
+										<!-- 2019-02-21 수정 -->
 										<li>
 											<dl class="inpItem">
-												<dt id="cup10505_cityStateLb">City, State/Province</dt>
+												<dt id="cup10505_cityLb">City</dt>
 												<dd>
-													<div class="inputBox full schType ty2">
+													<div class="inputBox schType ty2 short">
 														<div class="inner">
-															<input type="text" name="cup10505_city" class="inp autoSch ty2 code Readonly" id="" placeholder="State/Province" readonly="readonly" maxlength="50">
-															<input type="text" name="cup10505_stateProvince" class="inp autoSch Mandate ty2 name" id="" placeholder="City" maxlength="50">
+															<input type="text" name="" class="inp autoSch ty2 code Readonly" id="" placeholder="" readonly="readonly" maxlength="50" tabindex="-1">
+															<input type="text" name="cup10505_city" class="inp autoSch Mandate ty2 name" id="cup10505_city" placeholder="Select a City" maxlength="50">
 															<button type="button" class="inpReset"></button>
 														</div>
 													</div>
@@ -253,12 +259,26 @@
 										</li>
 										<li>
 											<dl class="inpItem">
-												<dt id="cup10505_countryZipLb">Country, Zip Code</dt>
+												<dt id="cup10505_StateLb">State/Province</dt>
+												<dd>
+													<div class="inputBox schType ty2 short">
+														<div class="inner">
+															<input type="text" name="" class="inp autoSch ty2 code Readonly" id="" placeholder="" readonly="readonly" maxlength="50" tabindex="-1">
+															<input type="text" name="cup10505_stateProvince" class="inp autoSch ty2 name" id="cup10505_stateProvince" placeholder="Select a State/Province" maxlength="50">
+															<button type="button" class="inpReset"></button>
+														</div>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10505_countryLb">Country</dt>
 												<dd>
 													<div class="ui search selection dropdown country Mandate" id="cup10505_country">
 														<input type="hidden" name="country">
 														<i class="dropdown icon"></i>
-														<div class="default text">Type Country</div>
+														<div class="default text">Select a Country</div>
 														<div class="menu">
 															<div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
 															<div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
@@ -504,15 +524,23 @@
 															<div class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</div>
 														</div>
 													</div>
-													<div class="inputBox zipCode">
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="cup10505_zipCodeLb">Zip Code</dt>
+												<dd>
+													<div class="inputBox zipCode single">
 														<div class="inner">
-															<input type="text" name="cup10505_zipCode" class="inp Mandate" id="cup10505_zipCode" placeholder="Zip Code">
+															<input type="text" name="cup10505_zipCode" class="inp" id="cup10505_zipCode" placeholder="Zip Code" maxlength="50">
 															<button type="button" class="inpReset"></button>
 														</div>
 													</div>
 												</dd>
 											</dl>
 										</li>
+										<!--// 2019-02-21 수정 -->
 									</ul>
 
 									<h3 class="tit" id="cup10505_personInChargeLb">Person in Charge</h3>
@@ -526,7 +554,9 @@
 														<div class="thumb">
 															<img src="../static/images/common/icon/icon_person_small.png" alt="" name="cup10505_picNamePhotoUrl" id="cup10505_picNamePhotoUrl" />
 														</div>
-														<input type="text" name="cup10505_picName" class="inp autoSch Edit_User name" id="cup10505_picName" placeholder="">
+														<!-- 2019-02-21 수정 -->
+														<input type="text" name="cup10505_picName" class="inp autoSch Edit_User name Mandate" id="cup10505_picName" placeholder="">
+														<!--// 2019-02-21 수정 -->
 														<button type="button" class="inpReset"></button>
 													</div>
 													<!--// 2019-02-12 수정 -->
@@ -538,7 +568,7 @@
 												<dt id="cup10505_emailLb">Email</dt>
 												<dd>
 													<div class="inputBox">
-														<input type="text" name="cup10505_email" class="inp Readonly" id="cup10505_email" readonly="readonly" value="Email">
+														<input type="text" name="cup10505_email" class="inp Readonly" id="cup10505_email" readonly="readonly" value="Email" tabindex="-1">
 													</div>
 												</dd>
 											</dl>
@@ -604,7 +634,9 @@
 														<div class="thumb">
 															<img src="../static/images/common/icon/icon_logo_small.png" alt="" name="cup10505_billingPartyLogoUrl" id="cup10505_billingPartyLogoUrl" />
 														</div>
-														<input type="text" name="cup10505_billingParty" class="inp autoSch Edit_Organization name" id="cup10505_billingParty" placeholder="">
+														<!-- 2019-02-21 수정 -->
+														<input type="text" name="cup10505_billingParty" class="inp autoSch Edit_Organization name Mandate" id="cup10505_billingParty" placeholder="">
+														<!--// 2019-02-21 수정 -->
 														<button type="button" class="inpReset"></button>
 													</div>
 													<!--// 2019-02-12 수정 -->
@@ -714,11 +746,13 @@
 															<option value="Zebra T-Shoot">Zebra T-Shoot</option>
 														</select>
 													</div>
+													<!-- 2019-02-21 수정 -->
 													<div class="inputBox count">
 														<button type="button" class="plus"><span>Plus</span></button>
-														<input type="number" name="cup10505_creditTermDay" class="inp Edit_Count" id="cup10505_creditTermDay" min="0">
+														<input type="number" name="cup10505_creditTermDay" class="inp Edit_Count" id="cup10505_creditTermDay" min="0" placeholder="Day(s)" maxlength="50" @@etc>
 														<button type="button" class="minus"><span>Minus</span></button>
 													</div>
+													<!--// 2019-02-21 수정 -->
 													<div class="tooltip">
 														<div class="tips">
 															<strong class="tit">Credit Term</strong>
@@ -820,17 +854,18 @@
 
 									<h3 class="tit" id="cup10505_servicesLb">Services</h3>
 									<div class="ibsheepTop">
-										<div class="tools">
+										<!-- 2019-02-21 수정 -->
+										<div class="btns">
 											<button type="button" class="btn addBtn" id="cup10505_rowAdd">ADD</button>
 											<button type="button" class="btn removeBtn" id="cup10505_rowDelete">REMOVE</button>
 										</div>
+										<!--// 2019-02-21 수정 -->
 									</div>
 									<div class="ibsheetDiv">
 										ibsheet
 									</div>
 								</div>
 
-								<!-- ***************************** -->
 								<div class="lsCont fix">
 									<h3 class="tit" id="cup10505_recordLb">Record</h3>
 									<dl class="inpItem2">
@@ -838,10 +873,10 @@
 										<dd>
 											<div class="ele">
 												<div class="inputBox Edit_date single">
-													<input type="text" name="cup10505_createDate" class="inp Readonly" id="cup10505_createDate" value="12-14-2018" readonly />
+													<input type="text" name="cup10505_createDate" class="inp Readonly" id="cup10505_createDate" value="12-14-2018" readonly="readonly" tabindex="-1">
 												</div>
 												<div class="inputBox Edit_Time readonly">
-													<input type="text" name="cup10505_createTime" class="inp Readonly" id="cup10505_createTime" value="10 : 20 AM" readonly="readonly">
+													<input type="text" name="cup10505_createTime" class="inp Readonly" id="cup10505_createTime" value="10 : 20 AM" readonly="readonly" tabindex="-1">
 												</div>
 											</div>
 											<div class="ele">
@@ -849,7 +884,7 @@
 													<div class="thumb">
 														<img src="../static/images/common/icon/icon_person_small.png" alt="" />
 													</div>
-													<input type="text" name="cup10505_createdBy" class="inp Readonly" id="cup10505_createdBy" value="Park, JungIl" readonly="readonly">
+													<input type="text" name="cup10505_createdBy" class="inp Readonly" id="cup10505_createdBy" value="Park, JungIl" readonly="readonly" tabindex="-1">
 												</div>
 											</div>
 										</dd>
@@ -859,10 +894,10 @@
 										<dd>
 											<div class="ele">
 												<div class="inputBox Edit_date single">
-													<input type="text" name="cup10505_modifiedDate" class="inp Readonly" id="cup10505_modifiedDate" value="12-14-2018" readonly />
+													<input type="text" name="cup10505_modifiedDate" class="inp Readonly" id="cup10505_modifiedDate" value="12-14-2018" readonly="readonly" tabindex="-1">
 												</div>
 												<div class="inputBox Edit_Time readonly">
-													<input type="text" name="cup10505_modifiedTime" class="inp Readonly" id="cup10505_modifiedTime" value="10 : 20 AM" readonly="readonly">
+													<input type="text" name="cup10505_modifiedTime" class="inp Readonly" id="cup10505_modifiedTime" value="10 : 20 AM" readonly="readonly" tabindex="-1">
 												</div>
 											</div>
 											<div class="ele">
@@ -871,7 +906,7 @@
 													<div class="thumb">
 														<img src="../static/images/common/icon/icon_person_small.png" alt="" />
 													</div>
-													<input type="text" name="cup10505_modifiedBy" class="inp Readonly" id="cup10505_modifiedBy" value="Park, JungIl" readonly="readonly">
+													<input type="text" name="cup10505_modifiedBy" class="inp Readonly" id="cup10505_modifiedBy" value="Park, JungIl" readonly="readonly" tabindex="-1">
 												</div>
 											</div>
 										</dd>
