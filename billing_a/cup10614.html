@@ -156,61 +156,72 @@
 					<!-- 컨텐츠 영역 -->
 					<form action="">
 						<div class="layout Layout_List">
-							<h2 class="tit" id="i10601_billingListLb">Billing Policy List</h2>
+							<h2 class="tit" id="i10614_transactionListLb">Transaction List</h2>
 							<div class="schOptionGroup">
 								<ul class="itemList1">
 									<li>
 										<dl class="inpItem">
-											<!-- 2019-02-20 수정 -->
-											<dt id="i10601-keywordLb">Keyword</dt>
+											<dt id="i10614_keywordLb">Keyword</dt>
 											<dd>
 												<div class="inputBox">
-													<input type="text" name="i10601_keyword" class="inp inputFocus" id="i10601_keyword" placeholder="ID, Name, Billing Party" maxlength="50">
+													<input type="text" name="i10614_keyword" class="inp inputFocus" id="i10614_keyword" placeholder="ID" maxlength="50">
 													<button type="button" class="inpReset"></button>
 												</div>
 											</dd>
-											<!--// 2019-02-20 수정 -->
 										</dl>
 									</li>
 									<li>
 										<dl class="inpItem">
-											<!-- 2019-02-20 수정 -->
-											<dt id="i10601-customerTypeLb">Customer Type</dt>
+											<dt id="i10614_serviceLb">Service</dt>
 											<dd>
-												<div class="comboBox">
-													<select class="comboSelect" id="i10601-customerType" placeholder="Select a Type">
-														<option value="">Select a Type</option>
-														<option value="T-Shirt">T-Shirt</option>
-														<option value="T-Shirt Woman">T-Shirt Woman</option>
-														<option value="Yellow T-Shirt">Yellow T-Shirt</option>
-														<option value="Zebra T-Shoot">Zebra T-Shoot</option>
-													</select>
+												<div class="inputBox">
+													<input type="text" name="i10614_service" class="inp" id="i10614_service">
+													<button type="button" class="inpReset"></button>
 												</div>
 											</dd>
-											<!--// 2019-02-20 수정 -->
 										</dl>
 									</li>
 									<li>
 										<dl class="inpItem">
-											<!-- 2019-02-20 수정 -->
-											<dt id="i10601-creationLb">Creation</dt>
+											<dt id="i10614_accountLb">Account</dt>
+											<dd>
+												<div class="inputBox">
+													<input type="text" name="i10614_account" class="inp" id="i10614_account" placeholder="">
+													<button type="button" class="inpReset"></button>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="inpItem">
+											<dt id="i10614_groupLb">Group</dt>
+											<dd>
+												<div class="inputBox">
+													<input type="text" name="i10614_group" class="inp" id="i10614_group">
+													<button type="button" class="inpReset"></button>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl class="inpItem">
+											<dt id="i10614_creationLb">Creation</dt>
 											<dd>
 												<div class="inputBox Edit_date">
-													<input type="text" name="daterange" class="inp daterange" id="i10601_creation" placeholder="From - To" />
+													<input type="text" name="daterange" class="inp daterange" id="i10614_creation" placeholder="From - To" />
 												</div>
 											</dd>
-											<!--// 2019-02-20 수정 -->
 										</dl>
 									</li>
 								</ul>
-								<button type="button" class="btn schBtn" id="i10601_search">Search</button>
+								<button type="button" class="btn schBtn" id="i10614_search">Search</button>
 							</div>
-							<h3 class="tit" id="i10601_billingPoliciesLb">Billing Policies</h3>
+
+							<h3 class="tit" id="i10614_transactionsLb">Transactions</h3>
 							<!-- 2019-02-25 수정 -->
 							<div class="ibsheetTop">
 								<!--// 2019-02-25 수정 -->
-								<!-- 2019-02-12 수정 -->
-								<div class="ui floating dropdown labeled icon button filter" id="i10601_filterStatus">
+								<div class="ui floating dropdown labeled icon button filter" id="i10614_filterStatus">
 									<i class="filter icon"></i>
 									<span class="text">Filter Status</span>
 									<div class="menu">
@@ -262,12 +273,6 @@
 										</div>
 									</div>
 								</div>
-								<!--// 2019-02-12 수정 -->
-								<!-- 2019-02-21 수정 -->
-								<div class="btns">
-									<button type="button" class="btn" id="i10601_addBillingPolicy">Add Billing Policy</button>
-								</div>
-								<!--// 2019-02-21 수정 -->
 							</div>
 							<div class="ibsheetDiv">
 								ibsheet
