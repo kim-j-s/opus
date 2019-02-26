@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="x-apple-disable-message-reformatting" />
+	<title>Customer Portal</title>
+	<link rel="shortcut icon" href="../static/images/common/favicon.ico">
+	<link href="../static/css/reset.css" rel="stylesheet" />
+	<link href="../static/css/common.css" rel="stylesheet" />
+	<link href="../static/css/contents.css" rel="stylesheet" />
+	<script type="text/javascript" src="../static/js/common.js"></script>
+	<script type="text/javascript" src="../static/js/lib/moment.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/daterangepicker.js"></script>
+	<script type="text/javascript" src="../static/js/lib/quill.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jQuery.dPassword.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery.easy-autocomplete.js"></script>
+	<script type="text/javascript" src="../static/js/lib/semantic.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery.are-you-sure.js"></script>
+	<script type="text/javascript" src="../static/js/ui.js"></script>
+	<!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+</head>
+
+<body>
+	<!-- 완성 예시 -->
+	<!--
+	<div class="messagePopup">
+		<dl class="mpCont">
+			<dt>Success</dt>
+			<dd>Data has been saved successfully</dd>
+		</dl>
+	</div>
+	-->
+	<!--// 완성 예시 -->
+
+	<button type="button" class="btn" onclick="msgpopup()">Message Popup</button>
+
+
+	<script type="text/javascript">
+		function msgpopup() {
+			var msg = '<div class="messagePopup">' +
+				'<dl class="mpCont">' +
+				'<dt>Success</dt>' +
+				'<dd>Data has been saved successfully</dd>' +
+				'</dl>' +
+				'</div>';
+
+			$(msg).appendTo('body');
+
+			// fadeout 효과 후 해당 레이어 삭제
+			$('.messagePopup').fadeOut(3000, function() {
+				$(this).remove();
+			});
+		}
+	</script>
+
+
+</body>
+
+</html>
