@@ -70,12 +70,14 @@ $(function(){
 	$('.ui.floating.dropdown.labeled').dropdown();
 
 	// autocomplete
+	/*
 	$(".autoSch.ty1").easyAutocomplete(Comp_options);
 	$(".autoSch.ty2").easyAutocomplete(city_options);
 	$(".autoSch.ty3").easyAutocomplete(state_options);
-	//$(".autoSch.keyword").easyAutocomplete(state_keyword);
 	$(".autoSch.Edit_User").easyAutocomplete(person);
 	$(".autoSch.Edit_Organization").easyAutocomplete(company);	
+	*/
+	//$(".autoSch.keyword").easyAutocomplete(state_keyword);
 
 
 	//gnbList
@@ -87,6 +89,10 @@ $(function(){
 	//Input Reset
 	InputReset();
 
+
+
+
+
 	// auto complete combobox
 	ACC();
 	$('.comboSelect').combobox();
@@ -94,6 +100,14 @@ $(function(){
 	{
 		$(this).find('.custom-combobox-input').focus();
 	}
+
+
+
+
+
+
+
+
 
 	// time input
 	tsChk();
@@ -603,6 +617,14 @@ function ACC() {
     });
 }
 
+
+
+
+
+
+
+
+
 // time select
 function tsChk() {
 	$(".quantity").keyup(function (event) {
@@ -927,3 +949,54 @@ var company = {
 		}
 	}
 };
+
+
+$(function(){
+	//$(".autoSch.ty1").easyAutocomplete(Comp_options);
+	$(".autoSch.key").easyAutocomplete(test);
+});
+
+
+
+var test = {
+	//url: "../static/json/person.json",
+
+
+	url: function(phrase) {
+		return "http://fwd01.cyberlogitec.com:3000/api/v1/location?phrase=" + phrase;
+		//http://fwd01.cyberlogitec.com:3000/api/v1/location?keyword=seoul&next=2
+	},
+
+
+	getValue: function(element) {
+		return element.name+", "+element.code+", "+element.keyword;
+	},
+
+	template: {
+		type: "description",
+		fields: {
+			description: "name"
+			//url: "url"
+		}
+	},
+	list: {
+		maxNumberOfElements: 10,
+		sort: {
+			enabled: true
+		},
+		onSelectItemEvent: function() {
+			var selectedItemValue = $(".autoSch.key.name").getSelectedItemData().name;
+			$(".autoSch.key.name").val(selectedItemValue);
+		},
+		onChooseEvent: function() {
+			var selectedItemValue = $(".autoSch.key.name").getSelectedItemData().name;
+			var selectedItemValue2 = $(".autoSch.key.name").getSelectedItemData().code;
+			var selectedItemValue3 = $(".autoSch.key.name").getSelectedItemData().url;
+			$(".autoSch.key.name").val(selectedItemValue);
+
+		},
+		match: {
+			enabled: true
+		}
+	}
+}
