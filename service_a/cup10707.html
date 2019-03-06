@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="x-apple-disable-message-reformatting" />
+	<title>Customer Portal</title>
+	<link rel="shortcut icon" href="../static/images/common/favicon.ico">
+	<link href="../static/css/reset.css" rel="stylesheet" />
+	<link href="../static/css/common.css" rel="stylesheet" />
+	<link href="../static/css/contents.css" rel="stylesheet" />
+	<script type="text/javascript" src="../static/js/common.js"></script>
+	<script type="text/javascript" src="../static/js/lib/moment.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/daterangepicker.js"></script>
+	<script type="text/javascript" src="../static/js/lib/quill.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jQuery.dPassword.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery.easy-autocomplete.js"></script>
+	<script type="text/javascript" src="../static/js/lib/semantic.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery.are-you-sure.js"></script>
+	<script type="text/javascript" src="../static/js/ui.js"></script>
+	<!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- 헤더영역 -->
+		<header id="headerWrap">
+			<h1><img src="../static/images/common/logo.jpg" alt="OPUS Logistics" /></h1>
+			<div class="menuAll">
+				<button type="button" class="allBtn">
+					<span>Menu</span>
+				</button>
+			</div>
+			<div class="utilGroup">
+				<div class="privacy">
+					<div class="thumb">
+						<a href="#">
+							<img src="../static/images/common/icon/icon_person.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="util">
+					<button type="button" class="btn utilMenu">Util</button>
+					<div class="utilBox">
+						<ul class="utilList">
+							<li><a href="#" class="ty1">Help</a></li>
+							<li><a href="#" class="ty2">Guide</a></li>
+							<li><a href="#" class="ty3">Learn &amp; Support</a></li>
+							<li><a href="#" class="ty4">Shortcut Key (Tab+s)</a></li>
+							<li><a href="#" class="logout">Logout</a></li>
+						</ul>
+						<button type="button" class="btn close">Close</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- //헤더영역 -->
+		<section id="container">
+			<div class="inner">
+				<nav>
+					<div class="gnb">
+						<ul class="gnbList">
+							<li>
+								<div class="gnbTit ty1">Organization</div>
+								<ul class="dept">
+									<li><a href="#" data-name="OrganizationList">Organization List</a></li>
+									<!-- 2019-03-05 삭제 -->
+									<!--
+					<li><a href="#" data-name="Organization">Organization</a></li>
+					-->
+									<!--// 2019-03-05 삭제 -->
+								</ul>
+								<button type="button" class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit ty2">Subscription</div>
+								<ul class="dept">
+									<li><a href="#" data-name="SubscriptionList">Subscription List</a></li>
+									<li><a href="#" data-name="SubscriptionListWaiting">Subscription List (Waiting)</a></li>
+									<li><a href="#" data-name="SubscriptionListApproved">Subscription List (Approved)</a></li>
+									<li><a href="#" data-name="SubscriptionListCancelled">Subscription List (Cancelled)</a></li>
+									<li><a href="#" data-name="SubscriptionListWithdraw">Subscription List (Withdraw)</a></li>
+								</ul>
+								<button type="button" class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit ty3">Billing</div>
+								<ul class="dept">
+									<li><a href="#" data-name="BillingPolicyList">Billing Policy List</a></li>
+									<li><a href="#" data-name="InvoiceList">Invoice List</a></li>
+									<li><a href="#" data-name="InvoiceListWaiting">Invoice List (Waiting)</a></li>
+									<li><a href="#" data-name="InvoiceListSent">Invoice List (Sent)</a></li>
+									<li><a href="#" data-name="InvoiceListPaid">Invoice List (Paid)</a></li>
+									<li><a href="#" data-name="InvoiceListCancelled">Invoice List (Cancelled)</a></li>
+									<li><a href="#" data-name="SchedulerandHistory">Scheduler and History</a></li>
+								</ul>
+								<button type="button" class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit ty4">Usage</div>
+								<ul class="dept">
+									<li><a href="#" data-name="UsageList">Usage List</a></li>
+									<li><a href="#" data-name="UsageListSeat">Usage List (Seat)</a></li>
+									<li><a href="#" data-name="UsageListTransaction">Usage List (Transaction)</a></li>
+									<li><a href="#" data-name="TransactionList">Transaction List</a></li>
+								</ul>
+								<button type="button" class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit ty5">Pricing</div>
+								<ul class="dept">
+									<li><a href="#" data-name="ServiceList">Service List</a></li>
+									<li><a href="#" data-name="TariffList">Tariff List</a></li>
+									<li><a href="#" data-name="ServiceGroupList">Service Group List</a></li>
+								</ul>
+								<button type="button" class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit ty6">Notice</div>
+								<ul class="dept">
+									<li><a href="#" data-name="NoticeList">Notice List</a></li>
+								</ul>
+								<button type="button" class="clip"></button>
+							</li>
+							<li>
+								<div class="gnbTit ty7">Administration</div>
+								<ul class="dept">
+									<li><a href="#" data-name="SystemCodeList">System Code List</a></li>
+									<li><a href="#" data-name="RoleList">Role List</a></li>
+									<li><a href="#" data-name="MailTransmitHistory">Mail Transmit History</a></li>
+								</ul>
+								<button type="button" class="clip"></button>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div class="content editBtns">
+					<div class="tabWrap">
+						<div class="tabHome single">
+							<a href="#">Homes</a>
+						</div>
+						<ul class="tabList">
+						</ul>
+						<div class="tabListBox">
+							<span>More</span>
+							<ul>
+							</ul>
+						</div>
+					</div>
+					<!-- 컨텐츠 영역 -->
+					<form action="">
+						<div class="layout Layout_Sidebar">
+							<h2 class="tit" id="i10707_serviceGroupLb">Service Group</h2>
+							<div class="serviceCode">
+								<div class="srvNum" id="">
+									<div class="inputBox inpNone">
+										<input type="text" name="i10707_serviceGroupIdLb" class="inp" id="i10707_serviceGroupIdLb" readonly="readonly" value="R10000001" tabindex="-1">
+									</div>
+								</div>
+								<div class="actChk">
+									<div class="switchChk">
+										<input type="checkbox" name="i10707_activeChk" id="i10707_activeChk" checked="checked">
+										<label for="i10707_activeChk" id="i10707_active">
+											<span class="txt1">Inactive</span>
+											<span class="txt2">Active</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="inner">
+								<div class="lsCont">
+									<h3 class="tit" id="i10707_basicLb">Basic</h3>
+									<ul class="itemList2">
+										<li>
+											<dl class="inpItem">
+												<dt id="i10707_serviceGroupNameLb">Service Group Name</dt>
+												<dd>
+													<div class="inputBox">
+														<input type="text" name="i10707_serviceGroupName" class="inp Mandate inputFocus" id="i10707_serviceGroupName">
+														<button type="button" class="inpReset"></button>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="i10707_productLineLb">Product Line</dt>
+												<dd>
+													<div class="comboBox">
+														<select class="comboSelect" id="i10707_productLineName" placeholder="Select a Type">
+															<option value="">Select a Type</option>
+															<option value="T-Shirt">T-Shirt</option>
+															<option value="T-Shirt Woman">T-Shirt Woman</option>
+															<option value="Yellow T-Shirt">Yellow T-Shirt</option>
+															<option value="Zebra T-Shoot">Zebra T-Shoot</option>
+														</select>
+													</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl class="inpItem">
+												<dt id="i10707_descriptionLb">Description</dt>
+												<dd>
+													<div class="textareaDiv">
+														<textarea name="i10707_description" id="i10707_description" cols="30" rows="10" class="textarea" maxlength="500" placeholder=""></textarea>
+														<div class="byte"><span class="bold">0</span>/500</div>
+													</div>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+
+									<h3 class="tit" id="i10707_usersLb">Users</h3>
+									<div class="ibsheetTop">
+										<div class="btns">
+											<button type="button" class="btn addBtn" id="i10707_rowAdd">ADD</button>
+											<button type="button" class="btn removeBtn" id="i10707_rowDelete">REMOVE</button>
+										</div>
+									</div>
+									<div class="ibsheetDiv">
+										ibsheet
+									</div>
+								</div>
+
+								<div class="lsCont fix">
+									<h3 class="tit" id="i10707_record">Record</h3>
+									<dl class="inpItem2">
+										<dt id="i10707_createdOnLb">Created on</dt>
+										<dd>
+											<div class="ele">
+												<div class="inputBox Edit_date single">
+													<input type="text" name="i10707_createDate" class="inp Readonly" id="i10707_createDate" value="12-14-2018" readonly="readonly" tabindex="-1">
+												</div>
+												<div class="inputBox Edit_Time readonly">
+													<input type="text" name="i10707_createTime" class="inp Readonly" id="i10707_createTime" value="10 : 20 AM" readonly="readonly" tabindex="-1">
+												</div>
+											</div>
+											<div class="ele">
+												<div class="inputBox Edit_User">
+													<div class="thumb">
+														<img src="../static/images/common/icon/icon_person_small.png" alt="" name="i10707_createdByPhotoUrl" id="i10707_createdByPhotoUrl" />
+													</div>
+													<input type="text" name="i10707_createdBy" class="inp Readonly" id="i10707_createdBy" value="Park, JungIl" readonly="readonly" tabindex="-1">
+												</div>
+											</div>
+										</dd>
+									</dl>
+
+									<dl class="inpItem2">
+										<dt id="i10707_modifiedOnLb">Modified on</dt>
+										<dd>
+											<div class="ele">
+												<div class="inputBox Edit_date single">
+													<input type="text" name="i10707_modifiedDate" class="inp Readonly" id="i10707_modifiedDate" value="12-14-2018" readonly="readonly" tabindex="-1">
+												</div>
+												<div class="inputBox Edit_Time readonly">
+													<input type="text" name="i10707_modifiedTime" class="inp Readonly" id="i10707_modifiedTime" value="10 : 20 AM" readonly="readonly" tabindex="-1">
+												</div>
+											</div>
+											<div class="ele">
+												<div class="inputBox Edit_User">
+													<div class="thumb">
+														<img src="../static/images/common/icon/icon_person_small.png" alt="" name="i10707_modifiedByPhotoUrl" id="i10707_modifiedByPhotoUrl" />
+													</div>
+													<input type="text" name="i10707_modifiedBy" class="inp Readonly" id="i10707_modifiedBy" value="Park, JungIl" readonly="readonly" tabindex="-1">
+												</div>
+											</div>
+										</dd>
+									</dl>
+
+								</div>
+							</div>
+							<div class="editBtns">
+								<button type="button" class="btn basic" id="i10707_save">Save</button>
+							</div>
+						</div>
+					</form>
+					<!--// 컨텐츠 영역 -->
+				</div>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			$('form').areYouSure();
+		});
+	</script>
+</body>
+
+</html>
