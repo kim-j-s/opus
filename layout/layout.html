@@ -35,7 +35,7 @@
 	<div class="wrapper">
 		<!-- 헤더영역 -->
 		<header id="headerWrap">
-			<h1><img src="../static/images/common/logo.jpg" alt="OPUS Logistics" /></h1>
+			<h1><img src="../static/images/common/logo.png" alt="OPUS Logistics" /></h1>
 			<div class="menuAll">
 				<button type="button" class="allBtn">
 					<span>Menu</span>
@@ -185,6 +185,14 @@
 	</div>
 	<script type="text/javascript">
 		$(function() {
+
+			// list home
+			$('.tabHome > a').on('click', function() {
+				$('.tabList > li > a').removeClass('on');
+				$('.tabListBox').find('a').removeClass('on');
+				$('.content').find('form').hide();
+				$('.content').find('form').eq(0).show();
+			});
 
 			// list tab 활성화
 			$('.tabList').on('click', '.addNewTab', function() {
