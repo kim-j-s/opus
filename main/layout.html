@@ -174,18 +174,6 @@
 
 	</div>
 
-	<script type="text/javascript">
-		$(function() {
-			$('form').areYouSure();
-		});
-
-		window.onbeforeunload = function(e) {
-			// Your logic to prepare for 'Stay on this Page' goes here 
-
-			return "Please click 'Stay on this Page' and we will give you candy";
-		};
-	</script>
-
 
 	<style type="text/css">
 		.dept {
@@ -303,12 +291,15 @@
 						$('.content').find('form').hide();
 						$(dmpDom).appendTo('.content');
 						TabListSort();
+						dirtyChk();
 					}
 				});
 			});
 
 			// script
 		});
+
+
 
 		// more tab sort
 		function moreTabSort(a, b, c) {
@@ -334,18 +325,52 @@
 			$('.tabListBox > ul').stop(true, true).slideUp();
 		}
 
+		dirty = false;
+
+		function dirtyChk() {
+			var idxchk = $(this).closest('form').index();
+			$('.content').find('form').eq(idxchk).find('input').change(function() {
+				console.log('dirty : ' + idxchk);
+				dirty = true;
+			});
+		}
+
 
 		// 탭 삭제
 		function TabRemove(e) {
 			tabLng = $('.tabList > li').length;
 			idx = $(e).closest('li').index();
 			Formlng = $('form').length;
+
 			console.log('탭 삭제 이벤트 순번 : ' + idx + ', 탭의 길이 : ' + tabLng + ' , form 의 갯수 : ' + Formlng);
 
-			if ((idx == (tabLng - 1)) && $(e).prev().hasClass('on')) {
+
+
+			if (dirty) {
+				console.log('sdfsdfsdf');
+				alert('나가시겠습니까?');
+				return 'You have unsaved changes! If you leave this page, your changes will ';
+			}
+
+
+
+
+			/*
+			$("window").on('beforeunload', function() {
+				if (dirty) {
+					return 'You have unsaved changes! If you leave this page, your changes will be lost.';
+				}
+			});
+			*/
+
+
+			/*
+			if ( (idx == (tabLng - 1)) && $(e).prev().hasClass('on'))
+			{
 				console.log('마지막');
 
-				if ($('.tabListBox').css('display') == 'none') {
+				if ( $('.tabListBox').css('display') == 'none' )
+				{
 					console.log('more 박스 없음');
 					$(e).closest('li').remove();
 					$('.content').find('form').eq(idx + 1).remove();
@@ -353,7 +378,8 @@
 					tabLng = $('.tabList > li').length;
 					$('.content').find('form').hide();
 					$('.content').find('form').eq(tabLng).show();
-				} else if ($('.tabListBox').css('display') == 'block') {
+				} else if ( $('.tabListBox').css('display') == 'block' )
+				{
 					console.log('more 박스 있음');
 					$(e).closest('li').remove();
 					$('.content').find('form').eq(idx + 1).remove();
@@ -364,13 +390,15 @@
 				}
 
 				tabLng = $('.tabList > li').length;
-				if (tabLng == 0) {
+				if (tabLng == 0)
+				{
 					$('.tabWrap').find('.tabHome').addClass('single');
 				}
 
 			} else {
 				console.log('다른곳');
-				if ($('.tabListBox').css('display') == 'none') {
+				if ( $('.tabListBox').css('display') == 'none' )
+				{
 					console.log('more 박스 없음');
 					$(e).closest('li').remove();
 					$('.content').find('form').eq(idx + 1).remove();
@@ -378,16 +406,19 @@
 					tabLng = $('.tabList > li').length;
 					$('.content').find('form').hide();
 					$('.content').find('form').eq(tabLng).show();
-
-				} else if ($('.tabListBox').css('display') == 'block') {
-					if ($(e).closest('ul').hasClass('tabList')) {
+					
+				} else if ( $('.tabListBox').css('display') == 'block' )
+				{
+					if ( $(e).closest('ul').hasClass('tabList') )
+					{
 						console.log('일반 탭 영역 : ' + idx);
 						$(e).closest('li').remove();
 						$('.content').find('form').eq(idx + 1).remove();
 						TabListSort();
 					} else {
 						console.log('more 탭 영역');
-						if ($(e).closest('li').find('a').hasClass('on')) {
+						if ( $(e).closest('li').find('a').hasClass('on'))
+						{
 							console.log('자기를 보고 있음');
 							$(e).closest('li').remove();
 							tabLng = $('.tabList > li').length;
@@ -396,7 +427,7 @@
 							TabListSort();
 							$('.tabList > li').last().children('a').addClass('on');
 							$('.content').find('form').eq(tabLng).show();
-
+							
 						} else {
 							console.log('다른 more 탭');
 							$(e).closest('li').remove();
@@ -408,6 +439,7 @@
 					}
 				}
 			}
+			*/
 		}
 
 		function TabListSort() {
