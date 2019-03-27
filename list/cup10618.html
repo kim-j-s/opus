@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="x-apple-disable-message-reformatting" />
+	<title>Customer Portal</title>
+	<link rel="shortcut icon" href="../static/images/common/favicon.ico">
+	<link href="../static/css/reset.css" rel="stylesheet" />
+	<link href="../static/css/common.css" rel="stylesheet" />
+	<link href="../static/css/contents.css" rel="stylesheet" />
+	<script type="text/javascript" src="../static/js/common.js"></script>
+	<script type="text/javascript" src="../static/js/lib/moment.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/daterangepicker.js"></script>
+	<script type="text/javascript" src="../static/js/lib/quill.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jQuery.dPassword.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery.easy-autocomplete.js"></script>
+	<script type="text/javascript" src="../static/js/lib/semantic.min.js"></script>
+	<script type="text/javascript" src="../static/js/lib/jquery.are-you-sure.js"></script>
+	<script type="text/javascript" src="../static/js/ui.js"></script>
+	<!--[if lt IE 9]>
+    <script type="text/javascript">
+        document.createElement("header"); 
+        document.createElement("nav"); 
+        document.createElement("section"); 
+        document.createElement("article"); 
+        document.createElement("footer");
+    </script>
+<![endif]-->
+</head>
+
+<body>
+	<section class="layerPopup">
+		<div class="inner">
+			<h1 class="popupTitle" id="i10618_paymentProcessingLb">Payment Processing</h1>
+			<div class="layerContent">
+				<dl class="inpItem">
+					<dt id="i10618_paidAmountLb">Paid Amount</dt>
+					<dd>
+						<div class="inputBox readonly amount single">
+							<input type="text" name="i10618_paidAmount" class="inp Readonly" id="i10618_paidAmount" readonly="readonly" value="0.00" tabindex="-1">
+						</div>
+					</dd>
+				</dl>
+				<dl class="inpItem">
+					<dt id="i10618_isPaidCompletelyLb">Is Paid Completely</dt>
+					<dd>
+						<div class="checkbox">
+							<input type="checkbox" name="i10618_isPaidChk" id="i10618_isPaidChk" checked="checked"><label for="i10618_isPaidChk" id="i10618_isPaid">Apply</label>
+						</div>
+					</dd>
+				</dl>
+				<dl class="inpItem">
+					<dt id="i10618_paidDateLb">Select Paid Date</dt>
+					<dd>
+						<div class="inputBox Edit_date single">
+							<input type="text" name="i10618_paidDate" class="inp datesingle Mandate" id="i10618_paidDate">
+						</div>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="layerBtns">
+			<button type="button" class="btn basic" id="i10618_applyPayment">Apply Payment</button>
+		</div>
+		<button type="button" class="btn close">Close</button>
+	</section>
+</body>
+
+</html>
